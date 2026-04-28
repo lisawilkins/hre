@@ -21,6 +21,7 @@ export const HowItWorks = ({ theme }) => {
         gridTemplateColumns: isTabletDown ? '1fr' : '1.1fr 1fr',
         gap: isTabletDown ? 40 : 64,
         alignItems: 'center',
+        minWidth: 0,
       }}>
         <div>
           <h2 style={{
@@ -30,11 +31,12 @@ export const HowItWorks = ({ theme }) => {
           }}>
             Four steps.<br/>One clean job.
           </h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 0, minWidth: 0 }}>
             {steps.map((s, i) => (
               <div key={i} style={{
                 display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 28,
                 padding: '22px 0', borderTop: i === 0 ? 'none' : `1px solid ${theme.line}`,
+                alignItems: 'baseline',
               }}>
                 <div style={{ fontFamily: theme.monoFont, fontSize: 14, color: theme.accent === '#FFC629' || theme.accent === '#EEFF41' ? theme.ink : theme.accent, fontWeight: 700, letterSpacing: '0.04em' }}>
                   {s.n}
