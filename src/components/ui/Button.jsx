@@ -8,7 +8,7 @@ export const Button = ({ theme, variant = 'primary', size = 'md', children, onCl
     accent:    { background: theme.accent, color: theme.accentInk, border: `1px solid ${theme.accent}` },
     emergency: { background: theme.emergency, color: theme.emergencyInk, border: `1px solid ${theme.emergency}` },
     outline:   { background: 'transparent', color: theme.ink, border: `1px solid ${theme.ink}` },
-    ghost:     { background: 'transparent', color: theme.ink, border: `1px solid ${theme.ink}` },
+    ghost:     { background: 'transparent', color: theme.ink, border: `1px solid ${theme.line}` },
   };
   return (
     <button

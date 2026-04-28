@@ -6,7 +6,7 @@ import { STATS, PHONE_DISPLAY, PHONE_TEL } from '../../data/content';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 export const HomeHero = ({ theme, tone }) => {
-  const { isMobile, isTabletDown } = useBreakpoint();
+  const { isNarrow, isMobile, isTabletDown } = useBreakpoint();
   const navigate = useNavigate();
 
   return (
@@ -52,7 +52,9 @@ export const HomeHero = ({ theme, tone }) => {
             <Button theme={theme} variant="ghost" size={isMobile ? 'md' : 'lg'} icon="phone" onClick={() => window.location.href = `tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</Button>
           </div>
           <div style={{
-            marginTop: 48, display: 'flex', gap: isMobile ? 24 : 36, flexWrap: 'wrap',
+            marginTop: 48, display: 'grid',
+            gridTemplateColumns: isNarrow ? 'repeat(2, 46%)' : `repeat(${4}, auto)`,
+            gap: isNarrow ? '20px 0' : isMobile ? 24 : 36,
             paddingTop: 32, borderTop: `1px solid ${theme.line}`,
           }}>
             {STATS.map((s, i) => (
