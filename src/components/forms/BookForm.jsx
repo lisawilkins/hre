@@ -17,8 +17,8 @@ export const BookForm = ({ theme, compact, onDone }) => {
         placeholder={placeholder}
         onChange={e => setState(s => ({ ...s, [key]: e.target.value }))}
         style={{
-          padding: '12px 14px', border: `1px solid ${theme.line}`, borderRadius: theme.radius,
-          background: theme.surface, color: theme.ink, fontFamily: theme.bodyFont, fontSize: 15, outline: 'none',
+          width: '100%', padding: '12px 14px', border: `1px solid ${theme.line}`, borderRadius: theme.radius,
+          background: theme.surface, color: theme.ink, fontFamily: theme.bodyFont, fontSize: 15, outline: 'none', boxSizing: 'border-box',
         }}
       />
     </label>
@@ -75,7 +75,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
           rows={3}
           style={{
             padding: '12px 14px', border: `1px solid ${theme.line}`, borderRadius: theme.radius,
-            background: theme.surface, color: theme.ink, fontFamily: theme.bodyFont, fontSize: 15, outline: 'none', resize: 'vertical',
+            width: '100%', boxSizing: 'border-box', background: theme.surface, color: theme.ink, fontFamily: theme.bodyFont, fontSize: 15, outline: 'none', resize: 'vertical',
           }}
         />
       </label>

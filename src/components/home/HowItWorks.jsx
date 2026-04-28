@@ -23,7 +23,7 @@ export const HowItWorks = ({ theme }) => {
         alignItems: 'center',
         minWidth: 0,
       }}>
-        <div>
+        <div style={{ minWidth: 0 }}>
           <h2 style={{
             fontFamily: theme.displayFont, fontWeight: theme.displayWeight,
             fontSize: 'clamp(36px, 4.5vw, 56px)', lineHeight: 1, margin: 0,
@@ -34,14 +34,14 @@ export const HowItWorks = ({ theme }) => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0, minWidth: 0 }}>
             {steps.map((s, i) => (
               <div key={i} style={{
-                display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 28,
+                display: 'grid', gridTemplateColumns: isTabletDown ? '1fr' : 'auto 1fr', gap: isTabletDown ? 12 : 28,
                 padding: '22px 0', borderTop: i === 0 ? 'none' : `1px solid ${theme.line}`,
-                alignItems: 'baseline',
+                alignItems: isTabletDown ? 'flex-start' : 'baseline', minWidth: 0,
               }}>
                 <div style={{ fontFamily: theme.monoFont, fontSize: 14, color: theme.accent === '#FFC629' || theme.accent === '#EEFF41' ? theme.ink : theme.accent, fontWeight: 700, letterSpacing: '0.04em' }}>
                   {s.n}
                 </div>
-                <div>
+                <div style={{ minWidth: 0 }}>
                   <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 22, letterSpacing: '-0.02em', color: theme.ink, marginBottom: 6 }}>{s.t}</div>
                   <p style={{ fontFamily: theme.bodyFont, fontSize: 15, lineHeight: 1.5, color: theme.ink2, margin: 0 }}>{s.d}</p>
                 </div>
@@ -52,7 +52,7 @@ export const HowItWorks = ({ theme }) => {
             <Button theme={theme} variant="primary" iconRight="arrow" onClick={() => navigate('/book')}>Request a callback</Button>
           </div>
         </div>
-        <div>
+        <div style={{ minWidth: 0 }}>
           <BookForm theme={theme} />
         </div>
       </div>
