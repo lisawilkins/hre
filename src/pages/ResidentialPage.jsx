@@ -29,7 +29,7 @@ const ProjectGallery = ({ theme }) => {
             <Placeholder theme={theme} label={p.t} aspect="4/5" tint={p.tint} />
             <div style={{ marginTop: 12 }}>
               <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 17, color: theme.ink, letterSpacing: '-0.015em' }}>{p.t}</div>
-              <div style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.muted, marginTop: 4 }}>{p.where}</div>
+              <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.monoColor, marginTop: 4 }}>{p.where}</div>
             </div>
           </div>
         ))}
@@ -54,7 +54,7 @@ const ProcessBand = ({ theme }) => {
             background: theme.surface,
           }}>
             <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 54, color: theme.ink, letterSpacing: '-0.03em', lineHeight: 1 }}>{it.n}</div>
-            <div style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted, margin: '16px 0 8px' }}>{it.l}</div>
+            <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor, margin: '16px 0 8px' }}>{it.l}</div>
             <div style={{ fontFamily: theme.bodyFont, fontSize: 14, color: theme.ink2, lineHeight: 1.4 }}>{it.d}</div>
           </div>
         ))}

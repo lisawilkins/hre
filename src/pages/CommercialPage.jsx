@@ -21,7 +21,7 @@ export const CommercialPage = ({ theme, tone }) => {
             borderRadius: theme.radius, padding: 28, minHeight: 200,
             display: 'flex', flexDirection: 'column', gap: 14,
           }}>
-            <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted }}>
+            <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>
               {String(i + 1).padStart(2, '0')} / {String(COMMERCIAL_SERVICES.length).padStart(2, '0')}
             </div>
             <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 24, color: theme.ink, letterSpacing: '-0.02em', lineHeight: 1.15 }}>

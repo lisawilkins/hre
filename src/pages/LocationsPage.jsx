@@ -38,11 +38,11 @@ const MapPlaceholder = ({ theme }) => (
         <g key={i}>
           <circle cx={p.x} cy={p.y} r={p.hq ? 7 : 4} fill={p.hq ? theme.accent : theme.brand} stroke={theme.surface} strokeWidth="2" />
           {p.hq && <circle cx={p.x} cy={p.y} r="14" fill="none" stroke={theme.accent} strokeWidth="1" opacity="0.5" />}
-          <text x={p.x + 10} y={p.y + 4} fontFamily={theme.monoFont} fontSize="9" fill={theme.ink} letterSpacing="0.06em">{p.label.toUpperCase()}</text>
+          <text x={p.x + 10} y={p.y + 4} fontFamily={theme.monoFont} fontSize="11" fill={theme.ink} letterSpacing="0.06em">{p.label.toUpperCase()}</text>
         </g>
       ))}
     </svg>
-    <div style={{ position: 'absolute', top: 16, left: 16, fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted, background: theme.surface, padding: '4px 8px', borderRadius: 3, border: `1px solid ${theme.line}` }}>
+    <div style={{ position: 'absolute', top: 16, left: 16, fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor, background: theme.surface, padding: '4px 8px', borderRadius: 3, border: `1px solid ${theme.line}` }}>
       Service area · Western WA
     </div>
   </div>
@@ -96,13 +96,13 @@ export const LocationsPage = ({ theme, tone }) => {
                       {l.city}
                       {l.hq && <Badge theme={theme} variant="accent">HQ</Badge>}
                     </div>
-                    <div style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.muted, marginTop: 4 }}>{l.county}</div>
+                    <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.monoColor, marginTop: 4 }}>{l.county}</div>
                   </div>
                   {l.emergency ? (
-                    <div style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.emergency, fontWeight: 700 }}>• 24hr available</div>
+                    <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.emergency, fontWeight: 700 }}>• 24hr available</div>
                   ) : <div/>}
                   <div style={{ fontFamily: theme.monoFont, fontSize: 11, color: theme.ink2, letterSpacing: '0.06em' }}><Icon name="clock" size={11}/> {l.eta}</div>
-                  <div style={{ fontFamily: theme.monoFont, fontSize: 11, color: theme.muted, letterSpacing: '0.06em' }}>{l.jobs} jobs</div>
+                  <div style={{ fontFamily: theme.monoFont, fontSize: 11, color: theme.monoColor, letterSpacing: '0.06em' }}>{l.jobs} jobs</div>
                   <div style={{ color: theme.ink, display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: theme.bodyFont, fontSize: 13, fontWeight: 600 }}>
                     View <Icon name="arrow" size={14} />
                   </div>

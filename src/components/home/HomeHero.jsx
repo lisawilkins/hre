@@ -58,7 +58,7 @@ export const HomeHero = ({ theme, tone }) => {
             {STATS.map((s, i) => (
               <div key={i}>
                 <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: isMobile ? 26 : 32, color: theme.ink, letterSpacing: '-0.02em', lineHeight: 1 }}>{s.n}</div>
-                <div style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.muted, marginTop: 8 }}>{s.l}</div>
+                <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.monoColor, marginTop: 8 }}>{s.l}</div>
               </div>
             ))}
           </div>
@@ -100,7 +100,7 @@ export const HomeHero = ({ theme, tone }) => {
             padding: '18px 22px', borderRadius: theme.radius, position: 'relative',
           }}>
             <div>
-              <div style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', opacity: 0.7 }}>Call us</div>
+              <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', opacity: 0.7 }}>Call us</div>
               <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 26, letterSpacing: '-0.02em' }}>{PHONE_DISPLAY}</div>
             </div>
             <Icon name="phone" size={28} stroke={2.2}/>
@@ -109,7 +109,7 @@ export const HomeHero = ({ theme, tone }) => {
             marginTop: 18,
             display: 'grid', gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(3, 1fr)',
             gap: 10,
-            fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.85, position: 'relative',
+            fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.85, position: 'relative',
           }}>
             <div>Lynnwood HQ<br/><span style={{ opacity: 0.65 }}>since 2003</span></div>
             <div>Four counties<br/><span style={{ opacity: 0.65 }}>Snohomish, King, Thurston, Kitsap</span></div>

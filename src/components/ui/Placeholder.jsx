@@ -8,7 +8,7 @@ export const Placeholder = ({ theme, label, aspect = '4/3', tint, rounded, style
       background: `repeating-linear-gradient(135deg, ${base}, ${base} 10px, ${adjust(base, 8)} 10px, ${adjust(base, 8)} 20px)`,
       borderRadius: rounded ?? theme.radius,
       display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-start',
-      padding: 14, color: theme.ink2, fontFamily: theme.monoFont, fontSize: 10,
+      padding: 14, color: theme.ink2, fontFamily: theme.monoFont, fontSize: 11,
       letterSpacing: '0.08em', textTransform: 'uppercase',
       border: `1px solid ${theme.line}`,
       position: 'relative', overflow: 'hidden',
@@ -44,7 +44,7 @@ export const Portrait = ({ theme, name, tint, aspect = '3/4' }) => {
       }}>{initials}</div>
       <div style={{
         position: 'absolute', bottom: 10, left: 10, right: 10,
-        fontFamily: theme.monoFont, fontSize: 9, letterSpacing: '0.1em',
+        fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em',
         color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase',
         display: 'flex', justifyContent: 'space-between',
       }}>

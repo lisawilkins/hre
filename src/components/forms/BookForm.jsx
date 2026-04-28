@@ -10,7 +10,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
 
   const field = (key, label, type = 'text', placeholder) => (
     <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-      <span style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted }}>{label}</span>
+      <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>{label}</span>
       <input
         type={type}
         value={state[key]}
@@ -67,7 +67,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
       </div>
       {field('zip', 'ZIP code', 'text', '98443')}
       <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <span style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted }}>How can we help you?</span>
+        <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>How can we help you?</span>
         <textarea
           value={state.issue}
           onChange={e => setState(s => ({ ...s, issue: e.target.value }))}
@@ -80,7 +80,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
         />
       </label>
       <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <span style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted }}>How soon?</span>
+        <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>How soon?</span>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6 }}>
           {['Within a week', 'This month', 'Getting estimates'].map(u => (
             <button key={u} type="button" onClick={() => setState(s => ({ ...s, urgency: u }))} style={{

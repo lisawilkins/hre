@@ -29,7 +29,7 @@ export const BookPage = ({ theme, tone }) => {
                 <Icon name={SERVICE_ICONS[selectedService.id]} size={22} />
               </div>
               <div>
-                <div style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted, marginBottom: 4 }}>Service selected</div>
+                <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor, marginBottom: 4 }}>Service selected</div>
                 <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 18, color: theme.ink, letterSpacing: '-0.015em' }}>{selectedService.title}</div>
               </div>
             </div>
@@ -46,7 +46,7 @@ export const BookPage = ({ theme, tone }) => {
                   <Icon name={it.i} size={16}/>
                 </div>
                 <div>
-                  <div style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.muted }}>{it.t}</div>
+                  <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.monoColor }}>{it.t}</div>
                   <div style={{ fontFamily: theme.bodyFont, fontSize: 14, color: theme.ink, fontWeight: 600, marginTop: 2 }}>{it.d}</div>
                 </div>
               </div>

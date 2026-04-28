@@ -44,7 +44,7 @@ export const CityPage = ({ theme, tone }) => {
           <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1, margin: 0, letterSpacing: '-0.03em', color: theme.ink }}>
             What we do in {city}.
           </h2>
-          <div style={{ display: 'flex', gap: 16, fontFamily: theme.monoFont, fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', color: theme.muted }}>
+          <div style={{ display: 'flex', gap: 16, fontFamily: theme.monoFont, fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', color: theme.monoColor }}>
             <span><Icon name="clock" size={12} style={{ display: 'inline', marginRight: 6 }} />~{eta} ETA</span>
             <span>{jobs} jobs completed</span>
           </div>
@@ -83,7 +83,7 @@ export const CityPage = ({ theme, tone }) => {
                   <Icon name={it.icon} size={18} />
                 </div>
                 <div>
-                  <div style={{ fontFamily: theme.monoFont, fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.muted }}>{it.label}</div>
+                  <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.monoColor }}>{it.label}</div>
                   <div style={{ fontFamily: theme.bodyFont, fontSize: 15, fontWeight: 600, color: theme.ink, marginTop: 2 }}>{it.value}</div>
                 </div>
               </div>

@@ -14,7 +14,7 @@ export const TrustStrip = ({ theme }) => {
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         {isMobile ? (
           <>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted, marginBottom: 14 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor, marginBottom: 14 }}>
               <Icon name="shield" size={14} /> Commercial Clients Trust Home Run Electric
             </div>
             <div style={{ display: 'flex', gap: 28, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
@@ -25,7 +25,7 @@ export const TrustStrip = ({ theme }) => {
           </>
         ) : (
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>
               <Icon name="shield" size={14} /> Commercial Clients Trust Home Run Electric
             </div>
             <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap', alignItems: 'center' }}>

@@ -8,8 +8,8 @@ export const PageHero = ({ theme, eyebrow, title, lede }) => (
   <div style={{ background: theme.bg, position: 'relative', overflow: 'hidden' }}>
     <HeroPattern theme={theme} kind={theme.heroPattern} />
     <div style={{ maxWidth: 1280, margin: '0 auto', padding: '72px 48px 64px', position: 'relative' }}>
-      <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.muted, marginBottom: 20, display: 'flex', alignItems: 'center', gap: 10 }}>
-        <span style={{ width: 24, height: 1, background: theme.muted }} /> {eyebrow}
+      <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor, marginBottom: 20, display: 'flex', alignItems: 'center', gap: 10 }}>
+        <span style={{ width: 24, height: 1, background: theme.monoColor }} /> {eyebrow}
       </div>
       <h1 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(44px, 6vw, 84px)', lineHeight: 0.98, margin: 0, letterSpacing: '-0.035em', color: theme.ink, textWrap: 'balance', maxWidth: 1000 }}>
         {title}

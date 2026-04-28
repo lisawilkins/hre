@@ -43,7 +43,7 @@ export const Testimonials = ({ theme }) => {
             </p>
             <div style={{
               paddingTop: 16, borderTop: `1px solid ${theme.line}`,
-              display: 'flex', justifyContent: 'space-between', fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: theme.muted,
+              display: 'flex', justifyContent: 'space-between', fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: theme.monoColor,
             }}>
               <span style={{ color: theme.ink, fontWeight: 600 }}>{t.name}</span>
               <span><Icon name="pin" size={11}/> {t.where}</span>

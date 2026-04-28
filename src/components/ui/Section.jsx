@@ -10,9 +10,9 @@ export const Section = ({ theme, children, style, eyebrow, id }) => {
         {eyebrow && (
           <div style={{
             fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase',
-            color: theme.muted, marginBottom: 24, display: 'flex', alignItems: 'center', gap: 10,
+            color: theme.monoColor, marginBottom: 24, display: 'flex', alignItems: 'center', gap: 10,
           }}>
-            <span style={{ width: 24, height: 1, background: theme.muted }} /> {eyebrow}
+            <span style={{ width: 24, height: 1, background: theme.monoColor }} /> {eyebrow}
           </div>
         )}
         {children}

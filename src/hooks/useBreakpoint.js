@@ -10,6 +10,7 @@ export function useBreakpoint() {
   }, []);
 
   return {
+    isNarrow: width < 600,
     isMobile: width < 768,
     isTablet: width >= 768 && width < 1024,
     isTabletDown: width < 1024,
