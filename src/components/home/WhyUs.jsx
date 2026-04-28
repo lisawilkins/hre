@@ -3,8 +3,8 @@ import { Icon } from '../ui/Icon';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 export const WhyUs = ({ theme }) => {
-  const { isNarrow, isMobile, isTablet } = useBreakpoint();
-  const cols = isNarrow ? 'repeat(2, 46%)' : isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)';
+  const { isMobile, isTablet } = useBreakpoint();
+  const cols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)';
 
   const items = [
     { i: 'shield', t: 'Licensed, bonded, insured', d: 'WA state electrical contractor lic. #HOMERE*892BC. $2M general liability.' },

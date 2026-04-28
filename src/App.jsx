@@ -11,6 +11,7 @@ import { AboutPage } from './pages/AboutPage';
 import { LocationsPage } from './pages/LocationsPage';
 import { BookPage } from './pages/BookPage';
 import { CityPage } from './pages/CityPage';
+import { DesignSystemPage } from './pages/DesignSystemPage';
 
 const DEFAULT_TWEAKS = {
   theme: 'tradeClassic',
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/service-areas" element={<LocationsPage theme={theme} tone={tone} />} />
         <Route path="/service-areas/:citySlug" element={<CityPage theme={theme} tone={tone} />} />
         <Route path="/book" element={<BookPage theme={theme} tone={tone} />} />
+        <Route path="/design-system" element={<DesignSystemPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer theme={theme} />

@@ -8,7 +8,7 @@ export const THEMES = {
     ink2: '#2A3A54',
     muted: '#6B7280',
     monoColor: '#2e3138',
-    line: '#E3DFD5',
+    line: '#CCC5B3',
     brand: '#0B1F3A',
     brandInk: '#FFFFFF',
     accent: '#FFC629',
