@@ -3,7 +3,7 @@ import logoHorizReversed from '../../assets/logos/logo-horizontal-reversed.svg';
 import logoStacked from '../../assets/logos/logo-stacked.svg';
 import logoStackedReversed from '../../assets/logos/logo-stacked-reversed.svg';
 
-export const Logo = ({ theme, size = 34, variant = 'auto', lockup = 'horizontal', inverted = false }) => {
+export const Logo = ({ theme, size = 34, width: widthProp, variant = 'auto', lockup = 'horizontal', inverted = false }) => {
   const isDark = theme && (theme.bg === '#0E0F12' || inverted);
   const useReversed = variant === 'light' || (variant === 'auto' && isDark);
 
@@ -14,7 +14,7 @@ export const Logo = ({ theme, size = 34, variant = 'auto', lockup = 'horizontal'
 
   const ratio = lockup === 'stacked' ? 1 : 1253 / 406;
   const height = size;
-  const width = height * ratio;
+  const width = widthProp ?? height * ratio;
 
   return (
     <img

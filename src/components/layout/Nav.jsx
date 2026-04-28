@@ -43,7 +43,7 @@ export const Nav = ({ theme }) => {
           display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24,
         }}>
           <div style={{ cursor: 'pointer' }} onClick={() => handleNav('/')}>
-            <Logo theme={theme} size={isMobile ? 28 : 34} />
+            <Logo theme={theme} size={isMobile ? 40 : 34} width={isMobile ? 106 : undefined} />
           </div>
 
           {isCompact ? (
