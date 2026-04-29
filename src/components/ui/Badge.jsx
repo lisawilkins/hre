@@ -9,7 +9,7 @@ export const Badge = ({ theme, children, variant = 'default', icon }) => {
   }[variant];
   return (
     <span style={{
-      display: 'inline-flex', alignItems: 'center', gap: 6,
+      display: 'inline-flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap',
       padding: '5px 10px', borderRadius: 100, fontSize: 11, fontWeight: 600,
       fontFamily: theme.monoFont, letterSpacing: '0.06em', textTransform: 'uppercase',
       ...v,

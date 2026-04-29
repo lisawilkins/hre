@@ -27,7 +27,7 @@ export const WhyUs = ({ theme }) => {
             }}>
               <Icon name={it.i} size={22} />
             </div>
-            <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 20, letterSpacing: '-0.02em', color: theme.ink, marginTop: 'auto' }}>{it.t}</div>
+            <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 20, letterSpacing: '-0.02em', color: theme.ink }}>{it.t}</div>
             <p style={{ fontFamily: theme.bodyFont, fontSize: 14, color: theme.ink2, lineHeight: 1.5, margin: 0 }}>{it.d}</p>
           </div>
         ))}

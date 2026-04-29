@@ -7,8 +7,10 @@ import { ServiceCard } from '../components/home/ServiceCard';
 import { Testimonials } from '../components/home/Testimonials';
 import { PageHero, CTABand } from './shared';
 import { SERVICES } from '../data/content';
+import { useBreakpoint } from '../hooks/useBreakpoint';
 
 const ProjectGallery = ({ theme }) => {
+  const { isMobile, isTablet } = useBreakpoint();
   const projects = [
     { t: '200A panel upgrade', where: 'Edmonds · 1951 Craftsman', tint: '#7FA0B8' },
     { t: 'Tesla Wall Connector', where: 'Mill Creek · detached garage', tint: '#C38B6E' },
@@ -23,7 +25,7 @@ const ProjectGallery = ({ theme }) => {
         </h2>
         <Badge theme={theme} variant="soft">Photos — user to replace</Badge>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : isTablet ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)', gap: 16 }}>
         {projects.map((p, i) => (
           <div key={i}>
             <Placeholder theme={theme} label={p.t} aspect="4/5" tint={p.tint} />
@@ -39,6 +41,8 @@ const ProjectGallery = ({ theme }) => {
 };
 
 const ProcessBand = ({ theme }) => {
+  const { isMobile, isTablet } = useBreakpoint();
+  const cols = isMobile ? 1 : isTablet ? 2 : 4;
   const items = [
     { n: '$185', l: 'Flat diagnostic fee', d: 'Waived if you hire us for the fix.' },
     { n: '1yr', l: 'Workmanship warranty', d: 'On everything we install.' },
@@ -47,10 +51,12 @@ const ProcessBand = ({ theme }) => {
   ];
   return (
     <Section theme={theme} eyebrow="What you can count on">
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, border: `1px solid ${theme.line}`, borderRadius: theme.radius, overflow: 'hidden' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: 0, border: `1px solid ${theme.line}`, borderRadius: theme.radius, overflow: 'hidden' }}>
         {items.map((it, i) => (
           <div key={i} style={{
-            padding: 32, borderRight: i < items.length - 1 ? `1px solid ${theme.line}` : 'none',
+            padding: 32,
+            borderRight: (i + 1) % cols !== 0 ? `1px solid ${theme.line}` : 'none',
+            borderBottom: i < items.length - cols ? `1px solid ${theme.line}` : 'none',
             background: theme.surface,
           }}>
             <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 54, color: theme.ink, letterSpacing: '-0.03em', lineHeight: 1 }}>{it.n}</div>
@@ -70,7 +76,7 @@ export const ResidentialPage = ({ theme, tone }) => {
       <PageMeta title="Residential Electrical Services · Home Run Electric" description="Licensed residential electrician in Western Washington. Panel upgrades, EV chargers, generators, smart home wiring, and more." />
       <PageHero theme={theme} eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} />
       <Section theme={theme}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 16 }}>
           {SERVICES.map(s => <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate('/book', { state: { service: s } })} />)}
         </div>
       </Section>

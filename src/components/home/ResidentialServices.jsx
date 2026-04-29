@@ -6,11 +6,8 @@ import { SERVICES } from '../../data/content';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 export const ResidentialServices = ({ theme }) => {
-  const { isMobile, isTablet } = useBreakpoint();
+  const { isMobile, isTabletDown } = useBreakpoint();
   const navigate = useNavigate();
-
-  const topCols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)';
-  const bottomCols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)';
 
   return (
     <Section theme={theme} eyebrow="Residential services">
@@ -36,13 +33,8 @@ export const ResidentialServices = ({ theme }) => {
           </div>
         </div>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: topCols, gap: 16 }}>
-        {SERVICES.slice(0, 4).map(s => (
-          <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate('/book', { state: { service: s } })} />
-        ))}
-      </div>
-      <div style={{ display: 'grid', gridTemplateColumns: bottomCols, gap: 16, marginTop: 16 }}>
-        {SERVICES.slice(4).map(s => (
+      <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? 'repeat(auto-fill, minmax(200px, 1fr))' : 'repeat(4, minmax(200px, 1fr))', gap: 16 }}>
+        {SERVICES.map(s => (
           <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate('/book', { state: { service: s } })} />
         ))}
       </div>
