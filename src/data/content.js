@@ -115,11 +115,11 @@ export const TEAM = [
 ];
 
 export const LOCATIONS = [
-  { city: 'Lynnwood', slug: 'lynnwood', county: 'Snohomish County', eta: '15 min', jobs: 412, hq: true },
+  { city: 'Lynnwood', slug: 'lynnwood', county: 'Snohomish County', eta: '5 min', jobs: 412, hq: true },
   { city: 'Edmonds', slug: 'edmonds', county: 'Snohomish County', eta: '20 min', jobs: 221 },
-  { city: 'Mountlake Terrace', slug: 'mountlake-terrace', county: 'Snohomish County', eta: '15 min', jobs: 143 },
+  { city: 'Mountlake Terrace', slug: 'mountlake-terrace', county: 'Snohomish County', eta: '15 min', jobs: 143, emergency: true },
   { city: 'Mill Creek', slug: 'mill-creek', county: 'Snohomish County', eta: '20 min', jobs: 167 },
-  { city: 'Everett', slug: 'everett', county: 'Snohomish County', eta: '25 min', jobs: 188 },
+  { city: 'Everett', slug: 'everett', county: 'Snohomish County', eta: '25 min', jobs: 188, emergency: true },
   { city: 'Mukilteo', slug: 'mukilteo', county: 'Snohomish County', eta: '25 min', jobs: 92 },
   { city: 'Bothell', slug: 'bothell', county: 'King County', eta: '20 min', jobs: 156, emergency: true },
   { city: 'Kirkland', slug: 'kirkland', county: 'King County', eta: '30 min', jobs: 129, emergency: true },
@@ -131,9 +131,9 @@ export const LOCATIONS = [
   { city: 'Olympia', slug: 'olympia', county: 'Thurston County', eta: '1 hr 30 min', jobs: 64 },
   { city: 'Lacey', slug: 'lacey', county: 'Thurston County', eta: '1 hr 35 min', jobs: 41 },
   { city: 'Tumwater', slug: 'tumwater', county: 'Thurston County', eta: '1 hr 35 min', jobs: 28 },
-  { city: 'Bremerton', slug: 'bremerton', county: 'Kitsap County', eta: '1 hr 10 min', jobs: 52 },
-  { city: 'Silverdale', slug: 'silverdale', county: 'Kitsap County', eta: '1 hr 15 min', jobs: 37 },
-  { city: 'Poulsbo', slug: 'poulsbo', county: 'Kitsap County', eta: '1 hr 20 min', jobs: 22 },
+  { city: 'Tacoma', slug: 'tacoma', county: 'Pierce County', eta: '1 hr 15 min', jobs: 61 },
+  { city: 'Puyallup', slug: 'puyallup', county: 'Pierce County', eta: '1 hr 20 min', jobs: 44 },
+  { city: 'Lakewood', slug: 'lakewood', county: 'Pierce County', eta: '1 hr 25 min', jobs: 33 },
 ];
 
 export const TESTIMONIALS = [
