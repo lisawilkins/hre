@@ -73,8 +73,8 @@ export const THEMES = {
 export const TONE_COPY = {
   neighborly: {
     name: 'Neighborly',
-    heroEyebrow: 'Your local electrician — since 2003',
-    heroTitle: ['Trusted Electrical Solutions for Home and Business'], //, 'Great neighbors.' ],//
+    heroEyebrow: 'Covering the bases since 2003',
+    heroTitle: ['Trusted Electrical Solutions for Home and Business'], 
     heroSub: "Home Run Electric has powered Western Washington's residential and commercial projects for over 20 years.",
     bookCta: 'Request Estimate',
     emergencyLede: 'Power out? Breaker tripping? Burning smell? Electricians are available Mon–Sat, 7am-6pm.',

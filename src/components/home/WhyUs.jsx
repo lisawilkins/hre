@@ -7,7 +7,7 @@ export const WhyUs = ({ theme }) => {
   const cols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)';
 
   const items = [
-    { i: 'shield', t: 'Licensed, bonded, insured', d: 'WA state electrical contractor lic. #HOMERE*892BC. $2M general liability.' },
+    { i: 'shield', t: 'Licensed, bonded, insured', d: 'WA state electrical contractor lic. HOMERRE974K2. $2M general liability.' },
     { i: 'clock', t: '23+ years, Western WA', d: "We're not a franchise. Local crew, local owners, local area code since 2003." },
     { i: 'check', t: 'One-year workmanship warranty', d: 'If something we installed fails, we come back. No runaround.' },
     { i: 'bolt', t: 'Commercial-grade standards', d: 'The same crew that wires hospitals and schools is now on your porch light.' },

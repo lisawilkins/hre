@@ -28,13 +28,13 @@ export const Footer = ({ theme }) => {
         <div style={{ display: 'grid', gridTemplateColumns: gridCols, gap: isMobile ? 36 : 48, marginBottom: isMobile ? 40 : 56 }}>
           <div style={{ gridColumn: isTablet ? '1 / -1' : undefined }}>
             <div style={{ marginBottom: 18 }}>
-              <Logo theme={theme} size={64} lockup="stacked" variant="light" />
+              <Logo theme={theme} size={64} variant="light" />
             </div>
             <p style={{ fontFamily: theme.bodyFont, fontSize: 14, lineHeight: 1.6, opacity: 0.75, maxWidth: 320, margin: 0 }}>
               Licensed, bonded, and insured electrical contractor serving Western Washington since 2003. Commercial-grade work, now for homes and small businesses.
             </p>
             <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 8, fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.7 }}>
-              <div>WA Lic. #HOMERE*892BC · Bonded & Insured</div>
+              <div>WA Lic. HOMERRE974K2 · Bonded & Insured</div>
               <div>19215 33rd Ave W, Lynnwood WA 98036</div>
             </div>
           </div>
@@ -49,7 +49,7 @@ export const Footer = ({ theme }) => {
           <FooterCol theme={theme} title="Contact" items={[
             PHONE_DISPLAY,
             'hello@homerunelectric.com',
-            'Mon–Sat · 7a–7p',
+            'Mon–Sat · 7a–6p',
             'Emergency service — King County',
           ]} />
         </div>
@@ -61,8 +61,8 @@ export const Footer = ({ theme }) => {
           fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase',
           opacity: 0.5, paddingTop: 30, borderTop: `1px solid ${theme.brandInk}22`,
         }}>
-          <div>© 2026 Home Run Electric LLC</div>
-          <div>Wired right. The first time.</div>
+          <div>© {new Date().getFullYear()} Home Run Electric LLC</div>
+          <div>Covering the bases.</div>
         </div>
       </div>
     </footer>

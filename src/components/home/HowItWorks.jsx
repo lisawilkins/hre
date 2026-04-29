@@ -9,10 +9,10 @@ export const HowItWorks = ({ theme }) => {
   const navigate = useNavigate();
 
   const steps = [
-    { n: '01', t: 'Call or request', d: "Tell us what's going on. Short form or a phone call — whichever you like." },
-    { n: '02', t: 'Real callback', d: 'A licensed electrician calls within the hour during business hours. Upfront pricing.' },
-    { n: '03', t: 'On-site', d: 'We show up in the arrival window. Fully licensed, bonded, insured, and background-checked.' },
-    { n: '04', t: 'Wired right', d: 'Permitted when required, tested before we leave, and warrantied for a full year.' },
+    { n: '01', t: 'Call or request', d: "Tell us what's going on. Short form or a phone call — whichever you like. Our skilled staff will call right back during business hours. Upfront pricing available on standard jobs." },
+    //{ n: '02', t: 'Real callback', d: 'A licensed electrician calls within the hour during business hours. Upfront pricing.' },
+    { n: '02', t: 'On-site', d: 'We show up in the arrival window. Fully licensed, bonded, insured, and background-checked.' },
+    { n: '03', t: 'Wired right', d: 'Permitted when required, tested before we leave, and warrantied for a full year.' },
   ];
   return (
     <Section theme={theme} eyebrow="How it works" style={{ background: theme.surface }}>
@@ -29,7 +29,7 @@ export const HowItWorks = ({ theme }) => {
             fontSize: 'clamp(36px, 4.5vw, 56px)', lineHeight: 1, margin: 0,
             color: theme.ink, letterSpacing: '-0.03em', textWrap: 'balance', marginBottom: 28,
           }}>
-            Four steps.<br/>One clean job.
+            Three steps.<br/>One clean job.
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0, minWidth: 0 }}>
             {steps.map((s, i) => (
@@ -47,9 +47,6 @@ export const HowItWorks = ({ theme }) => {
                 </div>
               </div>
             ))}
-          </div>
-          <div style={{ marginTop: 32 }}>
-            <Button theme={theme} variant="primary" iconRight="arrow" onClick={() => navigate('/book')}>Request a callback</Button>
           </div>
         </div>
         <div style={{ minWidth: 0 }}>
