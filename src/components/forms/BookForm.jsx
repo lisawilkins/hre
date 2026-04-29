@@ -5,21 +5,45 @@ import { Badge } from '../ui/Badge';
 import { PHONE_DISPLAY, PHONE_TEL } from '../../data/content';
 
 export const BookForm = ({ theme, compact, onDone }) => {
-  const [state, setState] = useState({ name: '', phone: '', zip: '', issue: '', urgency: 'Within a week' });
+  const [state, setState] = useState({ name: '', phone: '', email: '', zip: '', issue: '', urgency: 'Within a week' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    const e = {};
+    if (!state.name.trim()) e.name = true;
+    if (!state.zip.trim()) e.zip = true;
+    if (!state.issue.trim()) e.issue = true;
+    const hasPhone = state.phone.trim();
+    const hasEmail = state.email.trim();
+    if (!hasPhone && !hasEmail) e.contact = true;
+    if (hasPhone && state.phone.replace(/\D/g, '').length !== 10) e.phone = true;
+    return e;
+  };
+
+  const change = (key, val) => {
+    setState(s => ({ ...s, [key]: val }));
+    setErrors(e => {
+      const next = { ...e };
+      delete next[key];
+      if (key === 'phone' || key === 'email') delete next.contact;
+      return next;
+    });
+  };
 
   const field = (key, label, type = 'text', placeholder) => (
     <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-      <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>{label}</span>
+      <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: errors[key] ? '#DC2626' : theme.monoColor }}>{label}</span>
       <input
         type={type}
         value={state[key]}
         placeholder={placeholder}
-        onChange={e => setState(s => ({ ...s, [key]: e.target.value }))}
+        onChange={e => change(key, e.target.value)}
         style={{
-          width: '100%', padding: '12px 14px', border: `1px solid ${theme.line}`, borderRadius: theme.radius,
+          width: '100%', padding: '12px 14px', borderRadius: theme.radius,
+          border: `1px solid ${errors[key] || (errors.contact && (key === 'phone' || key === 'email')) ? '#DC2626' : theme.line}`,
           background: theme.surface, color: theme.ink, fontFamily: theme.bodyFont, fontSize: 15, outline: 'none', boxSizing: 'border-box',
         }}
       />
@@ -50,13 +74,19 @@ export const BookForm = ({ theme, compact, onDone }) => {
     <form
       onSubmit={async e => {
         e.preventDefault();
+        const e2 = validate();
+        if (Object.keys(e2).length) { setErrors(e2); return; }
         setLoading(true);
         setError(false);
         try {
           await fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams({ 'form-name': 'service-request', ...state }).toString(),
+            body: new URLSearchParams({
+            'form-name': 'service-request',
+            ...state,
+            phone: state.phone.replace(/\D/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3'),
+          }).toString(),
           });
           setSubmitted(true);
         } catch {
@@ -79,23 +109,43 @@ export const BookForm = ({ theme, compact, onDone }) => {
       <div style={{ color: theme.muted, fontFamily: theme.bodyFont, fontSize: 13, marginBottom: 4 }}>
         Give us the details. We&rsquo;ll call you back — usually within the hour.
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-        {field('name', 'Your name', 'text', 'Jane Smith')}
-        {field('phone', 'Phone', 'tel', '(425) 555-0123')}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+          {field('name', 'Your name', 'text', 'Jane Smith')}
+          {field('phone', 'Phone', 'tel', '(425) 555-0123')}
+        </div>
+        {errors.phone && (
+          <span style={{ fontFamily: theme.bodyFont, fontSize: 12, color: '#DC2626' }}>Please enter a 10-digit US phone number.</span>
+        )}
       </div>
-      {field('zip', 'ZIP code', 'text', '98443')}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+          {field('email', 'Email', 'email', 'jane@example.com')}
+          {field('zip', 'ZIP code', 'text', '98443')}
+        </div>
+        {errors.contact && (
+          <span style={{ fontFamily: theme.bodyFont, fontSize: 12, color: '#DC2626' }}>Please provide a phone number or email address.</span>
+        )}
+      </div>
       <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>How can we help you?</span>
+        <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: errors.issue ? '#DC2626' : theme.monoColor }}>How can we help you?</span>
         <textarea
           value={state.issue}
-          onChange={e => setState(s => ({ ...s, issue: e.target.value }))}
+          onChange={e => change('issue', e.target.value)}
           placeholder="Kitchen outlets not working, want a quote on a panel upgrade, need an EV charger, etc."
           rows={3}
+          maxLength={400}
           style={{
-            padding: '12px 14px', border: `1px solid ${theme.line}`, borderRadius: theme.radius,
+            padding: '12px 14px', border: `1px solid ${errors.issue ? '#DC2626' : theme.line}`, borderRadius: theme.radius,
             width: '100%', boxSizing: 'border-box', background: theme.surface, color: theme.ink, fontFamily: theme.bodyFont, fontSize: 15, outline: 'none', resize: 'vertical',
           }}
         />
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          {errors.issue
+            ? <span style={{ fontFamily: theme.bodyFont, fontSize: 12, color: '#DC2626' }}>Please briefly describe your project.</span>
+            : <span />}
+          <span style={{ fontFamily: theme.monoFont, fontSize: 11, color: theme.muted, marginLeft: 'auto' }}>{state.issue.length}/400</span>
+        </div>
       </label>
       <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
         <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>How soon?</span>
