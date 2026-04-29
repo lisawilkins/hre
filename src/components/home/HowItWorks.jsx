@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { Section } from '../ui/Section';
 import { Button } from '../ui/Button';
 import { BookForm } from '../forms/BookForm';
@@ -6,7 +5,6 @@ import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 export const HowItWorks = ({ theme }) => {
   const { isTabletDown } = useBreakpoint();
-  const navigate = useNavigate();
 
   const steps = [
     { n: '01', t: 'Call or request', d: "Tell us what's going on. Short form or a phone call — whichever you like. Our skilled staff will call right back during business hours. Upfront pricing available on standard jobs." },

@@ -7,6 +7,8 @@ import { PHONE_DISPLAY, PHONE_TEL } from '../../data/content';
 export const BookForm = ({ theme, compact, onDone }) => {
   const [state, setState] = useState({ name: '', phone: '', zip: '', issue: '', urgency: 'Within a week' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const field = (key, label, type = 'text', placeholder) => (
     <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -46,7 +48,23 @@ export const BookForm = ({ theme, compact, onDone }) => {
 
   return (
     <form
-      onSubmit={e => { e.preventDefault(); setSubmitted(true); }}
+      onSubmit={async e => {
+        e.preventDefault();
+        setLoading(true);
+        setError(false);
+        try {
+          await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({ 'form-name': 'service-request', ...state }).toString(),
+          });
+          setSubmitted(true);
+        } catch {
+          setError(true);
+        } finally {
+          setLoading(false);
+        }
+      }}
       style={{
         padding: compact ? 24 : 32, background: theme.surface, borderRadius: theme.radius,
         border: `1px solid ${theme.line}`, display: 'flex', flexDirection: 'column', gap: 14,
@@ -91,7 +109,14 @@ export const BookForm = ({ theme, compact, onDone }) => {
           ))}
         </div>
       </label>
-      <Button theme={theme} variant="accent" size="lg" iconRight="arrow" full>Request a call back</Button>
+      {error && (
+        <div style={{ padding: '10px 14px', background: '#FEE2E2', borderRadius: theme.radius, color: '#991B1B', fontFamily: theme.bodyFont, fontSize: 13 }}>
+          Something went wrong. Please call us directly or try again.
+        </div>
+      )}
+      <Button theme={theme} variant="accent" size="lg" iconRight="arrow" full disabled={loading}>
+        {loading ? 'Sending…' : 'Request a call back'}
+      </Button>
       <div style={{ textAlign: 'center', fontFamily: theme.bodyFont, fontSize: 12, color: theme.muted }}>
         Emergency? Call us directly at <a href={`tel:${PHONE_TEL}`} style={{ color: theme.ink, fontWeight: 600 }}>{PHONE_DISPLAY}</a>
       </div>

@@ -71,12 +71,13 @@ const ProcessBand = ({ theme }) => {
 
 export const ResidentialPage = ({ theme, tone }) => {
   const navigate = useNavigate();
+  const { isTabletDown } = useBreakpoint();
   return (
     <div>
       <PageMeta title="Residential Electrical Services · Home Run Electric" description="Licensed residential electrician in Western Washington. Panel upgrades, EV chargers, generators, smart home wiring, and more." />
       <PageHero theme={theme} eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} />
       <Section theme={theme}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 16 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? 'repeat(auto-fill, minmax(200px, 1fr))' : 'repeat(4, minmax(200px, 1fr))', gap: 16 }}>
           {SERVICES.map(s => <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate('/book', { state: { service: s } })} />)}
         </div>
       </Section>
