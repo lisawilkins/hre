@@ -13,15 +13,26 @@ export const HowItWorks = ({ theme }) => {
     { n: '03', t: 'Wired right', d: 'Permitted when required, tested before we leave, and warrantied for a full year.' },
   ];
   return (
-    <Section theme={theme} eyebrow="How it works" style={{ background: theme.surface }}>
+    <Section theme={theme} eyebrow={isTabletDown ? undefined : 'How it works'} style={{ background: theme.surface }}>
       <div style={{
         display: 'grid',
         gridTemplateColumns: isTabletDown ? '1fr' : '1.1fr 1fr',
         gap: isTabletDown ? 40 : 64,
         alignItems: 'center',
         minWidth: 0,
+        maxWidth: isTabletDown ? 650 : undefined,
+        margin: isTabletDown ? '0 auto' : undefined,
+        width: '100%',
       }}>
         <div style={{ minWidth: 0 }}>
+          {isTabletDown && (
+            <div style={{
+              fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase',
+              color: theme.monoColor, marginBottom: 24, display: 'flex', alignItems: 'center', gap: 10,
+            }}>
+              <span style={{ width: 24, height: 1, background: theme.monoColor }} /> How it works
+            </div>
+          )}
           <h2 style={{
             fontFamily: theme.displayFont, fontWeight: theme.displayWeight,
             fontSize: 'clamp(36px, 4.5vw, 56px)', lineHeight: 1, margin: 0,
@@ -32,9 +43,9 @@ export const HowItWorks = ({ theme }) => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0, minWidth: 0 }}>
             {steps.map((s, i) => (
               <div key={i} style={{
-                display: 'grid', gridTemplateColumns: isTabletDown ? '1fr' : 'auto 1fr', gap: isTabletDown ? 12 : 28,
+                display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 28,
                 padding: '22px 0', borderTop: i === 0 ? 'none' : `1px solid ${theme.line}`,
-                alignItems: isTabletDown ? 'flex-start' : 'baseline', minWidth: 0,
+                alignItems: 'baseline', minWidth: 0,
               }}>
                 <div style={{ fontFamily: theme.monoFont, fontSize: 14, color: theme.accent === '#FFC629' || theme.accent === '#EEFF41' ? theme.ink : theme.accent, fontWeight: 700, letterSpacing: '0.04em' }}>
                   {s.n}
