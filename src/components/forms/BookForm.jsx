@@ -63,7 +63,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
           Got it, {state.name.split(' ')[0] || 'friend'}.
         </div>
         <p style={{ fontFamily: theme.bodyFont, fontSize: 15, color: theme.ink2, margin: 0 }}>
-          One of our experts will call you right back at <strong>{state.phone || 'your number'}</strong> during business hours.
+          One of our experts will get in touch with you shortly during business hours.
         </p>
         {onDone && <div style={{ marginTop: 20 }}><Button theme={theme} variant="ghost" onClick={onDone}>Close</Button></div>}
       </div>
