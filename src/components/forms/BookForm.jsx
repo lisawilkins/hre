@@ -3,8 +3,10 @@ import { Icon } from '../ui/Icon';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 import { PHONE_DISPLAY, PHONE_TEL } from '../../data/content';
+import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 export const BookForm = ({ theme, compact, onDone }) => {
+  const { isMobile } = useBreakpoint();
   const [state, setState] = useState({ name: '', phone: '', email: '', zip: '', issue: '', urgency: 'Within a week' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -110,7 +112,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
         Give us the details. Our team will reach out right away during business hours.
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12 }}>
           {field('name', 'Your name', 'text', 'Jane Smith')}
           {field('phone', 'Phone', 'tel', '(425) 555-0123')}
         </div>
@@ -119,7 +121,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
         )}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12 }}>
           {field('email', 'Email', 'email', 'jane@example.com')}
           {field('zip', 'ZIP code', 'text', '98443')}
         </div>

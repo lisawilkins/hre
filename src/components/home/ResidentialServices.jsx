@@ -6,7 +6,7 @@ import { SERVICES } from '../../data/content';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 export const ResidentialServices = ({ theme }) => {
-  const { isMobile, isTabletDown } = useBreakpoint();
+  const { isMobile } = useBreakpoint();
   const navigate = useNavigate();
 
   return (
@@ -33,8 +33,8 @@ export const ResidentialServices = ({ theme }) => {
           </div>
         </div>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? 'repeat(auto-fill, minmax(200px, 1fr))' : 'repeat(4, minmax(200px, 1fr))', gap: 16 }}>
-        {SERVICES.map(s => (
+      <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', gap: 16 }}>
+        {SERVICES.slice(0, 4).map(s => (
           <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate('/book', { state: { service: s } })} />
         ))}
       </div>

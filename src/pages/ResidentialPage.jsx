@@ -21,7 +21,7 @@ const ProjectGallery = ({ theme }) => {
     <Section theme={theme} eyebrow="Recent projects" style={{ background: theme.surface }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', flexDirection: isMobile ? 'column' : 'row', gap: 12, marginBottom: 32 }}>
         <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1, margin: 0, letterSpacing: '-0.03em', color: theme.ink }}>
-          Some jobs from this month.
+          Projects from around the Sound.
         </h2>
         <Badge theme={theme} variant="soft">Photos — user to replace</Badge>
       </div>

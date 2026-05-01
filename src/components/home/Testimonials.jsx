@@ -9,7 +9,7 @@ export const Testimonials = ({ theme }) => {
   const cardCols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)';
 
   return (
-    <Section theme={theme} eyebrow="Neighbors talk">
+    <Section theme={theme} eyebrow="Testimonials">
       <div style={{
         display: 'grid',
         gridTemplateColumns: isMobile ? '1fr' : '1fr 2fr',
