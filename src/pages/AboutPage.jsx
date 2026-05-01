@@ -62,7 +62,7 @@ export const AboutPage = ({ theme, tone }) => (
     <Section theme={theme} eyebrow="Credentials" style={{ background: theme.surface }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
         {[
-          { t: 'Licensed in WA', d: 'Electrical contractor lic. #HOMERE*892BC' },
+          { t: 'Licensed in WA', d: 'Electrical contractor lic. HOMERRE974K2' },
           { t: 'Bonded & insured', d: '$2M general liability, $1M auto' },
           { t: 'IBEW trained', d: 'Every journeyman is union-trained' },
           { t: 'OSHA 30 certified', d: 'Safety-first, for your home and ours' },

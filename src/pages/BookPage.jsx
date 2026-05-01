@@ -11,16 +11,16 @@ export const BookPage = ({ theme, tone }) => {
   const selectedService = state?.service ?? null;
   return (
   <div>
-    <PageMeta title="Book a Visit · Home Run Electric" description="Request a callback from a licensed electrician in Western Washington. Short form — we call back within the hour during business hours." />
+    <PageMeta title="Request Service · Home Run Electric" description="Request service from Home Run Electric in Western Washington. Short form — our team gets back to you right away during business hours." />
     <Section theme={theme} style={{ borderTop: 'none' }}>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64 }}>
         <div>
-          <Badge theme={theme} variant="soft">Book a visit</Badge>
+          <Badge theme={theme} variant="soft">Request Service</Badge>
           <h1 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(40px, 5vw, 64px)', lineHeight: 1, margin: '18px 0 20px', letterSpacing: '-0.035em', color: theme.ink, textWrap: 'balance' }}>
-            Tell us what&apos;s going on. A real electrician calls back.
+            Tell us what&apos;s going on. Our team gets back to you.
           </h1>
           <p style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.55, color: theme.ink2, margin: 0, maxWidth: 440 }}>
-            Short form — about a minute. During business hours we usually call back within the hour. After hours, first thing next morning. For emergencies, call us directly at{' '}
+            Short form — about a minute. During business hours we&apos;ll get back to you right away. For emergencies, call us directly at{' '}
             <a href={`tel:${PHONE_TEL}`} style={{ color: theme.ink, fontWeight: 600 }}>{PHONE_DISPLAY}</a>.
           </p>
           {selectedService && (
@@ -37,8 +37,8 @@ export const BookPage = ({ theme, tone }) => {
           <div style={{ marginTop: 40, display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
             {[
               { i: 'phone', t: 'Or call us', d: PHONE_DISPLAY },
-              { i: 'clock', t: 'Hours', d: 'Mon–Sat · 7a–7p' },
-              { i: 'shield', t: 'Licensed', d: 'WA #HOMERE*892BC' },
+              { i: 'clock', t: 'Hours', d: 'Mon–Sat · 7a–6p' },
+              { i: 'shield', t: 'Licensed', d: 'WA Lic. HOMERRE974K2' },
               { i: 'pin', t: 'HQ', d: 'Lynnwood, WA' },
             ].map((it, i) => (
               <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>

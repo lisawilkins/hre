@@ -94,7 +94,7 @@ export const HomeHero = ({ theme, tone }) => {
             Your neighbors.<br/>Your electricians.
           </div>
           <p style={{ fontFamily: theme.bodyFont, fontSize: 15, lineHeight: 1.5, opacity: 0.92, margin: '0 0 24px', maxWidth: 360, position: 'relative' }}>
-            Headquartered in Lynnwood and serving Snohomish, King, Thurston, and Kitsap counties since 2003. We live here, our crew lives here, and we treat every job like it's on our own block.
+            Headquartered in Lynnwood and serving Snohomish, King, Pierce, and Thurston counties since 2003. We live here, our crew lives here, and we treat every job like it's on our own block.
           </p>
           <a href={`tel:${PHONE_TEL}`} style={{
             display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16,
@@ -114,7 +114,7 @@ export const HomeHero = ({ theme, tone }) => {
             fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.85, position: 'relative',
           }}>
             <div>Lynnwood HQ<br/><span style={{ opacity: 0.65 }}>since 2003</span></div>
-            <div>Four counties<br/><span style={{ opacity: 0.65 }}>Snohomish, King, Thurston, Kitsap</span></div>
+            <div>Four counties<br/><span style={{ opacity: 0.65 }}>Snohomish, King, Pierce, Thurston</span></div>
             {!isMobile && <div>Local crew<br/><span style={{ opacity: 0.65 }}>no franchise</span></div>}
           </div>
         </div>

@@ -92,7 +92,7 @@ export const Nav = ({ theme }) => {
                 }}>
                   <Icon name="phone" size={16} /> {PHONE_DISPLAY}
                 </a>
-                <Button theme={theme} variant="accent" size="sm" icon="calendar" onClick={() => handleNav('/book')}>Book</Button>
+                <Button theme={theme} variant="accent" size="sm" icon="calendar" onClick={() => handleNav('/book')}>Request Service</Button>
               </div>
             </>
           )}
@@ -121,7 +121,7 @@ export const Nav = ({ theme }) => {
           padding: isMobile ? '14px 16px' : '14px 24px',
           borderBottom: `1px solid ${theme.line}`,
         }}>
-          <Logo theme={theme} size={28} />
+          <div style={{ cursor: 'pointer' }} onClick={() => handleNav('/')}><Logo theme={theme} size={28} /></div>
           <button
             onClick={() => setMobileOpen(false)}
             style={{
@@ -160,7 +160,7 @@ export const Nav = ({ theme }) => {
           }}>
             <Icon name="phone" size={18} /> {PHONE_DISPLAY}
           </a>
-          <Button theme={theme} variant="accent" size="md" icon="calendar" onClick={() => handleNav('/book')} full>Book a visit</Button>
+          <Button theme={theme} variant="accent" size="md" icon="calendar" onClick={() => handleNav('/book')} full>Request Service</Button>
         </div>
       </div>
     </>

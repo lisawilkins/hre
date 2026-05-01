@@ -27,7 +27,7 @@ export const Footer = ({ theme }) => {
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: gridCols, gap: isMobile ? 36 : 48, marginBottom: isMobile ? 40 : 56 }}>
           <div style={{ gridColumn: isTablet ? '1 / -1' : undefined }}>
-            <div style={{ marginBottom: 18 }}>
+            <div style={{ marginBottom: 18, cursor: 'pointer', display: 'inline-block' }} onClick={() => navigate('/')}>
               <Logo theme={theme} size={64} variant="light" />
             </div>
             <p style={{ fontFamily: theme.bodyFont, fontSize: 14, lineHeight: 1.6, opacity: 0.75, maxWidth: 320, margin: 0 }}>
@@ -35,7 +35,6 @@ export const Footer = ({ theme }) => {
             </p>
             <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 8, fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.7 }}>
               <div>WA Lic. HOMERRE974K2 · Bonded & Insured</div>
-              <div>19215 33rd Ave W, Lynnwood WA 98036</div>
             </div>
           </div>
           <FooterCol theme={theme} title="Services" items={['Panel upgrades', 'EV chargers', 'Generators', 'Smart home', 'Troubleshooting', 'Lighting', 'Hot tub & pool']} />
@@ -44,11 +43,11 @@ export const Footer = ({ theme }) => {
             { t: 'Commercial', go: () => navigate('/commercial') },
             { t: 'About & team', go: () => navigate('/about') },
             { t: 'Service area', go: () => navigate('/service-areas') },
-            { t: 'Book a visit', go: () => navigate('/book') },
+            { t: 'Request Service', go: () => navigate('/book') },
           ]} />
           <FooterCol theme={theme} title="Contact" items={[
             PHONE_DISPLAY,
-            'hello@homerunelectric.com',
+            'websupport@homerunelectricllc.com',
             'Mon–Sat · 7a–6p',
             'Emergency service — King County',
           ]} />

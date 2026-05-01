@@ -35,7 +35,7 @@ export const CTABand = ({ theme, tone }) => {
             Ready when you are.
           </h2>
           <p style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.55, opacity: 0.8, marginTop: 20, maxWidth: 480 }}>
-            Short form, or a phone call. Either way you get a real electrician — usually within the hour.
+            Short form, or a phone call. Either way, our team gets back to you right away during business hours.
           </p>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>

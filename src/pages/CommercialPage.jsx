@@ -17,7 +17,7 @@ export const CommercialPage = ({ theme, tone }) => {
 
   return (
     <div>
-      <PageMeta title="Commercial Electrical Services · Home Run Electric" description="Licensed commercial electrician in Western Washington. Tenant improvements, service upgrades, ground-up construction, and 24/7 emergency response." />
+      <PageMeta title="Commercial Electrical Services · Home Run Electric" description="Licensed commercial electrician in Western Washington. Tenant improvements, service upgrades, ground-up construction, and emergency response." />
       <PageHero theme={theme} eyebrow="Commercial" title="Twenty-plus years keeping Western Washington's businesses running." lede={tone.commercialLede} />
 
       {/* Services grid */}

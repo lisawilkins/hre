@@ -107,7 +107,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
         </div>
       </div>
       <div style={{ color: theme.muted, fontFamily: theme.bodyFont, fontSize: 13, marginBottom: 4 }}>
-        Give us the details. We&rsquo;ll call you back — usually within the hour.
+        Give us the details. Our team will reach out right away during business hours.
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
