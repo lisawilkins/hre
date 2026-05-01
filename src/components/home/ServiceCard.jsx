@@ -36,7 +36,7 @@ export const ServiceCard = ({ theme, service, onClick, compact }) => (
       {service.eta ? (
         <>
           <span><Icon name="clock" size={11} /> {service.eta}</span>
-          <span>From {service.from}</span>
+          {/* <span>From {service.from}</span> */}
         </>
       ) : (
         <span>Request Estimate</span>
