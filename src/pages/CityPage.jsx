@@ -44,7 +44,7 @@ export const CityPage = ({ theme }) => {
       </div>
 
       {emergency && (
-        <div id="emergency" style={{ background: theme.emergency, color: theme.emergencyInk, padding: '16px 48px' }}>
+        <div id="emergency" style={{ background: theme.emergency, color: theme.emergencyInk, padding: isMobile ? '12px 16px' : isTablet ? '16px 24px' : '16px 48px' }}>
           <div style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 12, fontFamily: theme.monoFont, fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', fontWeight: 700 }}>
             <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', background: theme.emergencyInk, animation: 'hrepulse 1.4s ease-in-out infinite' }} />
             Emergency service available in {city}, Mon–Sat, 7a–6p — call <a href={`tel:${PHONE_TEL}`} style={{ color: 'inherit' }}>(425) 489-0791</a>
@@ -53,7 +53,7 @@ export const CityPage = ({ theme }) => {
       )}
 
       <Section theme={theme} id="services" eyebrow="Services available">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end', marginBottom: 32 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', flexDirection: isMobile ? 'column' : 'row', gap: 8, marginBottom: 32 }}>
           <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1, margin: 0, letterSpacing: '-0.03em', color: theme.ink }}>
             What we do in {city}.
           </h2>

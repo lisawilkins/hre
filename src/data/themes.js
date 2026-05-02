@@ -80,7 +80,7 @@ export const TONE_COPY = {
     emergencyLede: 'Power out? Breaker tripping? Burning smell? Electricians are available Mon–Sat, 7am-6pm.',
     residentialLede: "Home Run Electric handles the full range of residential electrical work, from panel upgrades and EV chargers to smart home installations and new construction. We treat your home like it's our own. Don't see your service listed? Contact us to request a quote.",
     commercialLede: 'Home Run Electric has delivered reliable commercial electrical work since 2003, from storefront wiring and 3-phase systems to large-scale power distribution and code compliance. We offer the following services and much more. Contact us to get a free estimate.',
-    aboutLede: "We're a local, full-time crew doing careful work for our neighbors.",
+    aboutLede: "Home Run Electric has been the trusted electrical contractor proudly serving our neighbors and community with integrity and honesty.",
   },
   professional: {
     name: 'Professional',

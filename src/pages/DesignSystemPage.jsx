@@ -10,7 +10,10 @@ const ALL_ICONS = [
   'bolt', 'phone', 'arrow', 'check', 'shield', 'clock', 'pin', 'calendar',
   'menu', 'close', 'star', 'house', 'building', 'wrench', 'plug', 'car',
   'lightbulb', 'battery', 'droplet', 'home-gear',
+  'hammer', 'tree', 'panel', 'resistor',
 ];
+
+const FILLED_ICONS = new Set(['bolt', 'shield', 'wrench', 'plug', 'panel', 'hammer']);
 
 const BUTTON_VARIANTS = ['primary', 'accent', 'emergency', 'outline', 'ghost'];
 const BADGE_VARIANTS = ['default', 'brand', 'accent', 'soft'];
@@ -197,6 +200,27 @@ export function DesignSystemPage() {
           </div>
         </Block>
 
+        {/* Section eyebrow motif */}
+        <Block label="Section eyebrow motif">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <svg viewBox="0 0 204 72" width={34} height={12} fill="none" style={{ flexShrink: 0, color: '#c2b9a3' }}>
+                <path d="M12 36H47" stroke="currentColor" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M47 36L67 6L87 66L107 6L127 66L147 6L167 36" stroke="currentColor" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M167 36H192" stroke="currentColor" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 42C15.31 42 18 39.31 18 36C18 32.69 15.31 30 12 30C8.69 30 6 32.69 6 36C6 39.31 8.69 42 12 42Z" fill="currentColor"/>
+                <path d="M192 42C195.31 42 198 39.31 198 36C198 32.69 195.31 30 192 30C188.69 30 186 32.69 186 36C186 39.31 188.69 42 192 42Z" fill="currentColor"/>
+              </svg>
+              <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>
+                Covering the bases since 2003
+              </span>
+            </div>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#6B7280', maxWidth: 480 }}>
+              The resistor symbol prefixes all section eyebrows in place of a plain rule. Fixed color <span style={{ color: '#0B1F3A', fontWeight: 600 }}>#c2b9a3</span>, 34×12px render. Eyebrow text uses <code>theme.monoFont</code> + <code>theme.monoColor</code>.
+            </div>
+          </div>
+        </Block>
+
         {/* Typography */}
         <Block label="Typography scale">
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
@@ -235,12 +259,15 @@ export function DesignSystemPage() {
               <div key={name} style={{
                 display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
                 padding: '16px 14px',
-                background: '#FFFFFF', border: '1px solid #E3DFD5', borderRadius: 8,
+                background: '#FFFFFF', border: '1px solid #CCC5B3', borderRadius: 8,
                 minWidth: 80, color: '#0B1F3A',
               }}>
                 <Icon name={name} size={22} />
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: '#6B7280', textAlign: 'center' }}>
                   {name}
+                </div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 8, color: FILLED_ICONS.has(name) ? '#FFC629' : '#CCC5B3', textAlign: 'center', letterSpacing: '0.06em' }}>
+                  {FILLED_ICONS.has(name) ? 'filled' : 'stroke'}
                 </div>
               </div>
             ))}
