@@ -32,8 +32,8 @@ export const LocationsPage = ({ theme, tone }) => {
         title="Service Areas · Home Run Electric — Western Washington"
         description="Home Run Electric serves Snohomish, King, Thurston, and Pierce counties. Find your city for ETA, job history, and availability."
       />
-      <PageHero theme={theme} eyebrow="Service area" title="Serving Snohomish, King, Thurston & Pierce counties." lede="Full service from our Lynnwood headquarters across four counties. Emergency and after-hours service available in King and Snohomish counties. If your area isn't listed give us a call!" />
-      <Section theme={theme}>
+      <PageHero theme={theme} id="hero" eyebrow="Service areas" title="Serving Snohomish, King, Thurston & Pierce counties." lede="Full service from our Lynnwood headquarters across four counties. Emergency and after-hours service available in King and Snohomish counties. If your area isn't listed give us a call!" />
+      <Section theme={theme} id="locations">
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.2fr', gap: isMobile ? 32 : 48 }}>
           <div>
             <ServiceAreaMap />
@@ -85,7 +85,7 @@ export const LocationsPage = ({ theme, tone }) => {
           </div>
         </div>
       </Section>
-      <CTABand theme={theme} tone={tone} />
+      <CTABand theme={theme} tone={tone} id="cta" />
     </div>
   );
 };

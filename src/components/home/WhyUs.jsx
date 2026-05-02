@@ -2,7 +2,7 @@ import { Section } from '../ui/Section';
 import { Icon } from '../ui/Icon';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
-export const WhyUs = ({ theme }) => {
+export const WhyUs = ({ theme, id }) => {
   const { isMobile, isTablet } = useBreakpoint();
   const cols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)';
 
@@ -13,7 +13,7 @@ export const WhyUs = ({ theme }) => {
     { i: 'bolt', t: 'Commercial-grade standards', d: 'The same crew that wires hospitals and schools is now on your porch light.' },
   ];
   return (
-    <Section theme={theme} style={{ background: theme.surface }} eyebrow="Why Trust Home Run Electric">
+    <Section theme={theme} id={id} style={{ background: theme.surface }} eyebrow="Why Trust Home Run Electric">
       <div style={{ display: 'grid', gridTemplateColumns: cols, gap: 16 }}>
         {items.map((it, i) => (
           <div key={i} style={{

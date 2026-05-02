@@ -42,11 +42,11 @@ const LaneCard = ({ theme, kind, title, lede, icon, go, isMobile }) => (
   </div>
 );
 
-export const TwoLanes = ({ theme }) => {
+export const TwoLanes = ({ theme, id }) => {
   const { isMobile } = useBreakpoint();
   const navigate = useNavigate();
   return (
-    <Section theme={theme}>
+    <Section theme={theme} id={id}>
       <div style={{
         display: 'grid',
         gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',

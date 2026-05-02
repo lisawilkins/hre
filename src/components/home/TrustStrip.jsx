@@ -1,9 +1,9 @@
 import { Icon } from '../ui/Icon';
 import { COMMERCIAL_CLIENTS } from '../../data/content';
 
-export const TrustStrip = ({ theme }) => {
+export const TrustStrip = ({ theme, id }) => {
   return (
-    <div style={{
+    <div id={id} style={{
       background: theme.surface,
       borderTop: `1px solid ${theme.line}`,
       borderBottom: `1px solid ${theme.line}`,

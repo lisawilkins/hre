@@ -15,7 +15,7 @@ export const BookPage = ({ theme, tone }) => {
   return (
     <div>
       <PageMeta title="Request Service · Home Run Electric" description="Request service from Home Run Electric in Western Washington. Short form — our team gets back to you right away during business hours." />
-      <Section theme={theme} style={{ borderTop: 'none' }}>
+      <Section theme={theme} id="book" style={{ borderTop: 'none' }}>
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? '1fr' : '1fr 1fr', gap: isTabletDown ? 40 : 64 }}>
           <div>
             <Badge theme={theme} variant="soft">Request Service</Badge>

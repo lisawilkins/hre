@@ -78,9 +78,9 @@ export const TONE_COPY = {
     heroSub: "Home Run Electric has powered Western Washington's residential and commercial projects for over 20 years.",
     bookCta: 'Request Estimate',
     emergencyLede: 'Power out? Breaker tripping? Burning smell? Electricians are available Mon–Sat, 7am-6pm.',
-    residentialLede: "Home Run Electric handles the full range of residential electrical work — from panel upgrades and EV chargers to smart home installations and beyond. From panel swaps to hot-tub hookups, we treat your home like it's our own.",
-    commercialLede: 'Home Run Electric has delivered reliable commercial electrical work since 2003 — from storefront wiring and 3-phase systems to large-scale power distribution and code compliance. We offer the following services and much more. Contact us to get a free estimate.',
-    aboutLede: "We're a family-feel crew doing careful work for our neighbors.",
+    residentialLede: "Home Run Electric handles the full range of residential electrical work, from panel upgrades and EV chargers to smart home installations and beyond. From panel swaps to hot-tub hookups, we treat your home like it's our own.",
+    commercialLede: 'Home Run Electric has delivered reliable commercial electrical work since 2003, from storefront wiring and 3-phase systems to large-scale power distribution and code compliance. We offer the following services and much more. Contact us to get a free estimate.',
+    aboutLede: "We're a local, full-time crew doing careful work for our neighbors.",
   },
   professional: {
     name: 'Professional',

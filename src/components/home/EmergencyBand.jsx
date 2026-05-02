@@ -2,10 +2,10 @@ import { Section } from '../ui/Section';
 import { PHONE_DISPLAY, PHONE_TEL } from '../../data/content';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
-export const EmergencyBand = ({ theme, tone }) => {
+export const EmergencyBand = ({ theme, tone, id }) => {
   const { isMobile } = useBreakpoint();
   return (
-    <Section theme={theme} style={{ background: theme.emergency, color: theme.emergencyInk, borderTop: 'none' }}>
+    <Section theme={theme} id={id} style={{ background: theme.emergency, color: theme.emergencyInk, borderTop: 'none' }}>
       <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1.2fr 1fr', gap: isMobile ? 32 : 48, alignItems: isMobile ? 'start' : 'center' }}>
         <div>
           <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 700, marginBottom: 20, display: 'inline-flex', alignItems: 'center', gap: 10 }}>

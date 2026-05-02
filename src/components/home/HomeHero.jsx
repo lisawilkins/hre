@@ -5,12 +5,12 @@ import { HeroPattern } from '../ui/HeroPattern';
 import { STATS, PHONE_DISPLAY, PHONE_TEL } from '../../data/content';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
-export const HomeHero = ({ theme, tone }) => {
+export const HomeHero = ({ theme, tone, id }) => {
   const { isNarrow, isMobile, isTabletDown } = useBreakpoint();
   const navigate = useNavigate();
 
   return (
-    <div style={{ position: 'relative', background: theme.bg, overflow: 'hidden' }}>
+    <div id={id} style={{ position: 'relative', background: theme.bg, overflow: 'hidden' }}>
       <HeroPattern theme={theme} kind={theme.heroPattern} />
       <div style={{
         maxWidth: 1400, margin: '0 auto',

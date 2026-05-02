@@ -17,7 +17,7 @@ export const Nav = ({ theme }) => {
     { label: 'Home', path: '/' },
     { label: 'Residential', path: '/residential' },
     { label: 'Commercial', path: '/commercial' },
-    { label: 'Service area', path: '/service-areas' },
+    { label: 'Service areas', path: '/service-areas' },
     { label: 'About', path: '/about' },
   ];
 
@@ -101,7 +101,7 @@ export const Nav = ({ theme }) => {
 
       {mobileOpen && (
         <div
-          style={{ position: 'fixed', inset: 0, zIndex: 49, background: 'rgba(0,0,0,0.4)' }}
+          style={{ position: 'fixed', inset: 0, zIndex: 110, background: 'rgba(0,0,0,0.4)' }}
           onClick={() => setMobileOpen(false)}
         />
       )}
@@ -110,7 +110,7 @@ export const Nav = ({ theme }) => {
         width: isMobile ? '100%' : 320,
         background: theme.surface,
         borderLeft: `1px solid ${theme.line}`,
-        zIndex: 60,
+        zIndex: 120,
         transform: mobileOpen ? 'translateX(0)' : 'translateX(100%)',
         transition: 'transform 0.25s ease',
         display: 'flex', flexDirection: 'column',

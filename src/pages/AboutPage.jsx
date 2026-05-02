@@ -9,9 +9,9 @@ import { TEAM } from '../data/content';
 export const AboutPage = ({ theme, tone }) => (
   <div>
     <PageMeta title="About Us · Home Run Electric" description="Home Run Electric — licensed electrical contractor in Lynnwood, WA since 2003. Family-owned, IBEW-trained crew serving Western Washington." />
-    <PageHero theme={theme} eyebrow="About HRE" title="We answer the phone. We show up. We wire it right." lede={tone.aboutLede} />
+    <PageHero theme={theme} id="hero" eyebrow="About HRE" title="We answer the phone. We show up. We wire it right." lede={tone.aboutLede} />
 
-    <Section theme={theme} style={{ background: theme.surface }}>
+    <Section theme={theme} id="story" style={{ background: theme.surface }}>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
         <Placeholder theme={theme} label="Crew photo · Lynnwood shop · 2024" aspect="4/5" tint="#8A8570" />
         <div>
@@ -33,7 +33,7 @@ export const AboutPage = ({ theme, tone }) => (
       </div>
     </Section>
 
-    <Section theme={theme} eyebrow="The crew">
+    <Section theme={theme} id="team" eyebrow="The crew">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end', marginBottom: 32 }}>
         <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1, margin: 0, letterSpacing: '-0.03em', color: theme.ink }}>
           The people on your job.
@@ -59,7 +59,7 @@ export const AboutPage = ({ theme, tone }) => (
       </div>
     </Section>
 
-    <Section theme={theme} eyebrow="Credentials" style={{ background: theme.surface }}>
+    <Section theme={theme} id="credentials" eyebrow="Credentials" style={{ background: theme.surface }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
         {[
           { t: 'Licensed in WA', d: 'Electrical contractor lic. HOMERRE974K2' },
@@ -78,6 +78,6 @@ export const AboutPage = ({ theme, tone }) => (
       </div>
     </Section>
 
-    <CTABand theme={theme} tone={tone} />
+    <CTABand theme={theme} tone={tone} id="cta" />
   </div>
 );

@@ -5,11 +5,11 @@ import { Button } from '../components/ui/Button';
 import { PHONE_DISPLAY, PHONE_TEL } from '../data/content';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
-export const PageHero = ({ theme, eyebrow, title, lede }) => {
+export const PageHero = ({ theme, eyebrow, title, lede, id }) => {
   const { isMobile, isTablet } = useBreakpoint();
   const padding = isMobile ? '48px 16px 40px' : isTablet ? '60px 24px 52px' : '72px 48px 64px';
   return (
-    <div style={{ background: theme.bg, position: 'relative', overflow: 'hidden' }}>
+    <div id={id} style={{ background: theme.bg, position: 'relative', overflow: 'hidden' }}>
       <HeroPattern theme={theme} kind={theme.heroPattern} />
       <div style={{ maxWidth: 1280, margin: '0 auto', padding, position: 'relative' }}>
         <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor, marginBottom: 20, display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -31,11 +31,11 @@ export const PageHero = ({ theme, eyebrow, title, lede }) => {
   );
 };
 
-export const CTABand = ({ theme, tone }) => {
+export const CTABand = ({ theme, tone, id }) => {
   const navigate = useNavigate();
   const { isTabletDown } = useBreakpoint();
   return (
-    <Section theme={theme} style={{ background: theme.brand, color: theme.brandInk, borderTop: 'none' }}>
+    <Section theme={theme} id={id} style={{ background: theme.brand, color: theme.brandInk, borderTop: 'none' }}>
       <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? '1fr' : '1.4fr 1fr', gap: isTabletDown ? 32 : 48, alignItems: 'center' }}>
         <div>
           <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(40px, 5vw, 64px)', lineHeight: 1, margin: 0, letterSpacing: '-0.035em' }}>

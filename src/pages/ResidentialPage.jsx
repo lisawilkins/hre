@@ -1,34 +1,36 @@
 import { useNavigate } from 'react-router-dom';
 import { Section } from '../components/ui/Section';
 import { PageMeta } from '../components/ui/PageMeta';
-import { Badge } from '../components/ui/Badge';
-import { Placeholder } from '../components/ui/Placeholder';
+import imgPanel from '../assets/res-panel.jpg';
+import imgEV from '../assets/res-ev-charger.jpg';
+import imgGenerator from '../assets/res-generator.jpg';
+import imgLighting from '../assets/res-lighting.jpg';
 import { ServiceCard } from '../components/home/ServiceCard';
 import { Testimonials } from '../components/home/Testimonials';
 import { PageHero, CTABand } from './shared';
 import { SERVICES } from '../data/content';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
-const ProjectGallery = ({ theme }) => {
+const ProjectGallery = ({ theme, id }) => {
   const { isMobile, isTablet } = useBreakpoint();
   const projects = [
-    { t: '200A panel upgrade', where: 'Edmonds · 1951 Craftsman', tint: '#7FA0B8' },
-    { t: 'Tesla Wall Connector', where: 'Mill Creek · detached garage', tint: '#C38B6E' },
-    { t: 'Generac 22kW standby', where: 'Lynnwood · whole-home', tint: '#A7BFA0' },
-    { t: 'Kitchen remodel rewire', where: 'Bothell · 1980s split', tint: '#D6B468' },
+    { t: '200A panel upgrade', where: 'Edmonds · 1951 Craftsman', img: imgPanel },
+    { t: 'EV Charger Install', where: 'Mill Creek · detached garage', img: imgEV },
+    { t: 'Backup generator', where: 'Lynnwood · whole-home', img: imgGenerator },
+    { t: 'Kitchen remodel rewire', where: 'Bothell · 1980s split', img: imgLighting },
   ];
   return (
-    <Section theme={theme} eyebrow="Recent projects" style={{ background: theme.surface }}>
+    <Section theme={theme} id={id} eyebrow="Recent projects" style={{ background: theme.surface }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', flexDirection: isMobile ? 'column' : 'row', gap: 12, marginBottom: 32 }}>
         <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1, margin: 0, letterSpacing: '-0.03em', color: theme.ink }}>
           Projects from around the Sound.
         </h2>
-        <Badge theme={theme} variant="soft">Photos — user to replace</Badge>
+        {/* <Badge theme={theme} variant="soft">Photos — user to replace</Badge> */}
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : isTablet ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)', gap: 16 }}>
         {projects.map((p, i) => (
           <div key={i}>
-            <Placeholder theme={theme} label={p.t} aspect="4/5" tint={p.tint} />
+            <img src={p.img} alt={p.t} style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: theme.radius, display: 'block' }} />
             <div style={{ marginTop: 12 }}>
               <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 17, color: theme.ink, letterSpacing: '-0.015em' }}>{p.t}</div>
               <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.monoColor, marginTop: 4 }}>{p.where}</div>
@@ -40,7 +42,7 @@ const ProjectGallery = ({ theme }) => {
   );
 };
 
-const ProcessBand = ({ theme }) => {
+const ProcessBand = ({ theme, id }) => {
   const { isMobile, isTablet } = useBreakpoint();
   const cols = isMobile ? 1 : isTablet ? 2 : 4;
   const items = [
@@ -50,7 +52,7 @@ const ProcessBand = ({ theme }) => {
     { n: '2hr', l: 'Arrival window', d: 'Not "sometime today." A real window.' },
   ];
   return (
-    <Section theme={theme} eyebrow="What you can count on">
+    <Section theme={theme} id={id} eyebrow="What you can count on">
       <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: 0, border: `1px solid ${theme.line}`, borderRadius: theme.radius, overflow: 'hidden' }}>
         {items.map((it, i) => (
           <div key={i} style={{
@@ -72,19 +74,29 @@ const ProcessBand = ({ theme }) => {
 export const ResidentialPage = ({ theme, tone }) => {
   const navigate = useNavigate();
   const { isTabletDown } = useBreakpoint();
+  const desktopCols = 4;
+  const lastRowCount = SERVICES.length % desktopCols || desktopCols;
+  const lastRowSpan = Math.min(2, Math.floor(desktopCols / lastRowCount));
+  const lastRowStart = SERVICES.length - lastRowCount;
   return (
     <div>
       <PageMeta title="Residential Electrical Services · Home Run Electric" description="Licensed residential electrician in Western Washington. Panel upgrades, EV chargers, generators, smart home wiring, and more." />
-      <PageHero theme={theme} eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} />
-      <Section theme={theme}>
+      <PageHero theme={theme} id="hero" eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} />
+      <Section theme={theme} id="services">
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? 'repeat(auto-fill, minmax(200px, 1fr))' : 'repeat(4, minmax(200px, 1fr))', gap: 16 }}>
-          {SERVICES.map(s => <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate('/book', { state: { service: s } })} />)}
+          {SERVICES.map((s, i) => (
+            <ServiceCard
+              key={s.id} theme={theme} service={s}
+              onClick={() => navigate('/book', { state: { service: s } })}
+              style={!isTabletDown && i >= lastRowStart ? { gridColumn: `span ${lastRowSpan}` } : undefined}
+            />
+          ))}
         </div>
       </Section>
-      <ProjectGallery theme={theme} />
-      <ProcessBand theme={theme} />
-      <Testimonials theme={theme} />
-      <CTABand theme={theme} tone={tone} />
+      <ProjectGallery theme={theme} id="projects" />
+      <ProcessBand theme={theme} id="guarantees" />
+      <Testimonials theme={theme} id="testimonials" />
+      <CTABand theme={theme} tone={tone} id="cta" />
     </div>
   );
 };

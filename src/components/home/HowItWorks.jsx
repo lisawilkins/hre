@@ -3,7 +3,7 @@ import { Button } from '../ui/Button';
 import { BookForm } from '../forms/BookForm';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
-export const HowItWorks = ({ theme }) => {
+export const HowItWorks = ({ theme, id }) => {
   const { isTabletDown } = useBreakpoint();
 
   const steps = [
@@ -13,7 +13,7 @@ export const HowItWorks = ({ theme }) => {
     { n: '03', t: 'Wired right', d: 'Permitted when required, tested before we leave, and warrantied for a full year.' },
   ];
   return (
-    <Section theme={theme} eyebrow={isTabletDown ? undefined : 'How it works'} style={{ background: theme.surface }}>
+    <Section theme={theme} id={id} eyebrow={isTabletDown ? undefined : 'How it works'} style={{ background: theme.surface }}>
       <div style={{
         display: 'grid',
         gridTemplateColumns: isTabletDown ? '1fr' : '1.1fr 1fr',

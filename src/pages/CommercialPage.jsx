@@ -18,10 +18,10 @@ export const CommercialPage = ({ theme, tone }) => {
   return (
     <div>
       <PageMeta title="Commercial Electrical Services · Home Run Electric" description="Licensed commercial electrician in Western Washington. Tenant improvements, service upgrades, ground-up construction, and emergency response." />
-      <PageHero theme={theme} eyebrow="Commercial" title="20+ years keeping Western Washington's businesses running." lede={tone.commercialLede} />
+      <PageHero theme={theme} id="hero" eyebrow="Commercial" title="20+ years keeping Western Washington's businesses running." lede={tone.commercialLede} />
 
       {/* Services grid */}
-      <Section theme={theme}>
+      <Section theme={theme} id="services">
         <div style={{ display: 'grid', gridTemplateColumns: servicesCols, gap: 16 }}>
           {COMMERCIAL_SERVICES.map((s, i) => (
             <div key={i} style={{
@@ -42,7 +42,7 @@ export const CommercialPage = ({ theme, tone }) => {
       </Section>
 
       {/* Clients */}
-      <Section theme={theme} eyebrow="Commercial clients" style={{ background: theme.surface }}>
+      <Section theme={theme} id="clients" eyebrow="Commercial clients" style={{ background: theme.surface }}>
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? '1fr' : '1fr 1.5fr', gap: isTabletDown ? 32 : 48, alignItems: 'start' }}>
           <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1, margin: 0, letterSpacing: '-0.03em', color: theme.ink }}>
             We&apos;ve worked with.
@@ -61,7 +61,7 @@ export const CommercialPage = ({ theme, tone }) => {
       </Section>
 
       {/* Bid section */}
-      <Section theme={theme}>
+      <Section theme={theme} id="bid">
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? '1fr' : '1.2fr 1fr', gap: isTabletDown ? 40 : 48, alignItems: 'center' }}>
           <div>
             <Badge theme={theme} variant="brand">Bid request</Badge>

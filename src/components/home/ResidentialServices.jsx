@@ -5,12 +5,12 @@ import { ServiceCard } from './ServiceCard';
 import { SERVICES } from '../../data/content';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
-export const ResidentialServices = ({ theme }) => {
+export const ResidentialServices = ({ theme, id }) => {
   const { isMobile } = useBreakpoint();
   const navigate = useNavigate();
 
   return (
-    <Section theme={theme} eyebrow="Residential services">
+    <Section theme={theme} id={id} eyebrow="Residential services">
       <div style={{
         display: 'grid',
         gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
