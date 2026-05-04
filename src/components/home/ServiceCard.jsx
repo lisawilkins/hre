@@ -36,7 +36,7 @@ export const ServiceCard = ({ theme, service, onClick, compact, style }) => (
     <div style={{ marginTop: 'auto', paddingTop: 14, borderTop: `1px solid ${theme.line}`, display: 'flex', justifyContent: 'space-between', fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.monoColor }}>
       {service.eta ? (
         <>
-          <span><Icon name="clock" size={11} /> {service.eta}</span>
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><Icon name="clock" size={11} /> {service.eta}</span>
           {/* <span>From {service.from}</span> */}
         </>
       ) : (

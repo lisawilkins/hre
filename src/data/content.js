@@ -226,21 +226,33 @@ export const LOCATIONS = [
 
 export const TESTIMONIALS = [
   {
-    quote: "Ray's team upgraded our panel and ran a new EV circuit in one day. Permit was handled. Cleaner than when they got here.",
-    name: 'Jordan M.',
-    where: 'Gig Harbor',
+    quote: "Mike was super responsive and is extremely knowledgeable! He was able to assess the state of my current electrical system and diagnose what the problem was with my electrical flow.",
+    name: 'Amy M.',
+    where: 'Kirkland',
     rating: 5,
   },
   {
-    quote: 'Our breaker kept tripping on a Sunday night. A real electrician — not dispatch — called me back in ten minutes.',
-    name: 'Priya R.',
+    quote: 'I am a general contractor and Homerun has performed many electrical repairs and installations for me over the years. Their work was consistently excellent and their pricing was always very reasonable.',
+    name: 'James C.',
     where: 'Lynnwood',
     rating: 5,
   },
   {
-    quote: "HRE has handled our office buildouts for six years. First residential call was for my own house. No surprises either way.",
-    name: 'Devon K.',
-    where: 'Puyallup',
+    quote: 'I had an exceptional experience with Brian Smith who went out of his way to come by our house and fix a broken outlet when he found out we lived near him. He went way above and beyond volunteering to do work. He was responsive, quick on the job and very friendly in person.',
+    name: 'Nikki L.',
+    where: 'Lynnwood',
+    rating: 5,
+  },
+  {
+    quote: "I called first thing in the morning and just a few hours later one of their electricians Brian was at the job site. Overall the experience was easy, stress free, and upfront... It was easy to tell that Brian was an expert in his field and that he truly enjoyed the electrical process. I also appreciated how Home Run Electric was very accommodating to our individual needs.",
+    name: 'Holly S.',
+    where: 'Bellevue',
+    rating: 5,
+  },
+  {
+    quote: "Super knowledgeable staff, responsive to calls and follow up question/issues that I had, and even recommended additional cost saving solutions with another provider. They went above and beyond on the project and left everything spotless afterwards",
+    name: 'Lisa W.',
+    where: 'Kirkland',
     rating: 5,
   },
 ];
