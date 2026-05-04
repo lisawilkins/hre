@@ -41,4 +41,11 @@ export const SERVICE_ICONS = {
   landscape: 'tree',
   security: 'shield',
   'three-phase': 'resistor',
+  'tenant-improvements': 'building',
+  'ground-up-construction': 'building',
+  'service-upgrades': 'bolt',
+  'data-low-voltage': 'plug',
+  'preventive-maintenance': 'wrench',
+  'emergency-response': 'phone',
+  'three-phase-systems': 'resistor',
 };

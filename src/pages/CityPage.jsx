@@ -6,6 +6,8 @@ import { Badge } from '../components/ui/Badge';
 import { ServiceCard } from '../components/home/ServiceCard';
 import { PageMeta } from '../components/ui/PageMeta';
 import { HeroPattern } from '../components/ui/HeroPattern';
+import { JsonLd } from '../components/seo/JsonLd';
+import { breadcrumbSchema } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
 export const CityPage = ({ theme }) => {
@@ -25,6 +27,11 @@ export const CityPage = ({ theme }) => {
         title={`Electrical Services in ${city}, WA · Home Run Electric`}
         description={`Licensed electrician serving ${city}, WA. EV chargers, panel upgrades, generators, and more.${emergency ? ' After hours emergency service available.' : ''}`}
       />
+      <JsonLd schema={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Service Areas', path: '/service-areas' },
+        { name: `${city}, WA`, path: `/service-areas/${citySlug}` },
+      ])} />
 
       <div id="hero" style={{ background: theme.bg, position: 'relative', overflow: 'hidden' }}>
         <HeroPattern theme={theme} kind={theme.heroPattern} />
@@ -37,9 +44,6 @@ export const CityPage = ({ theme }) => {
             <Button theme={theme} variant="primary" iconRight="arrow" onClick={() => navigate('/book')}>Request Estimate</Button>
             <Button theme={theme} variant="ghost" icon="phone" onClick={() => window.location.href = `tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</Button>
           </div>
-          {blurb && (
-            <p style={{ fontFamily: theme.bodyFont, fontSize: isMobile ? 16 : 19, lineHeight: 1.5, color: theme.ink2, marginTop: 28, maxWidth: 640 }}>{blurb}</p>
-          )}
         </div>
       </div>
 
@@ -50,6 +54,14 @@ export const CityPage = ({ theme }) => {
             Emergency service available in {city}, Mon–Sat, 7a–6p — call <a href={`tel:${PHONE_TEL}`} style={{ color: 'inherit' }}>(425) 489-0791</a>
           </div>
         </div>
+      )}
+
+      {blurb && (
+        <Section theme={theme} id="about">
+          <div style={{ maxWidth: 680 }}>
+            <p style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.7, color: theme.ink2, margin: 0 }}>{blurb}</p>
+          </div>
+        </Section>
       )}
 
       <Section theme={theme} id="services" eyebrow="Services available">
@@ -63,7 +75,7 @@ export const CityPage = ({ theme }) => {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gap: 16 }}>
           {SERVICES.map(s => (
-            <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate('/book', { state: { service: s } })} />
+            <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate(`/residential/${s.id}`)} />
           ))}
         </div>
       </Section>

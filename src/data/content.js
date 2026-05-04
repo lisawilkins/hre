@@ -9,6 +9,17 @@ export const SERVICES = [
     eta: '4-8 hrs (+permits & inspections)',
     from: '$2,600',
     tag: 'Most requested',
+    body: `Your electrical panel is the heart of your home's electrical system — and if it's undersized, outdated, or struggling to keep up with modern demand, it's time for an upgrade. Home Run Electric provides electrical panel upgrades and replacements for homeowners throughout Western Washington, delivering the capacity and safety your home needs for today and the years ahead.
+    
+    Older panels — particularly those from brands like Federal Pacific, Zinsco, and pushmatic — have well-documented safety issues and should be evaluated by a licensed electrician as soon as possible. Even panels that aren't flagged as hazardous can become inadequate over time as homes add EV chargers, hot tubs, home offices, and modern appliances that draw more power than older systems were designed to handle.
+    
+    Signs that your panel may need an upgrade include frequently tripping breakers, lights that flicker when appliances run, a panel that feels warm to the touch, a fuse box rather than a breaker panel, or simply running out of space to add new circuits. If you're planning a major remodel, adding an EV charger, or installing a hot tub or generator, a panel evaluation should be part of the planning process.
+    
+    We handle everything from pulling permits and coordinating with your utility for service upgrades to installing the new panel, reconnecting circuits, and passing final inspection. Most residential panel upgrades are completed in a single day with minimal disruption.
+    
+    Common panel upgrade services include main panel replacement, service entrance upgrades, subpanel installation, circuit breaker replacement, load calculation and capacity planning, and permit filing and inspection coordination.
+    
+    Is your panel keeping up? Contact Home Run Electric for a free evaluation and estimate. We serve homeowners throughout Western Washington including King, Snohomish, and Pierce counties.`,
   },
   {
     id: 'ev',
@@ -17,6 +28,17 @@ export const SERVICES = [
     eta: '2-4 hrs',
     from: '$950',
     tag: 'Fast install',
+    body: `Electric vehicles are becoming the norm across Western Washington — and having a reliable Level 2 charger at home is one of the best upgrades an EV owner can make. Charging on a standard 120V outlet is slow and inefficient. A professionally installed Level 2 home charger cuts charging time dramatically, is safer for your vehicle's battery, and adds long-term value to your home.
+
+    Home Run Electric installs Level 2 EV chargers for homeowners throughout Western Washington. Our licensed electricians assess your electrical panel, install a dedicated 240V circuit, and mount your charger in the optimal location — whether that's in your garage, carport, or on an exterior wall. We work with all major charger brands including Tesla, ChargePoint, Emporia, and Grizzl-E, and we can help you select the right unit if you haven't purchased one yet.
+
+    If your panel doesn't have capacity for a new EV circuit, we'll let you know upfront and provide options — whether that's a panel upgrade, a load management solution, or a smart charger that balances your home's electrical demand automatically.
+
+    We pull all necessary permits and ensure your installation meets Washington State electrical code, utility requirements, and any HOA or municipality guidelines. A permitted, code-compliant installation also protects your home insurance coverage and keeps your charger warranty valid.
+
+    Common EV charger services include Level 2 charger installation, dedicated 240V circuit installation, panel capacity evaluation, charger brand selection guidance, permit filing and inspection, and multi-vehicle charging setup.
+
+    Ready to charge smarter at home? Contact Home Run Electric for a free EV charger estimate. We serve homeowners throughout Western Washington.`,
   },
   {
     id: 'generator',
@@ -25,6 +47,17 @@ export const SERVICES = [
     eta: '1-2 days (+permits & inspections)',
     from: '$12,500',
     tag: 'Storm-ready',
+    body: `Power outages are a fact of life in Western Washington — winter storms, downed lines, and grid disruptions can leave your home without power for hours or days at a time. A properly installed home generator keeps your lights on, your heat running, your refrigerator cold, and your family comfortable no matter what's happening outside.
+    
+    Home Run Electric installs both standby generators and transfer switches for homeowners throughout Western Washington. A standby generator connects directly to your home's electrical system and starts automatically when the power goes out — no manual setup, no extension cords, no guesswork. Paired with a properly installed transfer switch or automatic transfer panel, your home seamlessly switches to generator power within seconds of an outage.
+    
+    We work with all major generator brands and sizes, from units sized to power essential circuits to whole-home generators capable of running everything in your house. Our licensed electricians handle the full electrical scope — transfer switch installation, connection to your panel, load calculation to ensure the right generator size, and permit filing.
+    
+    For homeowners who already have a portable generator, we can install a manual transfer switch or generator interlock kit that allows you to connect it safely to your home's panel without backfeeding the grid — a serious safety hazard that can injure utility workers and damage your equipment.
+    
+    Common home generator electrical services include automatic standby generator installation, transfer switch and automatic transfer panel installation, generator interlock kit installation, panel load calculations, permit filing, and existing generator connection.
+    
+    Don't wait until the next storm to think about backup power. Contact Home Run Electric for a free generator estimate. We serve homeowners throughout Western Washington.`,
   },
   {
     id: 'smart',
@@ -33,6 +66,17 @@ export const SERVICES = [
     eta: '1-3 days',
     from: '$1,200',
     tag: 'Convenience',
+    body: `Smart home technology has moved well beyond novelty — today's systems control lighting, climate, security, entertainment, and energy use from a single app or voice command. Home Run Electric provides professional smart home electrical installation for Western Washington homeowners who want their technology to work reliably and integrate seamlessly with the rest of their home.
+    
+    Smart home systems are only as good as the wiring and infrastructure behind them. We install dedicated circuits, low-voltage wiring, smart panels, and the electrical backbone that makes everything from smart switches and dimmers to whole-home automation platforms perform the way they're supposed to. We work with all major platforms including Google Home, Amazon Alexa, Apple HomeKit, and Lutron.
+
+    Whether you're outfitting a new build with smart home infrastructure from the start or retrofitting an existing home with smart switches, EV chargers, automated lighting, or a smart security system, our licensed electricians make sure the electrical side is done right so your technology works without interruption.
+
+    Smart home upgrades also offer real energy efficiency benefits. Automated lighting schedules, smart thermostats, and energy monitoring systems help Western Washington homeowners reduce consumption and lower utility bills over time.
+
+    Common smart home electrical services include smart switch and dimmer installation, whole-home automation wiring, smart panel installation, low-voltage and structured wiring, smart lighting system setup, EV charger integration, and security system wiring.
+
+    Interested in making your home smarter? Contact Home Run Electric for a free estimate. We serve homeowners throughout Western Washington.`,
   },
   {
     id: 'repair',
@@ -41,6 +85,17 @@ export const SERVICES = [
     eta: '1-2 hrs',
     from: '$225',
     tag: 'Stay Safe',
+    body: `Electrical problems don't always announce themselves — and when they do, they can range from a nuisance to a serious safety hazard. Home Run Electric provides residential electrical safety inspections and troubleshooting services for homeowners throughout Western Washington, helping you identify issues before they become emergencies.
+
+    Our licensed electricians assess your home's electrical system from panel to outlets, looking for outdated wiring, overloaded circuits, improper grounding, code violations, and other conditions that can pose a fire or shock risk. Whether you're buying a home, dealing with recurring breaker trips, or simply haven't had your system looked at in years, a professional inspection gives you a clear picture of where things stand.
+
+    For troubleshooting, we track down the source of electrical problems quickly and accurately — flickering lights, dead outlets, circuit breakers that won't stay reset, burning smells, or anything else that doesn't seem right. We explain what we find in plain language and give you straightforward options for getting it fixed.
+
+    Older homes in Western Washington often have wiring that was installed to the standards of a different era. Knob-and-tube wiring, aluminum branch circuit wiring, and undersized panels are common findings in homes built before the 1980s — and all of them warrant a professional evaluation.
+
+    Common inspection and troubleshooting services include whole-home electrical inspections, pre-purchase inspections, breaker and panel diagnostics, outlet and switch troubleshooting, GFCI and AFCI compliance checks, and code violation identification and correction.
+
+    Don't wait for a small problem to become a big one. Contact Home Run Electric to schedule a safety inspection or troubleshooting visit anywhere in Western Washington.`,
   },
   {
     id: 'lighting',
@@ -49,6 +104,15 @@ export const SERVICES = [
     eta: '4-8 hrs',
     from: '$600',
     tag: 'Add Value',
+    body: `Good lighting does more than illuminate a room — it shapes how your home looks, feels, and functions. Home Run Electric provides complete residential lighting services for Western Washington homeowners, from installing recessed lighting and upgrading outdated fixtures to designing layered lighting systems that work for everyday living and special occasions alike.
+
+    Whether you're updating a single room or rewiring lighting throughout your entire home, our licensed electricians handle every detail safely and to code. We work with all types of lighting systems including LED, dimmer-controlled, and smart lighting setups that integrate with home automation platforms.
+
+    Outside the home, we install landscape lighting, pathway lights, security lighting, and exterior fixtures that improve curb appeal and keep your property safe after dark. A well-lit exterior adds value, deters intruders, and makes your home more welcoming year-round.
+
+    Common residential lighting services include recessed lighting installation, fixture replacement and upgrades, dimmer switch installation, under-cabinet lighting, accent and task lighting, outdoor and landscape lighting, and smart lighting system integration.
+
+    If your home's lighting feels outdated, inefficient, or just not quite right, Home Run Electric can help. We serve homeowners across Western Washington including King, Snohomish, and Pierce counties. Contact us today to request a free estimate.`,
   },
   {
     id: 'pool',
@@ -57,6 +121,17 @@ export const SERVICES = [
     eta: '3-6 hrs (+inspection)',
     from: '$1,150',
     tag: 'Relax',
+    body: `Installing a hot tub is an exciting upgrade for any home — but the electrical work behind it is not a DIY project. Hot tubs require a dedicated 240-volt circuit, proper grounding, a disconnect box within sight of the tub, and GFCI protection, all installed to National Electrical Code standards and Washington State requirements. Home Run Electric handles all of it for homeowners throughout Western Washington.
+
+    Our licensed electricians work directly with hot tub dealers, manufacturers, and homeowners to make sure the electrical installation matches the equipment specifications exactly. We pull the necessary permits, install the dedicated circuit from your panel, mount the disconnect, and ensure everything is wired safely before your tub goes live.
+
+    We also handle electrical work for swim spas and outdoor sauna installations, which have similar dedicated circuit and safety requirements. If your panel doesn't have capacity for a new hot tub circuit, we can evaluate your service and recommend an upgrade if needed.
+
+    Getting the electrical right from the start protects your investment, keeps your warranty intact, and — most importantly — keeps your family safe. Improperly wired hot tubs are a leading cause of outdoor electrical hazards, and it's not a risk worth taking.
+
+    Common hot tub electrical services include dedicated 240V circuit installation, GFCI disconnect box installation, panel capacity evaluation, permit filing, swim spa and sauna electrical, and inspection-ready installation.
+
+    Ready to install your hot tub? Contact Home Run Electric for a free estimate. We serve homeowners throughout Western Washington including King, Snohomish, and Pierce counties.`,
   },
   {
     id: 'remodel',
@@ -64,6 +139,17 @@ export const SERVICES = [
     blurb: 'Full electrical for new builds and remodels — panels, wiring, outlets, and code compliance handled start to finish.',
     from: 'Request Quote',
     tag: 'Integrity',
+    body: `A remodel or new build is only as good as the electrical work behind the walls. Home Run Electric provides complete residential electrical services for home remodels and new construction projects throughout Western Washington, working alongside contractors, builders, and homeowners to deliver safe, code-compliant wiring from rough-in through final inspection.
+
+    For remodels, we handle everything from adding circuits for a kitchen upgrade to rewiring an entire floor during a major renovation. We coordinate with your general contractor to stay on schedule and minimize disruption, and we bring the experience to anticipate issues before they become costly problems.
+
+    For new construction, our team manages the full electrical scope: service entrance, panel installation, rough-in wiring, outlet and switch placement, lighting circuits, and final trim built to Washington State code and ready for inspection. We work on custom homes, spec builds, ADUs, and multi-unit residential projects.
+
+    Whether you're adding a bathroom, finishing a basement, converting a garage, or building from the ground up, having a reliable electrical contractor on your team from the start makes the entire project run more smoothly.
+
+    Common remodeling and new construction electrical services include panel installation and service upgrades, rough-in wiring for new builds, circuit additions for kitchen and bath remodels, basement and ADU electrical, outlet and switch relocation, and final inspection-ready trim work.
+
+    Planning a remodel or new build in Western Washington? Contact Home Run Electric for a free estimate and let's talk through your project.`,
   },
   {
     id: 'landscape',
@@ -71,6 +157,16 @@ export const SERVICES = [
     blurb: 'Outdoor outlets, pathway lighting, security lighting, and more — weatherproof wiring that extends your home outdoors.',
     from: 'Request Quote',
     tag: 'Add Value',
+    body: `Your home's electrical needs don't stop at the front door. Landscape and exterior wiring expands what your property can do — from pathway lighting and garden accents to outdoor kitchens, detached garages, workshop power, and security lighting that keeps your home safe after dark. Home Run Electric provides complete outdoor and exterior electrical services for homeowners throughout Western Washington.
+    
+    We design and install weatherproof wiring systems built for the Pacific Northwest climate — damp, wet, and everything in between. All outdoor electrical work requires proper conduit, weatherproof enclosures, GFCI protection, and code-compliant installation to keep your family safe and your system reliable through years of Western Washington weather.
+    
+    Common projects include landscape lighting systems with low-voltage or line-voltage fixtures, pathway and driveway lighting, outdoor outlet installation for patios and decks, security and motion-activated lighting, power to detached garages and outbuildings, and wiring for outdoor kitchens, hot tubs, and pool equipment.
+    
+    If you're planning a backyard renovation, adding an ADU, or simply want better lighting and more usable outdoor outlets, Home Run Electric can help you plan and execute the electrical side of the project from start to finish. We pull permits, install to code, and leave your outdoor spaces ready for whatever you have planned.
+    
+    Common landscape and exterior electrical services include pathway and landscape lighting, outdoor outlet installation, security and motion lighting, detached garage and outbuilding power, deck and patio wiring, and GFCI-protected exterior circuits.
+    Ready to get more out of your outdoor space? Contact Home Run Electric for a free estimate. We serve homeowners throughout Western Washington.`,
   },
   {
     id: 'security',
@@ -79,17 +175,61 @@ export const SERVICES = [
     eta: '4-8 hrs',
     from: '$1,050',
     tag: 'Protection',
+    body: `A well-wired security system is one of the most valuable investments a homeowner can make — and getting the wiring right from the start is what makes it reliable for years to come. Home Run Electric installs the electrical infrastructure behind home security systems, including cameras, motion sensors, doorbell cameras, access control systems, and smart locks for homeowners across Western Washington.
+
+    We work alongside your security system provider or help you select the right equipment for your home's layout and your family's needs. From running low-voltage wiring through walls to installing dedicated circuits for security panels and exterior cameras, our licensed electricians ensure your system is installed cleanly, safely, and built to last.
+
+    Smart home security integrations are increasingly popular among Western Washington homeowners, and we have the experience to wire systems that connect seamlessly with platforms like Google Home, Amazon Alexa, and Apple HomeKit. Whether you're outfitting a new build or retrofitting an existing home, we make sure the wiring supports your system today and leaves room to expand tomorrow.
+
+    Common home security electrical services include security camera wiring and installation, video doorbell installation, motion sensor wiring, smart lock installation, access control system wiring, and low-voltage security panel setup.
+
+    Protect your home and family with a properly installed security system. Home Run Electric serves homeowners throughout Western Washington. Contact us to request a free estimate.`,
   },
 ];
 
 export const COMMERCIAL_SERVICES = [
-  { t: 'Tenant improvements', d: 'Full electrical for office buildouts, retail fit-outs, and restaurants.' },
-  { t: 'Ground-up construction', d: 'Design-assist and design-build for commercial and light industrial.' },
-  { t: 'Service upgrades', d: '400A-4000A service, switchgear replacement, and utility coordination.' },
-  { t: 'Data & low-voltage', d: 'Structured cabling, access control, CCTV rough-in, and AV backbones.' },
-  { t: 'Preventive maintenance', d: 'Thermal scans, panel surveys, lighting retrofits, emergency contracts.' },
-  { t: 'Emergency response', d: 'Emergency response during business hours. SLA contracts available.' },
-  { t: '3-phase systems', d: 'Installation and service of 3-phase power systems for businesses with heavy equipment, motors, or high-demand operations.' },
+  {
+    id: 'tenant-improvements',
+    t: 'Tenant improvements',
+    d: 'Full electrical for office buildouts, retail fit-outs, and restaurants.',
+    body: `When a new tenant moves in or a business refreshes its space, the electrical work sets the foundation for everything else. Home Run Electric handles complete tenant improvement electrical for Western Washington commercial properties — new circuits, lighting layouts, panel work, data and security rough-in, and storefront signage wiring. We work on occupied buildings, coordinate with property managers and general contractors, and keep projects on schedule. Whether it's a single-suite buildout or a full floor renovation, we deliver clean, code-compliant work that passes inspection and gets your space open for business.`,
+  },
+  {
+    id: 'ground-up-construction',
+    t: 'New construction',
+    d: 'Design-assist and design-build for commercial and light industrial.',
+    body: `Home Run Electric provides full-scope electrical for commercial new construction throughout Western Washington. From service entrance and gear installation to rough-in wiring, panel builds, lighting, and final trim, we manage the complete electrical scope and coordinate directly with your project team to keep the build on schedule. We work on office buildings, retail centers, medical facilities, warehouses, and mixed-use developments. Every project is permitted, inspected, and built to Washington State commercial electrical code. Whether you're breaking ground on a small commercial building or a large multi-tenant development, our team has the experience to deliver.`,
+  },
+  {
+    id: 'service-upgrades',
+    t: 'Service upgrades',
+    d: '400A-4000A service, switchgear replacement, and utility coordination.',
+    body: `Growing businesses outgrow their electrical systems. If your facility is tripping breakers, running out of panel capacity, or struggling to support new equipment, it's time for a service upgrade. Home Run Electric assesses your current electrical service, calculates your load requirements, and upgrades your service entrance, main gear, and distribution equipment to match your operational needs. We coordinate directly with your utility provider and handle all permitting and inspection requirements. Upgrading your electrical service protects your equipment, reduces downtime risk, and gives your business the capacity to grow without electrical limitations holding you back.`,
+  },
+  {
+    id: 'data-low-voltage',
+    t: 'Data & low-voltage',
+    d: 'Structured cabling, access control, CCTV rough-in, and AV backbones.',
+    body: `Reliable low-voltage infrastructure is essential for any modern commercial operation. Home Run Electric installs structured wiring for data networks, access control systems, security cameras, intercoms, and alarm systems for commercial properties throughout Western Washington. We work alongside your IT team or security vendor to ensure the wiring is routed correctly, terminated cleanly, and built to support your systems today and expand as your needs grow. From single-suite office buildouts to multi-tenant buildings and warehouse facilities, we deliver low-voltage installations that are organized, documented, and ready for your technology team to connect and configure.`,
+  },
+  {
+    id: '3-phase-systems',
+    t: '3-phase systems',
+    d: 'Installation and service of 3-phase power systems for businesses with heavy equipment, motors, or high-demand operations.',
+    body: `Heavy equipment, industrial machinery, HVAC systems, and high-demand commercial operations require 3-phase power to run efficiently and safely. Home Run Electric designs and installs 3-phase electrical systems for commercial and industrial facilities throughout Western Washington. We handle service entrance work, gear installation, distribution panels, and branch circuit wiring sized for your specific equipment and load requirements. Whether you're commissioning a new facility, adding production equipment, or upgrading from single-phase service, our team has the commercial and industrial electrical experience to get your 3-phase system installed correctly and running reliably from day one.`,
+  },
+  {
+    id: 'emergency-response',
+    t: 'Emergency response',
+    d: 'Emergency response during business hours. SLA contracts available.',
+    body: `Electrical failures don't wait for business hours. Home Run Electric provides emergency electrical response for commercial properties throughout Western Washington — available when you need it most. Whether it's a tripped main, a failed transformer, damaged wiring, or a power issue threatening your operations, our licensed electricians respond quickly, diagnose the problem accurately, and get your facility back online as fast as possible. We work on commercial buildings, retail centers, warehouses, medical facilities, and industrial properties. When an electrical emergency puts your business at risk, you need a contractor with the experience and resources to handle it — that's Home Run Electric.`,
+  },
+  {
+    id: 'code-compliance',
+    t: 'Code compliance',
+    d: 'Ensuring all electrical work meets local and national code requirements.',
+    body: `Electrical code violations put your business, your employees, and your customers at risk — and can result in failed inspections, fines, or forced shutdowns. Home Run Electric provides commercial electrical code compliance services for businesses throughout Western Washington. We audit your facility's electrical systems, identify violations and deficiencies, document findings, and correct them efficiently with minimal disruption to your operations. Whether you're preparing for an inspection, responding to a violation notice, or taking a proactive look at an older facility, our licensed electricians give you a clear picture of where things stand and a straightforward path to getting compliant.`,
+  },
 ];
 
 export const TEAM = [
@@ -230,30 +370,35 @@ export const TESTIMONIALS = [
     name: 'Amy M.',
     where: 'Kirkland',
     rating: 5,
+    source: 'Yelp',
   },
   {
     quote: 'I am a general contractor and Homerun has performed many electrical repairs and installations for me over the years. Their work was consistently excellent and their pricing was always very reasonable.',
     name: 'James C.',
     where: 'Lynnwood',
     rating: 5,
+    source: 'Yelp',
   },
   {
     quote: 'I had an exceptional experience with Brian Smith who went out of his way to come by our house and fix a broken outlet when he found out we lived near him. He went way above and beyond volunteering to do work. He was responsive, quick on the job and very friendly in person.',
     name: 'Nikki L.',
     where: 'Lynnwood',
     rating: 5,
+    source: 'Yelp',
   },
   {
     quote: "I called first thing in the morning and just a few hours later one of their electricians Brian was at the job site. Overall the experience was easy, stress free, and upfront... It was easy to tell that Brian was an expert in his field and that he truly enjoyed the electrical process. I also appreciated how Home Run Electric was very accommodating to our individual needs.",
     name: 'Holly S.',
     where: 'Bellevue',
     rating: 5,
+    source: 'Yelp',
   },
   {
     quote: "Super knowledgeable staff, responsive to calls and follow up question/issues that I had, and even recommended additional cost saving solutions with another provider. They went above and beyond on the project and left everything spotless afterwards",
     name: 'Lisa W.',
     where: 'Kirkland',
     rating: 5,
+    source: 'Yelp',
   },
 ];
 

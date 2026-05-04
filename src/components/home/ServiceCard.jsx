@@ -26,9 +26,9 @@ export const ServiceCard = ({ theme, service, onClick, compact, style }) => (
       {service.tag && <Badge theme={theme} variant="accent">{service.tag}</Badge>}
     </div>
     <div>
-      <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 19, color: theme.ink, letterSpacing: '-0.015em', lineHeight: 1.2, marginBottom: 6 }}>
+      <h3 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 19, color: theme.ink, letterSpacing: '-0.015em', lineHeight: 1.2, marginBottom: 6, margin: '0 0 6px' }}>
         {service.title}
-      </div>
+      </h3>
       <p style={{ fontFamily: theme.bodyFont, fontSize: 13, color: theme.ink2, lineHeight: 1.5, margin: 0 }}>
         {service.blurb}
       </p>

@@ -35,7 +35,7 @@ export const ResidentialServices = ({ theme, id }) => {
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', gap: 16 }}>
         {SERVICES.slice(0, 4).map(s => (
-          <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate('/book', { state: { service: s } })} />
+          <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate(`/residential/${s.id}`)} />
         ))}
       </div>
     </Section>

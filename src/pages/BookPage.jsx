@@ -5,6 +5,8 @@ import { Icon, SERVICE_ICONS } from '../components/ui/Icon';
 import { Badge } from '../components/ui/Badge';
 import { BookForm } from '../components/forms/BookForm';
 import { PHONE_DISPLAY, PHONE_TEL } from '../data/content';
+import { JsonLd } from '../components/seo/JsonLd';
+import { breadcrumbSchema } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
 export const BookPage = ({ theme, tone }) => {
@@ -15,6 +17,7 @@ export const BookPage = ({ theme, tone }) => {
   return (
     <div>
       <PageMeta title="Request Service · Home Run Electric" description="Request service from Home Run Electric in Western Washington. Short form — our team gets back to you right away during business hours." />
+      <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Request Service', path: '/book' }])} />
       <Section theme={theme} id="book" style={{ borderTop: 'none' }}>
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? '1fr' : '1fr 1fr', gap: isTabletDown ? 40 : 64 }}>
           <div>
@@ -33,7 +36,7 @@ export const BookPage = ({ theme, tone }) => {
                 </div>
                 <div>
                   <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor, marginBottom: 4 }}>Service selected</div>
-                  <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 18, color: theme.ink, letterSpacing: '-0.015em' }}>{selectedService.title}</div>
+                  <h3 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 18, color: theme.ink, letterSpacing: '-0.015em', margin: 0 }}>{selectedService.title}</h3>
                 </div>
               </div>
             )}

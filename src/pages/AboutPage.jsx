@@ -5,6 +5,8 @@ import { Badge } from '../components/ui/Badge';
 import { Placeholder, Portrait } from '../components/ui/Placeholder';
 import { PageHero, CTABand } from './shared';
 import { TEAM } from '../data/content';
+import { JsonLd } from '../components/seo/JsonLd';
+import { breadcrumbSchema } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
 export const AboutPage = ({ theme, tone }) => {
@@ -15,6 +17,7 @@ export const AboutPage = ({ theme, tone }) => {
   return (
     <div>
       <PageMeta title="About Us · Home Run Electric" description="Home Run Electric — licensed electrical contractor in Lynnwood, WA since 2003. Family-owned, IBEW-trained crew serving Western Washington." />
+      <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'About Us', path: '/about' }])} />
       <PageHero theme={theme} id="hero" eyebrow="About HRE" title="Over 23 years of local, reliable electrical work" lede={tone.aboutLede} />
 
       {/* Story */}

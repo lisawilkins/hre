@@ -6,6 +6,8 @@ import { Button } from '../components/ui/Button';
 import { BookForm } from '../components/forms/BookForm';
 import { PageHero } from './shared';
 import { COMMERCIAL_SERVICES, COMMERCIAL_CLIENTS, PHONE_TEL } from '../data/content';
+import { JsonLd } from '../components/seo/JsonLd';
+import { breadcrumbSchema } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
 export const CommercialPage = ({ theme, tone }) => {
@@ -18,23 +20,30 @@ export const CommercialPage = ({ theme, tone }) => {
   return (
     <div>
       <PageMeta title="Commercial Electrical Services · Home Run Electric" description="Licensed commercial electrician in Western Washington. Tenant improvements, service upgrades, ground-up construction, and emergency response." />
+      <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Commercial Services', path: '/commercial' }])} />
       <PageHero theme={theme} id="hero" eyebrow="Commercial" title="20+ years keeping Western Washington's businesses running." lede={tone.commercialLede} />
 
       {/* Services grid */}
       <Section theme={theme} id="services">
         <div style={{ display: 'grid', gridTemplateColumns: servicesCols, gap: 16 }}>
           {COMMERCIAL_SERVICES.map((s, i) => (
-            <div key={i} style={{
-              background: theme.surface, border: `1px solid ${theme.line}`,
-              borderRadius: theme.radius, padding: 28, minHeight: 200,
-              display: 'flex', flexDirection: 'column', gap: 14,
-            }}>
+            <div
+              key={s.id} onClick={() => navigate(`/commercial/${s.id}`)}
+              style={{
+                background: theme.surface, border: `1px solid ${theme.line}`,
+                borderRadius: theme.radius, padding: 28, minHeight: 200,
+                display: 'flex', flexDirection: 'column', gap: 14,
+                cursor: 'pointer', transition: 'transform .15s, border-color .15s',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = theme.ink; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = theme.line; }}
+            >
               <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>
                 {String(i + 1).padStart(2, '0')} / {String(COMMERCIAL_SERVICES.length).padStart(2, '0')}
               </div>
-              <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 24, color: theme.ink, letterSpacing: '-0.02em', lineHeight: 1.15 }}>
+              <h3 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 24, color: theme.ink, letterSpacing: '-0.02em', lineHeight: 1.15, margin: 0 }}>
                 {s.t}
-              </div>
+              </h3>
               <p style={{ fontFamily: theme.bodyFont, fontSize: 14, color: theme.ink2, lineHeight: 1.5, margin: 0 }}>{s.d}</p>
             </div>
           ))}

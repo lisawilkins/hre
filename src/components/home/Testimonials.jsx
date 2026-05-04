@@ -26,7 +26,7 @@ export const Testimonials = ({ theme, id }) => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'flex-end' }}>
           <StarRow theme={theme} size={20} />
           <p style={{ fontFamily: theme.bodyFont, fontSize: 16, color: theme.ink2, margin: 0, maxWidth: 500 }}>
-            We ask every customer for feedback. Here&apos;s what they&apos;ve said lately.
+            Five-star reviews from real customers on Yelp.
           </p>
         </div>
       </div>
@@ -43,10 +43,15 @@ export const Testimonials = ({ theme, id }) => {
             </p>
             <div style={{
               paddingTop: 16, borderTop: `1px solid ${theme.line}`,
-              display: 'flex', justifyContent: 'space-between', fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: theme.monoColor,
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: theme.monoColor,
             }}>
-              <span style={{ color: theme.ink, fontWeight: 600 }}>{t.name}</span>
-              <span><Icon name="pin" size={11}/> {t.where}</span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                <span style={{ color: theme.ink, fontWeight: 600 }}>{t.name}</span>
+                <span><Icon name="pin" size={11}/> {t.where}</span>
+              </div>
+              {t.source && (
+                <span style={{ opacity: 0.5 }}>{t.source}</span>
+              )}
             </div>
           </div>
         ))}

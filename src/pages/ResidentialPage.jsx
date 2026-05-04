@@ -9,6 +9,8 @@ import { ServiceCard } from '../components/home/ServiceCard';
 import { Testimonials } from '../components/home/Testimonials';
 import { PageHero, CTABand } from './shared';
 import { SERVICES } from '../data/content';
+import { JsonLd } from '../components/seo/JsonLd';
+import { breadcrumbSchema } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
 const ProjectGallery = ({ theme, id }) => {
@@ -81,13 +83,14 @@ export const ResidentialPage = ({ theme, tone }) => {
   return (
     <div>
       <PageMeta title="Residential Electrical Services · Home Run Electric" description="Licensed residential electrician in Western Washington. Panel upgrades, EV chargers, generators, smart home wiring, and more." />
+      <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Residential Services', path: '/residential' }])} />
       <PageHero theme={theme} id="hero" eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} />
       <Section theme={theme} id="services">
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? 'repeat(auto-fill, minmax(200px, 1fr))' : 'repeat(4, minmax(200px, 1fr))', gap: 16 }}>
           {SERVICES.map((s, i) => (
             <ServiceCard
               key={s.id} theme={theme} service={s}
-              onClick={() => navigate('/book', { state: { service: s } })}
+              onClick={() => navigate(`/residential/${s.id}`)}
               style={!isTabletDown && i >= lastRowStart ? { gridColumn: `span ${lastRowSpan}` } : undefined}
             />
           ))}
