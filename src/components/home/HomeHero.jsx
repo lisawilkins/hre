@@ -114,8 +114,8 @@ export const HomeHero = ({ theme, tone, id }) => {
             fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.85, position: 'relative',
           }}>
             <div>Lynnwood HQ<br/><span style={{ opacity: 0.65 }}>since 2003</span></div>
-            <div>Four counties<br/><span style={{ opacity: 0.65 }}>Snohomish, King, Pierce, Thurston</span></div>
-            {!isMobile && <div>Local crew<br/><span style={{ opacity: 0.65 }}>no franchise</span></div>}
+            <div>4 counties<br/><span style={{ opacity: 0.65 }}>Snohomish, King, Pierce, Thurston</span></div>
+            {!isMobile && <div>Local crew<br/><span style={{ opacity: 0.65 }}>Our employees, no franchise</span></div>}
           </div>
         </div>
       </div>

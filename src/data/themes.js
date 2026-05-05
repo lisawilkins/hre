@@ -75,7 +75,7 @@ export const TONE_COPY = {
     name: 'Neighborly',
     heroEyebrow: 'Covering the bases since 2003',
     heroTitle: ['Western Washington\'s Trusted Electrician'], 
-    heroSub: "Home Run Electric has powered Puget Sound's residential and commercial projects for over 20 years.",
+    heroSub: "We serve homeowners across Snohomish, King, Pierce, and Thurston counties. From Lynnwood to Tacoma, from Marysville to Sammamish, Home Run Electric has powered the greater Seattle area's residential and commercial projects for over 20 years.",
     bookCta: 'Request Estimate',
     emergencyLede: 'Power out? Breaker tripping? Burning smell? Electricians are available Mon–Sat, 7am-6pm.',
     residentialLede:"From panel upgrades and EV chargers to smart home installations and emergency repairs, Home Run Electric handles the full range of residential electrical work for Western Washington homeowners. Whether it's a single-room remodel or a whole-home project, our licensed electricians get it done safely, on time, and up to code. We offer these services and much more — contact us to get a free estimate.",
