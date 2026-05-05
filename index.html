@@ -13,12 +13,14 @@
   <body>
     <!-- Hidden form for Netlify build-time detection -->
     <form name="service-request" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field" />
       <input type="text" name="name" />
       <input type="tel" name="phone" />
       <input type="email" name="email" />
       <input type="text" name="zip" />
       <textarea name="issue"></textarea>
       <input type="text" name="urgency" />
+      <input type="text" name="cf-turnstile-response" />
     </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

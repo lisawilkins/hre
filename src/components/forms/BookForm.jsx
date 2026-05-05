@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { Turnstile } from '@marsidev/react-turnstile';
 import { Icon } from '../ui/Icon';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 import { PHONE_DISPLAY, PHONE_TEL } from '../../data/content';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
+
+const TURNSTILE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || '1x00000000000000000000AA';
 
 export const BookForm = ({ theme, compact, onDone }) => {
   const { isMobile } = useBreakpoint();
@@ -12,6 +15,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [errors, setErrors] = useState({});
+  const [turnstileToken, setTurnstileToken] = useState(null);
 
   const validate = () => {
     const e = {};
@@ -74,6 +78,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
 
   return (
     <form
+      name="service-request"
       onSubmit={async e => {
         e.preventDefault();
         const e2 = validate();
@@ -86,6 +91,8 @@ export const BookForm = ({ theme, compact, onDone }) => {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams({
             'form-name': 'service-request',
+            'bot-field': '',
+            'cf-turnstile-response': turnstileToken || '',
             ...state,
             phone: state.phone.replace(/\D/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3'),
           }).toString(),
@@ -103,6 +110,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
         boxShadow: `0 20px 60px ${theme.bg === '#0E0F12' ? '#0007' : '#0B1F3A12'}`,
       }}
     >
+      <input type="text" name="bot-field" style={{ display: 'none' }} aria-hidden="true" tabIndex={-1} autoComplete="off" readOnly />
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4 }}>
         <div style={{ fontFamily: theme.displayFont, fontSize: 22, fontWeight: theme.displayWeight, color: theme.ink, letterSpacing: '-0.02em' }}>
           How can we help you?
@@ -161,12 +169,19 @@ export const BookForm = ({ theme, compact, onDone }) => {
           ))}
         </div>
       </label>
+      <Turnstile
+        siteKey={TURNSTILE_KEY}
+        onSuccess={setTurnstileToken}
+        onError={() => setTurnstileToken(null)}
+        onExpire={() => setTurnstileToken(null)}
+        options={{ theme: theme.bg === '#0E0F12' ? 'dark' : 'light' }}
+      />
       {error && (
         <div style={{ padding: '10px 14px', background: '#FEE2E2', borderRadius: theme.radius, color: '#991B1B', fontFamily: theme.bodyFont, fontSize: 13 }}>
           Something went wrong. Please call us directly or try again.
         </div>
       )}
-      <Button theme={theme} variant="accent" size="lg" iconRight="arrow" full disabled={loading}>
+      <Button theme={theme} variant="accent" size="lg" iconRight="arrow" full disabled={loading || !turnstileToken}>
         {loading ? 'Sending…' : 'Request a call back'}
       </Button>
       <div style={{ textAlign: 'center', fontFamily: theme.bodyFont, fontSize: 12, color: theme.muted }}>
