@@ -16,10 +16,10 @@ import { useBreakpoint } from '../hooks/useBreakpoint';
 const ProjectGallery = ({ theme, id }) => {
   const { isMobile, isTablet } = useBreakpoint();
   const projects = [
-    { t: '200A panel upgrade', where: 'Edmonds · 1951 Craftsman', img: imgPanel },
-    { t: 'EV Charger Install', where: 'Mill Creek · detached garage', img: imgEV },
-    { t: 'Backup generator', where: 'Lynnwood · whole-home', img: imgGenerator },
-    { t: 'Kitchen remodel rewire', where: 'Bothell · 1980s split', img: imgLighting },
+    { t: 'An open electrical panel revealing a 200A residential panel', where: 'Edmonds · 1951 Craftsman', img: imgPanel },
+    { t: 'An EV charger installed on a residential detached garage', where: 'Mill Creek · detached garage', img: imgEV },
+    { t: 'A backup generator installed in a residential home', where: 'Lynnwood · whole-home', img: imgGenerator },
+    { t: 'A kitchen beautifully well lit with warm light', where: 'Bothell · 1980s split', img: imgLighting },
   ];
   return (
     <Section theme={theme} id={id} eyebrow="Recent projects" style={{ background: theme.surface }}>
@@ -82,7 +82,7 @@ export const ResidentialPage = ({ theme, tone }) => {
   const lastRowStart = SERVICES.length - lastRowCount;
   return (
     <div>
-      <PageMeta title="Residential Electrical Services · Home Run Electric" description="Licensed residential electrician in Western Washington. Panel upgrades, EV chargers, generators, smart home wiring, and more." />
+      <PageMeta title="Residential Electrician — Western Washington | Home Run Electric" description="Residential electrician serving Snohomish, King, Pierce & Thurston County. Panel upgrades, EV charger installs, whole-home generators — licensed, bonded, warrantied." />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Residential Services', path: '/residential' }])} />
       <PageHero theme={theme} id="hero" eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} />
       <Section theme={theme} id="services">

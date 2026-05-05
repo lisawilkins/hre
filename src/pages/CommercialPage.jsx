@@ -19,7 +19,7 @@ export const CommercialPage = ({ theme, tone }) => {
 
   return (
     <div>
-      <PageMeta title="Commercial Electrical Services · Home Run Electric" description="Licensed commercial electrician in Western Washington. Tenant improvements, service upgrades, ground-up construction, and emergency response." />
+      <PageMeta title="Commercial Electrician — Western Washington | Home Run Electric" description="Commercial electrician in Western Washington since 2003. TIs, ground-up builds, service upgrades to 4000A. Serving businesses across Snohomish and King County." />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Commercial Services', path: '/commercial' }])} />
       <PageHero theme={theme} id="hero" eyebrow="Commercial" title="20+ years keeping Western Washington's businesses running." lede={tone.commercialLede} />
 

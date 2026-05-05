@@ -16,7 +16,7 @@ export const AboutPage = ({ theme, tone }) => {
 
   return (
     <div>
-      <PageMeta title="About Us · Home Run Electric" description="Home Run Electric — licensed electrical contractor in Lynnwood, WA since 2003. Family-owned, IBEW-trained crew serving Western Washington." />
+      <PageMeta title="About Home Run Electric — Licensed Electricians in Lynnwood, WA since 2003" description="Meet the Home Run Electric team — locally owned since 2003, serving Western Washington. Licensed master electricians, OSHA 30 certified." />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'About Us', path: '/about' }])} />
       <PageHero theme={theme} id="hero" eyebrow="About HRE" title="Over 23 years of local, reliable electrical work" lede={tone.aboutLede} />
 

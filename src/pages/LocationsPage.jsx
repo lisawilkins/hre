@@ -8,7 +8,7 @@ import { PageHero, CTABand } from './shared';
 import { PageMeta } from '../components/ui/PageMeta';
 import { LOCATIONS } from '../data/content';
 import { JsonLd } from '../components/seo/JsonLd';
-import { breadcrumbSchema } from '../data/schemas';
+import { breadcrumbSchema, SITE_URL } from '../data/schemas';
 import serviceAreaMap from '../assets/service-area-map.svg';
 
 const ServiceAreaMap = () => (
@@ -31,8 +31,9 @@ export const LocationsPage = ({ theme, tone }) => {
   return (
     <div>
       <PageMeta
-        title="Service Areas · Home Run Electric — Western Washington"
+        title="Electrician Service Areas — Snohomish, King, Pierce & Thurston County | HRE"
         description="Home Run Electric serves Snohomish, King, Thurston, and Pierce counties. Find your city for ETA, job history, and availability."
+        ogImage={`${SITE_URL}/og-areas.jpg`}
       />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Service Areas', path: '/service-areas' }])} />
       <PageHero theme={theme} id="hero" eyebrow="Service areas" title="Serving Snohomish, King, Thurston & Pierce counties." lede="Full service from our Lynnwood headquarters across four counties. Emergency and after-hours service available in King and Snohomish counties. If your area isn't listed give us a call!" />

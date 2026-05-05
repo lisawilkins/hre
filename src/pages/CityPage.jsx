@@ -7,7 +7,7 @@ import { ServiceCard } from '../components/home/ServiceCard';
 import { PageMeta } from '../components/ui/PageMeta';
 import { HeroPattern } from '../components/ui/HeroPattern';
 import { JsonLd } from '../components/seo/JsonLd';
-import { breadcrumbSchema } from '../data/schemas';
+import { breadcrumbSchema, SITE_URL } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
 export const CityPage = ({ theme }) => {
@@ -26,6 +26,7 @@ export const CityPage = ({ theme }) => {
       <PageMeta
         title={`Electrical Services in ${city}, WA · Home Run Electric`}
         description={`Licensed electrician serving ${city}, WA. EV chargers, panel upgrades, generators, and more.${emergency ? ' After hours emergency service available.' : ''}`}
+        ogImage={`${SITE_URL}/og-areas.jpg`}
       />
       <JsonLd schema={breadcrumbSchema([
         { name: 'Home', path: '/' },
