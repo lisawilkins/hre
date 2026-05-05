@@ -412,5 +412,41 @@ export const STATS = [
   { n: '23+', l: 'Years in business' },
   { n: 'LOCALLY', l: 'Owned & operated' },
   { n: '4', l: 'Counties served' },
-  { n: '1 YR', l: 'Warrantee' },
+  { n: 'A+', l: 'BBB Rated' },
+];
+
+
+export const FAQ_ITEMS = [
+  {
+    q: 'Why does my circuit breaker keep tripping?',
+    a: "A breaker that trips repeatedly is overloaded or has a fault. Don't just reset it — identify what's on that circuit. If it trips without a clear cause, call an electrician. Repeatedly tripping breakers can indicate wiring problems that are a fire risk.",
+  },
+  {
+    q: "What's the difference between a GFCI and a regular outlet?",
+    a: "GFCI outlets detect ground faults and cut power instantly to prevent shock. They're required in kitchens, bathrooms, garages, and outdoor areas. If an outlet near water stops working, look for a GFCI with a reset button nearby — it may have tripped and just needs to be reset.",
+  },
+  {
+    q: 'How do I know if my home needs a panel upgrade?',
+    a: "Signs include: breakers that trip often, flickering lights, a panel with fuses instead of breakers, or a panel rated under 200 amps. If you're adding an EV charger, hot tub, or major appliance, your current panel may not have the capacity. Have an electrician assess before adding load.",
+  },
+  {
+    q: 'Is it safe to use extension cords long-term?',
+    a: "No. Extension cords are for temporary use only. Running them under rugs, through walls, or as a permanent power source is a fire hazard. If you're relying on extension cords regularly, you need more outlets — a quick job for any licensed electrician.",
+  },
+  {
+    q: 'What qualifies as an electrical emergency?',
+    a: "Call immediately for: burning smell from an outlet or panel, sparking wires, power loss to part of your home after a storm, an outlet that's hot to the touch, or any shock from an appliance or fixture. These are not wait-until-Monday issues.",
+  },
+  {
+    q: 'Should I get a whole-home surge protector?',
+    a: 'Yes, especially in Western Washington where storms cause power fluctuations. A whole-home surge protector installs at your panel and protects every device in the house — appliances, HVAC, electronics. Far cheaper than replacing what a surge can destroy.',
+  },
+  {
+    q: 'How do I prepare my home for an EV charger?',
+    a: "Level 2 chargers (the kind worth having) require a dedicated 240V circuit. Most homes need a panel assessment before installation. Plan ahead — permit and installation time varies. HRE can assess your panel and handle the full install.",
+  },
+  {
+    q: 'When should I call an electrician instead of DIYing?',
+    a: "If it involves the panel, new circuits, 240V outlets, or anything behind the wall — call a pro. In Washington state, most electrical work beyond simple fixture swaps requires a licensed electrician and permit. Unpermitted work can create liability issues when you sell.",
+  },
 ];

@@ -73,7 +73,7 @@ export const AboutPage = ({ theme, tone }) => {
           {[
             { t: 'Licensed in WA', d: 'Electrical contractor lic. HOMERRE974K2' },
             { t: 'Bonded & insured', d: '$2M general liability, $1M auto' },
-            { t: 'IBEW trained', d: 'Every journeyman is union-trained' },
+            { t: 'A+ Rated', d: 'by the Better Business Bureau' },
             { t: 'OSHA 30 certified', d: 'Safety-first, for your home and ours' },
           ].map((c, i) => (
             <div key={i} style={{ background: theme.bg, border: `1px solid ${theme.line}`, borderRadius: theme.radius, padding: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>

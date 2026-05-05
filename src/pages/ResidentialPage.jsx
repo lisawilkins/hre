@@ -7,10 +7,11 @@ import imgGenerator from '../assets/res-generator.jpg';
 import imgLighting from '../assets/res-lighting.jpg';
 import { ServiceCard } from '../components/home/ServiceCard';
 import { Testimonials } from '../components/home/Testimonials';
+import { FAQ } from '../components/home/FAQ';
 import { PageHero, CTABand } from './shared';
-import { SERVICES } from '../data/content';
+import { SERVICES, FAQ_ITEMS } from '../data/content';
 import { JsonLd } from '../components/seo/JsonLd';
-import { breadcrumbSchema } from '../data/schemas';
+import { breadcrumbSchema, faqSchema } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
 const ProjectGallery = ({ theme, id }) => {
@@ -84,6 +85,7 @@ export const ResidentialPage = ({ theme, tone }) => {
     <div>
       <PageMeta title="Residential Electrician — Western Washington | Home Run Electric" description="Residential electrician serving Snohomish, King, Pierce & Thurston County. Panel upgrades, EV charger installs, whole-home generators — licensed, bonded, warrantied." />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Residential Services', path: '/residential' }])} />
+      <JsonLd schema={faqSchema(FAQ_ITEMS)} />
       <PageHero theme={theme} id="hero" eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} />
       <Section theme={theme} id="services">
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? 'repeat(auto-fill, minmax(200px, 1fr))' : 'repeat(4, minmax(200px, 1fr))', gap: 16 }}>
@@ -98,6 +100,7 @@ export const ResidentialPage = ({ theme, tone }) => {
       </Section>
       <ProjectGallery theme={theme} id="projects" />
       <ProcessBand theme={theme} id="guarantees" />
+      <FAQ theme={theme} id="faq" />
       <Testimonials theme={theme} id="testimonials" />
       <CTABand theme={theme} tone={tone} id="cta" />
     </div>

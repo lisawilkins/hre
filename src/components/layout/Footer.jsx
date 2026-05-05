@@ -37,7 +37,15 @@ export const Footer = ({ theme }) => {
               <div>WA Lic. HOMERRE974K2 · Bonded & Insured</div>
             </div>
           </div>
-          <FooterCol theme={theme} title="Services" items={['Panel upgrades', 'EV chargers', 'Generators', 'Smart home', 'Troubleshooting', 'Lighting', 'Hot tub & pool']} />
+          <FooterCol theme={theme} title="Services" items={[
+            { t: 'Panel upgrades', go: () => navigate('/residential') },
+            { t: 'EV chargers', go: () => navigate('/residential') },
+            { t: 'Generators', go: () => navigate('/residential') },
+            { t: 'Smart home', go: () => navigate('/residential') },
+            { t: 'Troubleshooting', go: () => navigate('/residential') },
+            { t: 'Lighting', go: () => navigate('/residential') },
+            { t: 'Hot tub & pool', go: () => navigate('/residential') },
+          ]} />
           <FooterCol theme={theme} title="Company" items={[
             { t: 'Residential', go: () => navigate('/residential') },
             { t: 'Commercial', go: () => navigate('/commercial') },

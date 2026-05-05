@@ -75,11 +75,10 @@ export const TONE_COPY = {
     name: 'Neighborly',
     heroEyebrow: 'Covering the bases since 2003',
     heroTitle: ['Western Washington\'s Trusted Electrician'], 
-    heroSub: "Home Run Electric has powered Western Washington's residential and commercial projects for over 20 years.",
+    heroSub: "Home Run Electric has powered Puget Sound's residential and commercial projects for over 20 years.",
     bookCta: 'Request Estimate',
     emergencyLede: 'Power out? Breaker tripping? Burning smell? Electricians are available Mon–Sat, 7am-6pm.',
     residentialLede:"From panel upgrades and EV chargers to smart home installations and emergency repairs, Home Run Electric handles the full range of residential electrical work for Western Washington homeowners. Whether it's a single-room remodel or a whole-home project, our licensed electricians get it done safely, on time, and up to code. We offer these services and much more — contact us to get a free estimate.",
-
     commercialLede: 'Home Run Electric has delivered reliable commercial electrical work since 2003, from storefront wiring and 3-phase systems to large-scale power distribution and code compliance. We offer the following services and much more. Contact us to get a free estimate.',
     aboutLede: "Home Run Electric has been the trusted electrical contractor proudly serving our neighbors and community with integrity and honesty.",
   },
