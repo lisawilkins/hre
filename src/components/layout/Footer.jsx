@@ -38,13 +38,13 @@ export const Footer = ({ theme }) => {
             </div>
           </div>
           <FooterCol theme={theme} title="Services" items={[
-            { t: 'Panel upgrades', go: () => navigate('/residential') },
-            { t: 'EV chargers', go: () => navigate('/residential') },
-            { t: 'Generators', go: () => navigate('/residential') },
-            { t: 'Smart home', go: () => navigate('/residential') },
-            { t: 'Troubleshooting', go: () => navigate('/residential') },
-            { t: 'Lighting', go: () => navigate('/residential') },
-            { t: 'Hot tub & pool', go: () => navigate('/residential') },
+            { t: 'Panel upgrades', go: () => navigate('/residential/panel') },
+            { t: 'EV chargers', go: () => navigate('/residential/ev') },
+            { t: 'Generators', go: () => navigate('/residential/generator') },
+            { t: 'Smart home', go: () => navigate('/residential/smart') },
+            { t: 'Troubleshooting', go: () => navigate('/residential/repair') },
+            { t: 'Lighting', go: () => navigate('/residential/lighting') },
+            { t: 'Hot tub & pool', go: () => navigate('/residential/pool') },
           ]} />
           <FooterCol theme={theme} title="Company" items={[
             { t: 'Residential', go: () => navigate('/residential') },
