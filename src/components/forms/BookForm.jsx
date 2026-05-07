@@ -39,9 +39,9 @@ export const BookForm = ({ theme, compact, onDone }) => {
     });
   };
 
-  const field = (key, label, type = 'text', placeholder) => (
+  const field = (key, label, type = 'text', placeholder, errorMsg) => (
     <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-      <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: errors[key] ? '#DC2626' : theme.monoColor }}>{label}</span>
+      <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: errors[key] || (errors.contact && (key === 'phone' || key === 'email')) ? '#DC2626' : theme.monoColor }}>{label}</span>
       <input
         type={type}
         value={state[key]}
@@ -53,6 +53,7 @@ export const BookForm = ({ theme, compact, onDone }) => {
           background: theme.surface, color: theme.ink, fontFamily: theme.bodyFont, fontSize: 15, outline: 'none', boxSizing: 'border-box',
         }}
       />
+      {errorMsg && <span style={{ fontFamily: theme.bodyFont, fontSize: 12, color: '#DC2626' }}>{errorMsg}</span>}
     </label>
   );
 
@@ -119,23 +120,13 @@ export const BookForm = ({ theme, compact, onDone }) => {
       <div style={{ color: theme.muted, fontFamily: theme.bodyFont, fontSize: 13, marginBottom: 4 }}>
         Give us the details. Our team will reach out right away during business hours.
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12 }}>
-          {field('name', 'Your name', 'text', 'Jane Smith')}
-          {field('phone', 'Phone', 'tel', '(425) 555-0123')}
-        </div>
-        {errors.phone && (
-          <span style={{ fontFamily: theme.bodyFont, fontSize: 12, color: '#DC2626' }}>Please enter a 10-digit US phone number.</span>
-        )}
+      <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12 }}>
+        {field('name', 'Your name', 'text', 'Jane Smith')}
+        {field('phone', 'Phone', 'tel', '(425) 555-0123', errors.phone ? 'Please enter a 10-digit US phone number.' : errors.contact ? 'Please provide a phone or email.' : undefined)}
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12 }}>
-          {field('email', 'Email', 'email', 'jane@example.com')}
-          {field('zip', 'ZIP code', 'text', '98443')}
-        </div>
-        {errors.contact && (
-          <span style={{ fontFamily: theme.bodyFont, fontSize: 12, color: '#DC2626' }}>Please provide a phone number or email address.</span>
-        )}
+      <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12 }}>
+        {field('email', 'Email', 'email', 'jane@example.com', !errors.phone && errors.contact ? 'Please provide a phone or email.' : undefined)}
+        {field('zip', 'ZIP code', 'text', '98443')}
       </div>
       <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
         <span style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: errors.issue ? '#DC2626' : theme.monoColor }}>Describe your project</span>
@@ -178,11 +169,11 @@ export const BookForm = ({ theme, compact, onDone }) => {
       />
       {error && (
         <div style={{ padding: '10px 14px', background: '#FEE2E2', borderRadius: theme.radius, color: '#991B1B', fontFamily: theme.bodyFont, fontSize: 13 }}>
-          Something went wrong. Please call us directly or try again.
+          We're sorry, something went wrong. Please call us directly or try again.
         </div>
       )}
       <Button theme={theme} variant="accent" size="lg" iconRight="arrow" full disabled={loading || !turnstileToken}>
-        {loading ? 'Sending…' : 'Request a call back'}
+        {loading ? 'Sending…' : 'Submit your request'}
       </Button>
       <div style={{ textAlign: 'center', fontFamily: theme.bodyFont, fontSize: 12, color: theme.muted }}>
         Emergency? Call us directly at <a href={`tel:${PHONE_TEL}`} style={{ color: theme.ink, fontWeight: 600 }}>{PHONE_DISPLAY}</a>
@@ -190,4 +181,3 @@ export const BookForm = ({ theme, compact, onDone }) => {
     </form>
   );
 };
-//'Today — emergency', "How soon?" option
