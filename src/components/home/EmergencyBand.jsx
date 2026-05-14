@@ -16,7 +16,7 @@ export const EmergencyBand = ({ theme, tone, id }) => {
             fontFamily: theme.displayFont, fontWeight: theme.displayWeight,
             fontSize: 'clamp(40px, 5.5vw, 76px)', lineHeight: 0.95, margin: '0 0 22px', letterSpacing: '-0.035em',
           }}>
-            When it can&apos;t wait, we answer.
+            Power out? Breaker tripping? Burning smell?
           </h2>
           <a href={`tel:${PHONE_TEL}`} style={{
             display: 'block', background: theme.emergencyInk, color: theme.emergency, textDecoration: 'none',
@@ -31,7 +31,7 @@ export const EmergencyBand = ({ theme, tone, id }) => {
           </a>
         </div>
         <p style={{ fontFamily: theme.bodyFont, fontSize: 16, lineHeight: 1.55, opacity: 0.92, margin: 0 }}>
-          {tone.emergencyLede} Common emergencies: panel smoking or buzzing, breakers that won&apos;t reset, burning-plastic smell, sparks at outlets, power loss in rain or windstorms. After-hours emergency service is currently available in King County only.
+          {tone.emergencyLede} Common emergencies: panel smoking or buzzing, breakers that won&apos;t reset, burning-plastic smell, sparks at outlets, power loss in rain or windstorms. Give us a call and put your family's safety first.
         </p>
       </div>
     </Section>
