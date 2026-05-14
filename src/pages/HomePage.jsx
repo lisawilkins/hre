@@ -12,7 +12,7 @@ export const HomePage = ({ theme, tone }) => (
   <>
     <PageMeta
       title="Electrician in Lynnwood, WA — Home Run Electric | Snohomish & King County"
-      description="Licensed electrician in Lynnwood, WA — residential & commercial electrical services in Snohomish and King County. Panel upgrades, EV chargers, generators. Call (425) 489-0791."
+      description="Licensed electrician in Lynnwood, WA — residential & commercial electrical services in Snohomish, King, Skagit, Thurston, Pierce and Whatcom Counties. Panel upgrades, EV chargers, generators. Call (425) 489-0791."
     />
     <HomeHero theme={theme} tone={tone} id="hero" />
     <TrustStrip theme={theme} id="trust" />
