@@ -2,7 +2,7 @@ import { Icon } from '../ui/Icon';
 import { PHONE_DISPLAY, PHONE_TEL } from '../../data/content';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
-export const EmergencyBar = ({ theme, show, tone }) => {
+export const EmergencyBar = ({ theme, show }) => {
   const { isMobile } = useBreakpoint();
   if (!show) return null;
   return (
@@ -25,10 +25,6 @@ export const EmergencyBar = ({ theme, show, tone }) => {
       <a href={`tel:${PHONE_TEL}`} style={{ color: 'inherit', textDecoration: 'none', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
         <Icon name="phone" size={14} /> {PHONE_DISPLAY}
       </a>
-      {!isMobile && <span style={{ opacity: 0.75 }}>·</span>}
-      <span style={isMobile ? { width: '100%', textAlign: 'center', fontSize: 11, opacity: 0.85 } : {}}>
-        Monday – Saturday &nbsp;|&nbsp; 7:00AM – 6:00PM
-      </span>
     </div>
   );
 };

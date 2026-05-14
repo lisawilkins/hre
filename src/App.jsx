@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation, useSearchParams } from 'react-router-dom';
 import { THEMES, TONE_COPY } from './data/themes';
 import { JsonLd } from './components/seo/JsonLd';
 import { localBusinessSchema } from './data/schemas';
@@ -31,7 +31,9 @@ function ScrollToTop() {
 
 export default function App() {
   const [tweaks] = useState(DEFAULT_TWEAKS);
-  const theme = THEMES[tweaks.theme];
+  const [searchParams] = useSearchParams();
+  const themeKey = searchParams.get('theme');
+  const theme = THEMES[themeKey] ?? THEMES[DEFAULT_TWEAKS.theme];
   const tone = TONE_COPY[tweaks.tone];
 
   useEffect(() => {
