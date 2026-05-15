@@ -98,7 +98,7 @@ export const HomeHero = ({ theme, tone, id }) => {
             Your neighbors.<br/>Your electricians.
           </div>
           <p style={{ fontFamily: theme.bodyFont, fontSize: 15, lineHeight: 1.5, opacity: 0.92, margin: '0 0 24px', maxWidth: 360, position: 'relative' }}>
-            Headquartered in Lynnwood and serving Snohomish, King, Pierce, Whatcom, Kistap, and Thurston counties since 2003. We live here, our crew lives here, and we treat every job like it's on our own block.
+            Our company and crew are local to Western Washington, so we treat every job like it's on our own block.
           </p>
           <a href={`tel:${PHONE_TEL}`} style={{
             display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16,

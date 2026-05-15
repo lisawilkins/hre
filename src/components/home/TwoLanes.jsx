@@ -42,6 +42,34 @@ const LaneCard = ({ theme, kind, eyebrow, title, lede, icon, go, isMobile }) => 
   </div>
 );
 
+const InfoCard = ({ theme, eyebrow, title, lede, icon, isMobile }) => (
+  <div style={{
+    background: theme.surfaceAlt,
+    color: theme.ink,
+    borderRadius: theme.radius, padding: isMobile ? 28 : 48,
+    border: `1px solid ${theme.line}`,
+    display: 'flex', flexDirection: 'column',
+  }}>
+    <div style={{
+      width: 56, height: 56, borderRadius: theme.radius,
+      background: theme.brand,
+      color: theme.brandInk,
+      display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 28,
+    }}>
+      <Icon name={icon} size={28} />
+    </div>
+    <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', opacity: 0.7, marginBottom: 12 }}>
+      {eyebrow}
+    </div>
+    <h2 style={{
+      fontFamily: theme.displayFont, fontWeight: theme.displayWeight,
+      fontSize: isMobile ? 'clamp(26px, 7vw, 36px)' : 'clamp(32px, 3.5vw, 46px)',
+      lineHeight: 1, letterSpacing: '-0.03em', margin: 0, marginBottom: 16,
+    }}>{title}</h2>
+    <p style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.5, opacity: 0.85, margin: 0, maxWidth: 420 }}>{lede}</p>
+  </div>
+);
+
 export const TwoLanes = ({ theme, id }) => {
   const { isMobile } = useBreakpoint();
   const navigate = useNavigate();
@@ -54,6 +82,15 @@ export const TwoLanes = ({ theme, id }) => {
       }}>
         <LaneCard theme={theme} kind="Residential" eyebrow="For the home" title="Residential Electrical Services in Western Washington" lede="Panel swaps, EV chargers, smart home, and repairs — handled like it's our own house." icon="house" go={() => navigate('/residential')} isMobile={isMobile} />
         <LaneCard theme={theme} kind="Commercial" eyebrow="Commercial" title="Commercial Expertise Across Snohomish & King County" lede="Twenty-plus years of TIs, ground-up builds, and service upgrades across Western WA." icon="building" go={() => navigate('/commercial')} isMobile={isMobile} />
+      </div>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+        gap: 16,
+        marginTop: 16,
+      }}>
+        <InfoCard theme={theme} eyebrow="Rebuild" title="Insurance & Restoration" lede="We work with all insurance & restoration companies to make you whole again after fire or water damage." icon="life-preserver" isMobile={isMobile} />
+        <InfoCard theme={theme} eyebrow="Referrals" title="Public Utilities" lede="We're proud to be frequently referred by agencies such as PUD, PSE and Seattle City Light" icon="lightning" isMobile={isMobile} />
       </div>
     </Section>
   );
