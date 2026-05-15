@@ -410,8 +410,8 @@ export const COMMERCIAL_CLIENTS = [
 
 export const STATS = [
   { n: '23+', l: 'Years in business' },
-  { n: 'LOCAL', l: 'Owned & operated in the Pacific Northwest' },
-  { n: '4', l: 'Counties served' },
+  { n: '40+', l: 'Years of experience' },
+  { n: '6+', l: 'Counties served' },
   { n: 'A+', l: 'BBB Rated' },
 ];
 
