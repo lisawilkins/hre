@@ -31,12 +31,12 @@ export const LocationsPage = ({ theme, tone }) => {
   return (
     <div>
       <PageMeta
-        title="Electrician Service Areas — Snohomish, King, Pierce & Thurston County | HRE"
-        description="Home Run Electric serves Snohomish, King, Thurston, and Pierce counties. Find your city for ETA, job history, and availability."
+        title="Electrician Service Areas — Snohomish, King, Pierce, Whatcom, Skagit & Thurston County | HRE"
+        description="Home Run Electric serves Snohomish, King, Thurston, Whatcom, Skagit, and Pierce counties. Find your city for ETA, job history, and availability."
         ogImage={`${SITE_URL}/og-areas.jpg`}
       />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Service Areas', path: '/service-areas' }])} />
-      <PageHero theme={theme} id="hero" eyebrow="Service areas" title="Serving Snohomish, King, Thurston & Pierce counties." lede="Full service from our Lynnwood headquarters across four counties. Emergency and after-hours service available in King and Snohomish counties. If your area isn't listed give us a call!" />
+      <PageHero theme={theme} id="hero" eyebrow="Service areas" title="Serving Western Washington for over 23 years." lede="Full service from our Lynnwood headquarters across 6+ counties across Western Washington. Emergency and after-hours service available in King and Snohomish counties. If your area isn't listed give us a call!" cta={{ label: tone.bookCta, path: '/book' }} />
       <Section theme={theme} id="locations">
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.2fr', gap: isMobile ? 32 : 48 }}>
           <div>

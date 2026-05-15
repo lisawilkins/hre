@@ -5,8 +5,9 @@ import { Button } from '../components/ui/Button';
 import { PHONE_DISPLAY, PHONE_TEL } from '../data/content';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
-export const PageHero = ({ theme, eyebrow, title, lede, id }) => {
+export const PageHero = ({ theme, eyebrow, title, lede, id, cta }) => {
   const { isMobile, isTablet } = useBreakpoint();
+  const navigate = useNavigate();
   const padding = isMobile ? '48px 16px 40px' : isTablet ? '60px 24px 52px' : '72px 48px 64px';
   return (
     <div id={id} style={{ background: theme.bg, position: 'relative', overflow: 'hidden' }}>
@@ -26,6 +27,12 @@ export const PageHero = ({ theme, eyebrow, title, lede, id }) => {
           {title}
         </h1>
         <p style={{ fontFamily: theme.bodyFont, fontSize: isMobile ? 16 : 19, lineHeight: 1.5, color: theme.ink2, marginTop: 24, maxWidth: 640 }}>{lede}</p>
+        {cta && (
+          <div style={{ display: 'flex', gap: 12, marginTop: 28, flexWrap: 'wrap' }}>
+            <Button theme={theme} variant="primary" size={isMobile ? 'md' : 'lg'} iconRight="arrow" onClick={() => navigate(cta.path, cta.state ? { state: cta.state } : undefined)}>{cta.label}</Button>
+            <Button theme={theme} variant="ghost" size={isMobile ? 'md' : 'lg'} icon="phone" onClick={() => window.location.href = `tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</Button>
+          </div>
+        )}
       </div>
     </div>
   );

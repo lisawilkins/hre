@@ -21,7 +21,7 @@ export const CommercialPage = ({ theme, tone }) => {
     <div>
       <PageMeta title="Commercial Electrician — Western Washington | Home Run Electric" description="Commercial electrician in Western Washington since 2003. TIs, ground-up builds, service upgrades to 4000A. Serving businesses across Snohomish and King County." />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Commercial Services', path: '/commercial' }])} />
-      <PageHero theme={theme} id="hero" eyebrow="Commercial" title="20+ years keeping Western Washington's businesses running." lede={tone.commercialLede} />
+      <PageHero theme={theme} id="hero" eyebrow="Commercial" title="20+ years keeping Western Washington's businesses running." lede={tone.commercialLede} cta={{ label: tone.bookCta, path: '/book' }} />
 
       {/* Services grid */}
       <Section theme={theme} id="services">

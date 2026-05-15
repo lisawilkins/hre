@@ -33,15 +33,5 @@ export const ServiceCard = ({ theme, service, onClick, compact, style }) => (
         {service.blurb}
       </p>
     </div>
-    <div style={{ marginTop: 'auto', paddingTop: 14, borderTop: `1px solid ${theme.line}`, display: 'flex', justifyContent: 'space-between', fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.monoColor }}>
-      {service.eta ? (
-        <>
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><Icon name="clock" size={11} /> {service.eta}</span>
-          {/* <span>From {service.from}</span> */}
-        </>
-      ) : (
-        <span>Request Estimate</span>
-      )}
-    </div>
   </div>
 );

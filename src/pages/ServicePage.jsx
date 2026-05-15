@@ -1,7 +1,6 @@
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { SERVICES, COMMERCIAL_SERVICES, PHONE_TEL, PHONE_DISPLAY } from '../data/content';
 import { Button } from '../components/ui/Button';
-import { Icon } from '../components/ui/Icon';
 import { Section } from '../components/ui/Section';
 import { PageMeta } from '../components/ui/PageMeta';
 import { HeroPattern } from '../components/ui/HeroPattern';
@@ -62,20 +61,6 @@ export const ServicePage = ({ theme, tone, type }) => {
           <p style={{ fontFamily: theme.bodyFont, fontSize: isMobile ? 16 : 19, lineHeight: 1.55, color: theme.ink2, marginTop: 24, maxWidth: 600, marginBottom: 0 }}>
             {description}
           </p>
-          {isResidential && (
-            <div style={{ display: 'flex', gap: 20, marginTop: 20, fontFamily: theme.monoFont, fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', color: theme.monoColor, flexWrap: 'wrap' }}>
-              {service.eta ? (
-                <>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                    <Icon name="clock" size={13} /> {service.eta}
-                  </span>
-                  <span>From {service.from}</span>
-                </>
-              ) : (
-                <span>Project-based pricing</span>
-              )}
-            </div>
-          )}
           <div style={{ display: 'flex', gap: 12, marginTop: 28, flexWrap: 'wrap' }}>
             <Button theme={theme} variant="primary" iconRight="arrow" onClick={() => navigate('/book', { state: bookState })}>
               {isResidential ? 'Request Service' : 'Request a Bid'}

@@ -86,7 +86,7 @@ export const ResidentialPage = ({ theme, tone }) => {
       <PageMeta title="Residential Electrician — Western Washington | Home Run Electric" description="Residential electrician serving Snohomish, King, Pierce & Thurston County. Panel upgrades, EV charger installs, whole-home generators — licensed, bonded, warrantied." />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Residential Services', path: '/residential' }])} />
       <JsonLd schema={faqSchema(FAQ_ITEMS)} />
-      <PageHero theme={theme} id="hero" eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} />
+      <PageHero theme={theme} id="hero" eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} cta={{ label: tone.bookCta, path: '/book' }} />
       <Section theme={theme} id="services">
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? 'repeat(auto-fill, minmax(200px, 1fr))' : 'repeat(4, minmax(200px, 1fr))', gap: 16 }}>
           {SERVICES.map((s, i) => (

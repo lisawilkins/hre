@@ -83,7 +83,7 @@ export const TONE_COPY = {
     heroSub: "From Bellingham to Olympia, and Gig Harbor to Monroe, Home Run Electric has powered the greater Seattle area's residential and commercial projects for over 23 years.",
     bookCta: 'Request Estimate',
     emergencyLede: 'Don\'t wait to have your electrical system checked out by one of our licensed electricians.',
-    residentialLede:"From panel upgrades and EV chargers to smart home installations and emergency repairs, Home Run Electric handles the full range of residential electrical work for Western Washington homeowners. Whether it's a single-room remodel or a whole-home project, our licensed electricians get it done safely, on time, and up to code. We offer these services and much more — contact us to get a free estimate.",
+    residentialLede:"From panel upgrades and EV chargers to smart home installations and emergency repairs, Home Run Electric handles the full range of residential electrical work for Western Washington homeowners. Our licensed electricians get work done safely, on time, and up to code. We offer these services and much more — contact us to get a free estimate.",
     commercialLede: 'Home Run Electric has delivered reliable commercial electrical work since 2003, from storefront wiring and 3-phase systems to large-scale power distribution and code compliance. We offer the following services and much more. Contact us to get a free estimate.',
     aboutLede: "Home Run Electric has been the trusted electrical contractor proudly serving our neighbors and community with integrity and honesty.",
   },
