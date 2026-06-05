@@ -2,7 +2,7 @@ import { HomeHero } from '../components/home/HomeHero';
 import { TrustStrip } from '../components/home/TrustStrip';
 import { TwoLanes } from '../components/home/TwoLanes';
 import { ResidentialServices } from '../components/home/ResidentialServices';
-import { WhyUs } from '../components/home/WhyUs';
+import { TrustPoints } from '../components/ui/TrustPoints';
 import { HowItWorks } from '../components/home/HowItWorks';
 import { EmergencyBand } from '../components/home/EmergencyBand';
 import { Testimonials } from '../components/home/Testimonials';
@@ -18,7 +18,7 @@ export const HomePage = ({ theme, tone }) => (
     <TrustStrip theme={theme} id="trust" />
     <TwoLanes theme={theme} id="lanes" />
     <ResidentialServices theme={theme} id="residential" />
-    <WhyUs theme={theme} id="why-us" />
+    <TrustPoints theme={theme} id="why-us" />
     <HowItWorks theme={theme} id="how-it-works" />
     <EmergencyBand theme={theme} tone={tone} id="emergency" />
     <Testimonials theme={theme} id="testimonials" />

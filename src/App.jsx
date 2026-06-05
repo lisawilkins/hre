@@ -47,19 +47,21 @@ export default function App() {
       <ScrollToTop />
       <EmergencyBar theme={theme} show={tweaks.emergencyBar} tone={tone} />
       <Nav theme={theme} />
-      <Routes>
-        <Route path="/" element={<HomePage theme={theme} tone={tone} />} />
-        <Route path="/residential" element={<ResidentialPage theme={theme} tone={tone} />} />
-        <Route path="/residential/:serviceId" element={<ServicePage theme={theme} tone={tone} type="residential" />} />
-        <Route path="/commercial" element={<CommercialPage theme={theme} tone={tone} />} />
-        <Route path="/commercial/:serviceId" element={<ServicePage theme={theme} tone={tone} type="commercial" />} />
-        <Route path="/about" element={<AboutPage theme={theme} tone={tone} />} />
-        <Route path="/service-areas" element={<LocationsPage theme={theme} tone={tone} />} />
-        <Route path="/service-areas/:citySlug" element={<CityPage theme={theme} tone={tone} />} />
-        <Route path="/book" element={<BookPage theme={theme} tone={tone} />} />
-        <Route path="/design-system" element={<DesignSystemPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage theme={theme} tone={tone} />} />
+          <Route path="/residential" element={<ResidentialPage theme={theme} tone={tone} />} />
+          <Route path="/residential/:serviceId" element={<ServicePage theme={theme} tone={tone} type="residential" />} />
+          <Route path="/commercial" element={<CommercialPage theme={theme} tone={tone} />} />
+          <Route path="/commercial/:serviceId" element={<ServicePage theme={theme} tone={tone} type="commercial" />} />
+          <Route path="/about" element={<AboutPage theme={theme} tone={tone} />} />
+          <Route path="/service-areas" element={<LocationsPage theme={theme} tone={tone} />} />
+          <Route path="/service-areas/:citySlug" element={<CityPage theme={theme} tone={tone} />} />
+          <Route path="/book" element={<BookPage theme={theme} tone={tone} />} />
+          <Route path="/design-system" element={<DesignSystemPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
       <Footer theme={theme} />
     </div>
   );

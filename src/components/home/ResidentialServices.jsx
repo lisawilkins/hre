@@ -10,7 +10,7 @@ export const ResidentialServices = ({ theme, id }) => {
   const navigate = useNavigate();
 
   return (
-    <Section theme={theme} id={id} eyebrow="Residential services">
+    <Section theme={theme} id={id} eyebrow="Residential services" topDivider="bgIcons">
       <div style={{
         display: 'grid',
         gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',

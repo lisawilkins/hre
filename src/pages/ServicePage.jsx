@@ -1,4 +1,18 @@
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
+
+function parseBody(bodyText) {
+  return bodyText.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean).map(para => {
+    const match = para.match(/^(Common .+? (?:electrical )?services) include (.+?)\.?\s*$/is);
+    if (match) {
+      const items = match[2]
+        .split(/,\s*/)
+        .map(s => s.replace(/^and\s+/i, '').trim())
+        .filter(Boolean);
+      return { type: 'list', heading: match[1], items };
+    }
+    return { type: 'p', text: para };
+  });
+}
 import { SERVICES, COMMERCIAL_SERVICES, PHONE_TEL, PHONE_DISPLAY } from '../data/content';
 import { Button } from '../components/ui/Button';
 import { Section } from '../components/ui/Section';
@@ -75,11 +89,31 @@ export const ServicePage = ({ theme, tone, type }) => {
       {service.body && (
         <Section theme={theme}>
           <div style={{ maxWidth: 680 }}>
-            {service.body.split(/\n\s*\n/).map((para, i) => (
-              <p key={i} style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.7, color: theme.ink2, margin: '0 0 20px' }}>
-                {para.trim()}
-              </p>
-            ))}
+            <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(24px, 3vw, 34px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: theme.ink, margin: '0 0 28px' }}>
+              {title} in Western Washington
+            </h2>
+            {parseBody(service.body).map((block, i) => {
+              if (block.type === 'list') return (
+                <div key={i} style={{ margin: '28px 0 24px' }}>
+                  <h3 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 18, letterSpacing: '-0.015em', color: theme.ink, margin: '0 0 14px' }}>
+                    {block.heading}
+                  </h3>
+                  <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {block.items.map((item, j) => (
+                      <li key={j} style={{ fontFamily: theme.bodyFont, fontSize: 16, lineHeight: 1.5, color: theme.ink2, display: 'flex', alignItems: 'baseline', gap: 10 }}>
+                        <span style={{ color: theme.accent === '#FFC629' || theme.accent === '#EEFF41' ? theme.ink : theme.accent, fontWeight: 700, flexShrink: 0 }}>—</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+              return (
+                <p key={i} style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.7, color: theme.ink2, margin: '0 0 20px' }}>
+                  {block.text}
+                </p>
+              );
+            })}
           </div>
         </Section>
       )}

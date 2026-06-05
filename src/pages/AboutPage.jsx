@@ -2,6 +2,7 @@ import { Section } from '../components/ui/Section';
 import { PageMeta } from '../components/ui/PageMeta';
 import { Icon } from '../components/ui/Icon';
 import { Badge } from '../components/ui/Badge';
+import { TrustPoints } from '../components/ui/TrustPoints';
 import { Placeholder, Portrait } from '../components/ui/Placeholder';
 import { PageHero, CTABand } from './shared';
 import { TEAM } from '../data/content';
@@ -12,7 +13,6 @@ import { useBreakpoint } from '../hooks/useBreakpoint';
 export const AboutPage = ({ theme, tone }) => {
   const { isMobile, isTablet, isTabletDown } = useBreakpoint();
   const teamCols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)';
-  const credCols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)';
 
   return (
     <div>
@@ -67,25 +67,7 @@ export const AboutPage = ({ theme, tone }) => {
         </div>
       </Section>
 
-      {/* Credentials */}
-      <Section theme={theme} id="credentials" eyebrow="Credentials" style={{ background: theme.surface }}>
-        <div style={{ display: 'grid', gridTemplateColumns: credCols, gap: 16 }}>
-          {[
-            { t: 'Licensed in WA', d: 'Electrical contractor lic. HOMERRE974K2' },
-            { t: 'Bonded & insured', d: '$2M general liability, $1M auto' },
-            { t: 'A+ Rated', d: 'by the Better Business Bureau' },
-            { t: 'Safety Certified ', d: 'We are certified for Life Safety & Fire Alarm Systems' },
-          ].map((c, i) => (
-            <div key={i} style={{ background: theme.bg, border: `1px solid ${theme.line}`, borderRadius: theme.radius, padding: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
-              <div style={{ width: 40, height: 40, borderRadius: theme.radius, background: theme.brand, color: theme.brandInk, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Icon name="shield" size={20} />
-              </div>
-              <div style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 18, color: theme.ink, letterSpacing: '-0.015em' }}>{c.t}</div>
-              <div style={{ fontFamily: theme.bodyFont, fontSize: 13, color: theme.ink2, lineHeight: 1.5 }}>{c.d}</div>
-            </div>
-          ))}
-        </div>
-      </Section>
+      <TrustPoints theme={theme} id="credentials" eyebrow="Credentials &amp; Trust" />
 
       <CTABand theme={theme} tone={tone} id="cta" />
     </div>
