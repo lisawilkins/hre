@@ -18,8 +18,15 @@ export const CityPage = ({ theme }) => {
 
   if (!location) return <Navigate to="/service-areas" replace />;
 
-  const { city, county, jobs, emergency, blurb } = location;
+  const { city, county, emergency, blurb } = location;
   const heroPadding = isMobile ? '48px 16px 40px' : isTablet ? '60px 24px 52px' : '72px 48px 64px';
+
+  const seed = location.slug.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
+  const featuredServices = [...SERVICES]
+    .map((s, i) => ({ s, key: Math.sin(seed + i) }))
+    .sort((a, b) => a.key - b.key)
+    .slice(0, 3)
+    .map(x => x.s);
 
   return (
     <div>
@@ -70,14 +77,15 @@ export const CityPage = ({ theme }) => {
           <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1, margin: 0, letterSpacing: '-0.03em', color: theme.ink }}>
             What we do in {city}.
           </h2>
-          <div style={{ fontFamily: theme.monoFont, fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', color: theme.monoColor }}>
-            +{jobs} jobs completed
-          </div>
+
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gap: 16 }}>
-          {SERVICES.map(s => (
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: 16 }}>
+          {featuredServices.map(s => (
             <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate(`/residential/${s.id}`)} />
           ))}
+        </div>
+        <div style={{ marginTop: 24 }}>
+          <Button theme={theme} variant="outline" iconRight="arrow" onClick={() => navigate('/residential')}>Explore residential services</Button>
         </div>
       </Section>
     </div>

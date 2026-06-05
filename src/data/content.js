@@ -279,119 +279,119 @@ export const TEAM = [
 
 export const LOCATIONS = [
   {
-    city: 'Lynnwood', slug: 'lynnwood', county: 'Snohomish County', eta: '5 min', jobs: 412, hq: true, emergency: true,
+    city: 'Lynnwood', slug: 'lynnwood', county: 'Snohomish County', eta: '5 min', hq: true, emergency: true,
     blurb: "Home Run Electric's home base since 2003. Lynnwood is a vibrant, fast-growing city of roughly 45,000 in southern Snohomish County, perfectly positioned between Seattle and Everett along the I-5 corridor. With the arrival of Sound Transit's light rail extension spurring new residential and commercial development, demand for modern electrical work — from panel upgrades to EV charger installations — is growing right alongside the city. A welcoming mix of established neighborhoods and new construction makes Lynnwood a smart choice for homeowners and businesses alike. Home Run Electric is proud to be Lynnwood's trusted electrical contractor for both residential and commercial work.",
   },
   {
-    city: 'Edmonds', slug: 'edmonds', county: 'Snohomish County', eta: '20 min', jobs: 221, emergency: true,
+    city: 'Edmonds', slug: 'edmonds', county: 'Snohomish County', eta: '20 min', emergency: true,
     blurb: "Edmonds is a charming waterfront city of roughly 42,000 on Puget Sound, known for its arts community, ferry terminal, and some of the best sunset views in Western Washington. With a mix of older craftsman homes and newer construction along the waterfront and hillside neighborhoods, landscape and exterior lighting upgrades are a popular way for Edmonds homeowners to enhance their properties and enjoy the natural surroundings year-round. Its walkable downtown and thriving local business scene give Edmonds a personality that residents love and visitors rarely forget. Home Run Electric is Edmonds' go-to electrical contractor, trusted by homeowners and local businesses throughout this beloved waterfront community.",
   },
   {
-    city: 'Mountlake Terrace', slug: 'mountlake-terrace', county: 'Snohomish County', eta: '15 min', jobs: 143, emergency: true,
+    city: 'Mountlake Terrace', slug: 'mountlake-terrace', county: 'Snohomish County', eta: '15 min', emergency: true,
     blurb: "Mountlake Terrace is a compact, well-established city undergoing steady reinvestment as light rail brings renewed development pressure to its town center. Many of its post-war homes are prime candidates for panel upgrades, EV charger installations, and smart home wiring. We're on the ground here regularly and know the neighborhoods well.",
   },
   {
-    city: 'Mill Creek', slug: 'mill-creek', county: 'Snohomish County', eta: '20 min', jobs: 167, emergency: true,
+    city: 'Mill Creek', slug: 'mill-creek', county: 'Snohomish County', eta: '20 min', emergency: true,
     blurb: "Mill Creek is one of Snohomish County's most sought-after residential communities — a planned city with winding streets, wooded lots, and homes built primarily in the 1980s and 90s. EV charger installations and panel upgrades are among our most common calls here, as homeowners modernize electrical systems reaching the end of their first service life.",
   },
   {
-    city: 'Everett', slug: 'everett', county: 'Snohomish County', eta: '25 min', jobs: 188, emergency: true,
+    city: 'Everett', slug: 'everett', county: 'Snohomish County', eta: '25 min', emergency: true,
     blurb: "Everett is Snohomish County's largest city, home to roughly 115,000 residents and a major economic engine for the region. As headquarters to Boeing's commercial assembly operations and a hub for maritime industry and healthcare, large-scale power distribution and 3-phase electrical systems are routine here. Its revitalized waterfront and affordable housing relative to Seattle make it an increasingly attractive destination for families and businesses alike.",
   },
   {
-    city: 'Mukilteo', slug: 'mukilteo', county: 'Snohomish County', eta: '25 min', jobs: 92, emergency: true,
+    city: 'Mukilteo', slug: 'mukilteo', county: 'Snohomish County', eta: '25 min', emergency: true,
     blurb: "Mukilteo is a small waterfront city with a strong aerospace identity — home to one of Boeing's largest manufacturing facilities and the ferry terminal connecting the mainland to Whidbey Island. Its mix of industrial corridors and quiet residential streets keeps our commercial and residential crews equally busy. Older neighborhoods near the shoreline see frequent calls for panel replacements and outlet upgrades.",
   },
   {
-    city: 'Bothell', slug: 'bothell', county: 'King County', eta: '20 min', jobs: 156, emergency: true,
+    city: 'Bothell', slug: 'bothell', county: 'King County', eta: '20 min', emergency: true,
     blurb: "Bothell is a thriving city of roughly 55,000 straddling the King and Snohomish County line, offering a winning combination of small-town warmth and big-city access. With a booming biotech and tech industry presence and a rapidly growing downtown core, data and security system wiring is increasingly in demand for Bothell's expanding commercial and medical office developments. Parks, trails along the Sammamish River, and a strong local business community round out a quality of life that keeps residents proud to call it home. Home Run Electric is Bothell's trusted name in electrical contracting, serving the city's homes and businesses with care and consistency.",
   },
   {
-    city: 'Kirkland', slug: 'kirkland', county: 'King County', eta: '30 min', jobs: 129, emergency: true,
+    city: 'Kirkland', slug: 'kirkland', county: 'King County', eta: '30 min', emergency: true,
     blurb: "Kirkland is a thriving lakeside city of roughly 92,000 on the eastern shore of Lake Washington, known for its charming waterfront, acclaimed dining, and strong tech industry presence. With a high concentration of tech professionals and upscale homes, smart home installations and whole-home electrical upgrades are in high demand across Kirkland's established and newer neighborhoods alike. Top-rated schools, tree-lined streets, and easy access to both Seattle and the Eastside make Kirkland one of the most desirable communities in the region. Home Run Electric has been the go-to electrical contractor for Kirkland homeowners and businesses for over two decades.",
   },
   {
-    city: 'Shoreline', slug: 'shoreline', county: 'King County', eta: '20 min', jobs: 119, emergency: true,
+    city: 'Shoreline', slug: 'shoreline', county: 'King County', eta: '20 min', emergency: true,
     blurb: "Shoreline is a dense, transit-rich city that has seen rapid transformation with the arrival of light rail and significant new residential construction. Its housing stock spans generations — from mid-century ranches to brand-new high-rises — which keeps our crews handling everything from rewiring older homes to roughing-in new multifamily buildings. Emergency service is available Mon–Sat, 7a–6p.",
   },
   {
-    city: 'Lake Forest Park', slug: 'lake-forest-park', county: 'King County', eta: '25 min', jobs: 78, emergency: true,
+    city: 'Lake Forest Park', slug: 'lake-forest-park', county: 'King County', eta: '25 min', emergency: true,
     blurb: "Lake Forest Park is a quiet residential enclave nestled between Lake Washington and the county line, known for its heavily wooded lots and mid-century homes. Many properties here still have original electrical panels and wiring, making it a frequent destination for Home Run Electric's residential upgrade crews. Emergency service is available when you need it most.",
   },
   {
-    city: 'Bellevue', slug: 'bellevue', county: 'King County', eta: '40 min', jobs: 84, emergency: true,
+    city: 'Bellevue', slug: 'bellevue', county: 'King County', eta: '40 min', emergency: true,
     blurb: "Bellevue is the economic capital of the Eastside — a city of corporate headquarters, luxury high-rises, and some of Washington's most valuable residential real estate. Our crews handle a wide spectrum here: commercial tenant improvements, high-spec custom home electrical, EV charging infrastructure, and smart home systems. Emergency service is available Mon–Sat, 7a–6p.",
   },
   {
-    city: 'Redmond', slug: 'redmond', county: 'King County', eta: '40 min', jobs: 54, emergency: true,
+    city: 'Redmond', slug: 'redmond', county: 'King County', eta: '40 min', emergency: true,
     blurb: "Redmond is a dynamic Eastside city of roughly 73,000, globally recognized as the home of Microsoft and Nintendo of America. With a dense concentration of tech workers and modern homes, demand for EV chargers, home office electrical upgrades, and smart home automation keeps pace with the city's relentless innovation culture. Exceptional parks, a vibrant downtown, and continued infrastructure investment make Redmond one of the Pacific Northwest's premier cities. Home Run Electric is wired into the Redmond community, delivering electrical solutions for the city's homes, tech campuses, and commercial properties.",
   },
   {
-    city: 'Seattle', slug: 'seattle', county: 'King County', eta: '35 min', jobs: 98, emergency: true,
+    city: 'Seattle', slug: 'seattle', county: 'King County', eta: '35 min', emergency: true,
     blurb: "Seattle's electrical landscape is as varied as its neighborhoods — century-old craftsman bungalows in Capitol Hill, modern high-rises in South Lake Union, and everything in between. Our crews are experienced in the permitting requirements and inspection protocols specific to Seattle City Light territory. From knob-and-tube remediation to commercial tenant improvements, we bring the same standard of work across the city.",
   },
   {
-    city: 'Olympia', slug: 'olympia', county: 'Thurston County', eta: '1 hr 30 min', jobs: 64,
+    city: 'Olympia', slug: 'olympia', county: 'Thurston County', eta: '1 hr 30 min',
     blurb: "Olympia is the state capital of Washington, home to roughly 55,000 residents and a vibrant mix of government, arts, and small business culture on the southern tip of Puget Sound. With a eclectic mix of historic buildings, older bungalows, and growing commercial districts, electrical remodels and code compliance work are a natural fit for a city balancing its historic character with modern demands. A thriving food scene, strong community identity, and stunning waterfront views make Olympia one of the Pacific Northwest's most distinctive small cities. Home Run Electric is ready to serve Olympia's homes and businesses with the same quality and reliability we bring to every community we work in.",
   },
   {
-    city: 'Lacey', slug: 'lacey', county: 'Thurston County', eta: '1 hr 35 min', jobs: 41,
+    city: 'Lacey', slug: 'lacey', county: 'Thurston County', eta: '1 hr 35 min',
     blurb: "Lacey is one of Thurston County's fastest-growing cities, with steady residential and commercial development expanding outward from its established core. New construction generates consistent demand for full electrical builds, while older homes and retail spaces call for panel upgrades and lighting retrofits. Home Run Electric is a dependable option for Lacey homeowners and businesses.",
   },
   {
-    city: 'Tumwater', slug: 'tumwater', county: 'Thurston County', eta: '1 hr 35 min', jobs: 28,
+    city: 'Tumwater', slug: 'tumwater', county: 'Thurston County', eta: '1 hr 35 min',
     blurb: "Tumwater is Thurston County's oldest incorporated city, home to Tumwater Falls and a mix of industrial, commercial, and residential uses. Its older building stock is well-suited to Home Run Electric's retrofit and remediation services, from rewiring historic properties to upgrading service panels for modern electrical loads.",
   },
   {
-    city: 'Tacoma', slug: 'tacoma', county: 'Pierce County', eta: '1 hr 15 min', jobs: 61,
+    city: 'Tacoma', slug: 'tacoma', county: 'Pierce County', eta: '1 hr 15 min',
     blurb: "Tacoma is a bold, fast-rising city of roughly 220,000 on Commencement Bay, shedding its industrial past in favor of a dynamic arts scene, waterfront redevelopment, and a growing reputation as one of the most exciting cities in the Pacific Northwest. With significant commercial construction, multi-family housing development, and a mix of historic and modern properties across its neighborhoods, large-scale power distribution and full-service remodel wiring are in high demand across the city. Affordable relative to Seattle, culturally rich, and strategically positioned between the metro and the South Sound, Tacoma is a city on the rise. Home Run Electric is proud to power Tacoma's next chapter, serving both its established properties and its newest developments.",
   },
   {
-    city: 'Puyallup', slug: 'puyallup', county: 'Pierce County', eta: '1 hr 20 min', jobs: 44,
+    city: 'Puyallup', slug: 'puyallup', county: 'Pierce County', eta: '1 hr 20 min',
     blurb: "Puyallup is a welcoming city of roughly 45,000 at the foot of Mount Rainier's foothills in Pierce County, best known for the Washington State Fair and a strong sense of community pride. With a steady stream of residential remodels and older homes throughout its established neighborhoods, electrical safety inspections and panel upgrades are among the most practical investments Puyallup homeowners can make. Tree-lined streets, a charming downtown, and affordable housing make Puyallup one of the most livable cities in the South Sound. Home Run Electric is proud to bring dependable residential and commercial electrical service to the Puyallup community.",
   },
   {
-    city: 'Lakewood', slug: 'lakewood', county: 'Pierce County', eta: '1 hr 25 min', jobs: 33,
+    city: 'Lakewood', slug: 'lakewood', county: 'Pierce County', eta: '1 hr 25 min',
     blurb: "Lakewood is a diverse Pierce County city with a substantial military presence from Joint Base Lewis-McChord and a mix of residential, retail, and light industrial uses. Electrical work here spans the full spectrum, from residential service upgrades and circuit additions to commercial tenant improvements and light industrial installations.",
   },
   {
-    city: 'Mercer Island', slug: 'mercer-island', county: 'King County', eta: '30 min', jobs: 33, emergency: true,
+    city: 'Mercer Island', slug: 'mercer-island', county: 'King County', eta: '30 min', emergency: true,
     blurb:"Mercer Island is an affluent island community of roughly 25,000 situated in the middle of Lake Washington, connected to Seattle and the Eastside by I-90. With a high proportion of luxury homes and waterfront properties, whole-home generator installations are a popular choice for residents who want reliable power regardless of Pacific Northwest storm season. The island's tight-knit community and exceptional quality of life make it one of the most sought-after addresses in Washington State. When it comes to electrical work on Mercer Island, Home Run Electric is the contractor residents and property managers count on.",
   },
   {
-    city: 'Woodinville', slug: 'woodinville', county: 'King County', eta: '15 min', jobs: 33, emergency: true,
+    city: 'Woodinville', slug: 'woodinville', county: 'King County', eta: '15 min', emergency: true,
     blurb:"Woodinville is a picturesque city of roughly 13,000 in northeastern King County, celebrated for its world-class wine country, craft breweries, and lush Pacific Northwest scenery. With a thriving hospitality industry and dozens of tasting rooms and event venues, commercial electrical upgrades and reliable 3-phase power systems are essential to keeping Woodinville's businesses running at their best. Well-regarded schools, spacious properties, and a strong sense of local pride make it a standout community on the Eastside. Home Run Electric is the electrical partner Woodinville homeowners, wineries, and businesses rely on for quality work done right.",
   },
   {
-    city: 'Lynden', slug: 'lynden', county: 'Whatcom County', eta: '15 min', jobs: 33,
+    city: 'Lynden', slug: 'lynden', county: 'Whatcom County', eta: '15 min',
     blurb:"Lynden is a charming city of roughly 16,000 in northern Whatcom County, celebrated for its Dutch heritage, immaculate downtown, and strong agricultural tradition. With a mix of family farms, rural properties, and well-kept residential neighborhoods, home generators and exterior wiring for outbuildings and agricultural operations are practical priorities for Lynden property owners who know that reliable power is essential to daily life and livelihood. Top-ranked schools, a safe and welcoming community, and a strong local business base make Lynden one of the most family-friendly cities in Washington State. Home Run Electric is honored to serve the Lynden community with the quality and care its residents expect.",
   },
   {
-    city: 'Blaine', slug: 'blaine', county: 'Whatcom County', eta: '15 min', jobs: 33,
+    city: 'Blaine', slug: 'blaine', county: 'Whatcom County', eta: '15 min',
     blurb:"Blaine is a scenic border city of roughly 6,000 at the northernmost tip of Washington State, where the Semiahmoo Peninsula meets the waters of Drayton Harbor and the Canadian border crossing hums with daily cross-border activity. With a growing waterfront community, an active marina, and a mix of residential and commercial properties serving both locals and international travelers, storefront electrical work and exterior lighting upgrades are a natural fit for Blaine's evolving business district. The city's stunning natural setting and small-town character make it a hidden gem on the northern edge of Puget Sound country. Home Run Electric is ready to serve Blaine's homes and businesses with reliable electrical work from the ground up.",
   },
   {
-    city: 'Mount Vernon', slug: 'mount-vernon', county: 'Skagit County', eta: '35 min', jobs: 33,
+    city: 'Mount Vernon', slug: 'mount-vernon', county: 'Skagit County', eta: '35 min',
     blurb:"Mount Vernon is the county seat of Skagit County, home to roughly 37,000 residents and the commercial and cultural hub of the Skagit Valley. Known worldwide for the Skagit Valley Tulip Festival and surrounded by some of the most productive farmland in the Pacific Northwest, Mount Vernon balances its agricultural identity with a growing downtown, expanding medical facilities, and active residential development. Electrical service upgrades and commercial remodel wiring are in steady demand as the city's business community continues to modernize and grow. Home Run Electric is proud to serve Mount Vernon's homes, farms, and businesses as a trusted electrical contractor in the Skagit Valley.",
   },
   {
-    city: 'Anacortes', slug: 'anacortes', county: 'Skagit County', eta: '40 min', jobs: 33,
+    city: 'Anacortes', slug: 'anacortes', county: 'Skagit County', eta: '40 min',
     blurb:"Anacortes is a picturesque island city of roughly 17,000 on Fidalgo Island in Skagit County, known as the gateway to the San Juan Islands and home to a proud maritime heritage. With a mix of historic homes, waterfront properties, and an active refinery and industrial sector, the city presents a diverse range of electrical needs — from residential safety inspections and panel upgrades in its older neighborhoods to large-scale industrial power work along its commercial waterfront. A charming downtown, stunning water views, and a tight-knit community make Anacortes one of the most distinctive cities in Western Washington. Home Run Electric is the electrical contractor Anacortes homeowners and businesses count on for quality work done right.",
   },
   {
-    city: 'Sedro-Woolley', slug: 'sedro-woolley', county: 'Skagit County', eta: '40 min', jobs: 33,
+    city: 'Sedro-Woolley', slug: 'sedro-woolley', county: 'Skagit County', eta: '40 min',
     blurb:"Sedro-Woolley is a working-class city of roughly 12,000 at the eastern edge of the Skagit Valley, serving as a gateway to the North Cascades and the Skagit River corridor. With a heritage rooted in logging and manufacturing and a growing base of residential development, electrical panel upgrades and safety inspections are common needs for homeowners in Sedro-Woolley's established and newer neighborhoods alike. The city's rugged character, community pride, and access to world-class outdoor recreation make it a solid and unpretentious place to call home in Skagit County. Home Run Electric is ready to serve Sedro-Woolley's homes and businesses with straight-shooting, reliable electrical work.",
   },
   {
-    city: 'Burlington', slug: 'burlington', county: 'Skagit County', eta: '40 min', jobs: 33,
+    city: 'Burlington', slug: 'burlington', county: 'Skagit County', eta: '40 min',
     blurb:"Burlington is a thriving commercial city of roughly 10,000 at the crossroads of I-5 and Highway 20 in Skagit County, home to one of the most active retail corridors in the region and a growing residential community. With a high concentration of retail centers, restaurants, and light commercial properties along its busy arterials, storefront electrical upgrades and tenant improvement wiring are among the most in-demand services in Burlington's fast-moving business landscape. Its central location, affordable housing, and easy access to both Bellingham and the greater Seattle area make Burlington a practical and appealing place to live and do business. Home Run Electric is Burlington's reliable electrical contractor, serving the city's commercial and residential needs with consistency and expertise.",
   },
   {
-    city: 'Nooksack', slug: 'nooksack', county: 'Whatcom County', eta: '40 min', jobs: 33,
+    city: 'Nooksack', slug: 'nooksack', county: 'Whatcom County', eta: '40 min',
     blurb:"Nooksack is a small, close-knit community of roughly 1,500 in the heart of the Nooksack River Valley, surrounded by rich farmland and framed by the stunning peaks of the North Cascades. With a largely rural character and a mix of agricultural properties and family homes, landscape and exterior wiring — from barn power to outbuilding circuits and security lighting — is among the most common electrical needs for Nooksack property owners. The community's quiet, unhurried way of life and deep agricultural roots make it a unique and cherished corner of Whatcom County. Home Run Electric is ready to serve Nooksack's rural properties and residential community with reliable, code-compliant electrical work.",
   },
   {
-    city: 'Bellingham', slug: 'bellingham', county: 'Whatcom County', eta: '40 min', jobs: 33,
+    city: 'Bellingham', slug: 'bellingham', county: 'Whatcom County', eta: '40 min',
     blurb:"Bellingham is a vibrant coastal city of roughly 92,000 in Whatcom County, nestled between the Cascade Mountains and Puget Sound just 20 miles south of the Canadian border. With a thriving university presence, a booming craft industry scene, and a steady stream of residential and commercial development, electrical panel upgrades and new construction wiring are in constant demand across Bellingham's growing neighborhoods and expanding business corridors. A beloved waterfront, strong arts community, and outdoor recreation culture make Bellingham one of the most livable cities in the Pacific Northwest. Home Run Electric is proud to bring dependable, professional electrical service to Bellingham's homes and businesses.",
   },
 ];

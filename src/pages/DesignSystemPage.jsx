@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { THEMES } from '../data/themes';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
@@ -134,6 +135,61 @@ function ThemeCard({ theme }) {
   );
 }
 
+function ButtonStateSample({ label, note, theme, primaryHover, primaryPressed, ghostHover, ghostPressed }) {
+  const [pState, setPState] = useState('rest');
+  const [gState, setGState] = useState('rest');
+
+  const resolve = (base, state, hover, pressed) => ({
+    ...base,
+    ...(state === 'hover' ? hover : {}),
+    ...(state === 'pressed' ? pressed : {}),
+  });
+
+  const primaryBase = {
+    display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 10,
+    padding: '16px 26px', fontSize: 16, fontFamily: theme.bodyFont, fontWeight: 600,
+    borderRadius: theme.radius, cursor: 'pointer', letterSpacing: '-0.005em', outline: 'none',
+    background: theme.brand, color: theme.brandInk, border: `1px solid ${theme.brand}`,
+    transition: 'background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.1s, filter 0.15s',
+  };
+
+  const ghostBase = {
+    display: 'inline-flex', alignItems: 'center', gap: 10,
+    padding: '16px 26px', fontSize: 16, fontFamily: theme.bodyFont, fontWeight: 600,
+    borderRadius: theme.radius, cursor: 'pointer', letterSpacing: '-0.005em', outline: 'none',
+    background: 'transparent', color: theme.ink, border: `1px solid ${theme.line}`,
+    transition: 'background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s, transform 0.1s, filter 0.15s',
+  };
+
+  return (
+    <div style={{ flex: '1 1 300px' }}>
+      <div style={{ fontFamily: theme.monoFont, fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: theme.ink, marginBottom: 6 }}>{label}</div>
+      {note && <div style={{ fontFamily: theme.bodyFont, fontSize: 13, color: theme.muted, marginBottom: 14, lineHeight: 1.45 }}>{note}</div>}
+      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center', padding: '28px 24px', background: theme.bg, borderRadius: 8, border: `1px solid ${theme.line}` }}>
+        <button
+          style={resolve(primaryBase, pState, primaryHover, primaryPressed)}
+          onMouseEnter={() => setPState('hover')}
+          onMouseLeave={() => setPState('rest')}
+          onMouseDown={() => setPState('pressed')}
+          onMouseUp={() => setPState(prev => prev === 'pressed' ? 'hover' : prev)}
+        >
+          Request Estimate →
+        </button>
+        <button
+          style={resolve(ghostBase, gState, ghostHover, ghostPressed)}
+          onMouseEnter={() => setGState('hover')}
+          onMouseLeave={() => setGState('rest')}
+          onMouseDown={() => setGState('pressed')}
+          onMouseUp={() => setGState(prev => prev === 'pressed' ? 'hover' : prev)}
+        >
+          ☎ (425) 489-0791
+        </button>
+      </div>
+      <div style={{ fontFamily: theme.monoFont, fontSize: 10, color: theme.muted, marginTop: 8 }}>Hover + click to interact</div>
+    </div>
+  );
+}
+
 export function DesignSystemPage() {
   const theme = THEMES.tradeClassic;
 
@@ -185,6 +241,21 @@ export function DesignSystemPage() {
                 <Button theme={theme} variant="primary" size={size} iconRight="arrow">Icon right</Button>
               </div>
             ))}
+          </div>
+        </Block>
+
+        {/* Button states — exploration */}
+        <Block label="Button states — hover + pressed exploration (hero CTAs)">
+          <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
+            <ButtonStateSample
+              label="A — Glow lift"
+              note="Primary lightens slightly and rises. Ghost fills with a warm surface tint and the border sharpens."
+              theme={THEMES.tradeClassic}
+              primaryHover={{ filter: 'brightness(1.14)', boxShadow: '0 6px 20px rgba(11,31,58,0.28)', transform: 'translateY(-1px)' }}
+              primaryPressed={{ filter: 'brightness(0.82)', transform: 'translateY(1px)', boxShadow: 'none' }}
+              ghostHover={{ background: '#EAE6DE', borderColor: '#A8A094' }}
+              ghostPressed={{ background: '#DDD8CE', borderColor: '#A8A094', transform: 'translateY(1px)' }}
+            />
           </div>
         </Block>
 
