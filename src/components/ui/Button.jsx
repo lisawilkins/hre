@@ -8,25 +8,31 @@ export const Button = ({ theme, variant = 'primary', size = 'md', children, onCl
   const pad = size === 'lg' ? '16px 26px' : size === 'sm' ? '8px 14px' : '12px 20px';
   const fs = size === 'lg' ? 16 : size === 'sm' ? 13 : 15;
   const variants = {
-    primary:   { background: theme.brand, color: theme.brandInk, border: `1px solid ${theme.brand}` },
-    accent:    { background: theme.accent, color: theme.accentInk, border: `1px solid ${theme.accent}` },
-    emergency: { background: theme.emergency, color: theme.emergencyInk, border: `1px solid ${theme.emergency}` },
-    outline:   { background: 'transparent', color: theme.ink, border: `1px solid ${theme.ink}` },
-    ghost:     { background: 'transparent', color: theme.ink, border: `1px solid ${theme.line}` },
+    primary:          { background: theme.brand, color: theme.brandInk, border: `1px solid ${theme.brand}` },
+    'primary-inverted': { background: theme.brandInk, color: theme.brand, border: `1px solid ${theme.brandInk}` },
+    accent:           { background: theme.accent, color: theme.accentInk, border: `1px solid ${theme.accent}` },
+    emergency:        { background: theme.emergency, color: theme.emergencyInk, border: `1px solid ${theme.emergency}` },
+    outline:          { background: 'transparent', color: theme.ink, border: `1px solid ${theme.ink}` },
+    ghost:            { background: 'transparent', color: theme.ink, border: `1px solid ${theme.line}` },
+    'ghost-inverted': { background: 'transparent', color: theme.brandInk, border: '1px solid rgba(255,255,255,0.45)' },
   };
   const hoverStyles = {
-    primary:   { filter: 'brightness(1.14)', boxShadow: '0 6px 20px rgba(0,0,0,0.20)', transform: 'translateY(-1px)' },
-    accent:    { filter: 'brightness(1.10)', boxShadow: '0 6px 20px rgba(0,0,0,0.15)', transform: 'translateY(-1px)' },
-    emergency: { filter: 'brightness(1.10)', boxShadow: '0 6px 20px rgba(0,0,0,0.18)', transform: 'translateY(-1px)' },
-    outline:   { background: theme.surfaceAlt },
-    ghost:     { background: theme.surfaceAlt },
+    primary:          { filter: 'brightness(1.14)', boxShadow: '0 6px 20px rgba(0,0,0,0.20)', transform: 'translateY(-1px)' },
+    'primary-inverted': { filter: 'brightness(0.94)', boxShadow: '0 6px 20px rgba(0,0,0,0.20)', transform: 'translateY(-1px)' },
+    accent:           { filter: 'brightness(1.10)', boxShadow: '0 6px 20px rgba(0,0,0,0.15)', transform: 'translateY(-1px)' },
+    emergency:        { filter: 'brightness(1.10)', boxShadow: '0 6px 20px rgba(0,0,0,0.18)', transform: 'translateY(-1px)' },
+    outline:          { background: theme.surfaceAlt },
+    ghost:            { background: theme.surfaceAlt },
+    'ghost-inverted': { background: 'rgba(255,255,255,0.12)' },
   };
   const pressedStyles = {
-    primary:   { filter: 'brightness(0.82)', transform: 'translateY(1px)', boxShadow: 'none' },
-    accent:    { filter: 'brightness(0.85)', transform: 'translateY(1px)', boxShadow: 'none' },
-    emergency: { filter: 'brightness(0.85)', transform: 'translateY(1px)', boxShadow: 'none' },
-    outline:   { background: theme.line, transform: 'translateY(1px)' },
-    ghost:     { background: theme.line, transform: 'translateY(1px)' },
+    primary:          { filter: 'brightness(0.82)', transform: 'translateY(1px)', boxShadow: 'none' },
+    'primary-inverted': { filter: 'brightness(0.86)', transform: 'translateY(1px)', boxShadow: 'none' },
+    accent:           { filter: 'brightness(0.85)', transform: 'translateY(1px)', boxShadow: 'none' },
+    emergency:        { filter: 'brightness(0.85)', transform: 'translateY(1px)', boxShadow: 'none' },
+    outline:          { background: theme.line, transform: 'translateY(1px)' },
+    ghost:            { background: theme.line, transform: 'translateY(1px)' },
+    'ghost-inverted': { background: 'rgba(255,255,255,0.22)', transform: 'translateY(1px)' },
   };
   const interactionStyle = isPressed ? pressedStyles[variant] : isHovered ? hoverStyles[variant] : {};
 

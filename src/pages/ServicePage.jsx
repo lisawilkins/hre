@@ -132,10 +132,10 @@ export const ServicePage = ({ theme, tone, type }) => {
               {description}
             </p>
             <div style={{ display: 'flex', gap: 12, marginTop: 28, flexWrap: 'wrap' }}>
-              <Button theme={theme} variant="primary" iconRight="arrow" onClick={() => navigate('/book', { state: bookState })}>
+              <Button theme={theme} variant="primary-inverted" iconRight="arrow" onClick={() => navigate('/book', { state: bookState })}>
                 {isResidential ? 'Request Service' : 'Request a Bid'}
               </Button>
-              <Button theme={theme} variant="ghost" icon="phone" style={{ color: theme.brandInk, borderColor: `${theme.brandInk}50` }} onClick={() => window.location.href = `tel:${PHONE_TEL}`}>
+              <Button theme={theme} variant="ghost-inverted" icon="phone" onClick={() => window.location.href = `tel:${PHONE_TEL}`}>
                 {PHONE_DISPLAY}
               </Button>
             </div>
