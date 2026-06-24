@@ -21,7 +21,7 @@ export const Testimonials = ({ theme, id }) => {
           fontSize: 'clamp(36px, 4vw, 52px)', lineHeight: 1, margin: 0,
           color: theme.ink, letterSpacing: '-0.03em', textWrap: 'balance',
         }}>
-          Word of mouth,<br/>across Western WA.
+          Customer satisfaction is our goal.
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'flex-end' }}>
           <StarRow theme={theme} size={20} />

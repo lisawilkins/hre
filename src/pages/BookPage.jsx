@@ -9,7 +9,7 @@ import { JsonLd } from '../components/seo/JsonLd';
 import { breadcrumbSchema } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
-export const BookPage = ({ theme, tone }) => {
+export const BookPage = ({ theme }) => {
   const { state } = useLocation();
   const selectedService = state?.service ?? null;
   const { isTabletDown } = useBreakpoint();

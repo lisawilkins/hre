@@ -2,6 +2,8 @@ import { Section } from './Section';
 import { Icon } from './Icon';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
+const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+
 const ITEMS = [
   {
     icon: 'shield',
@@ -32,13 +34,21 @@ const ITEMS = [
 
 export const TrustPoints = ({ theme, id, eyebrow = 'Why Trust Home Run Electric', style }) => {
   const { isMobile, isTablet } = useBreakpoint();
-  const cols = isMobile ? 'repeat(2, 1fr)' : isTablet ? 'repeat(3, 1fr)' : 'repeat(5, 1fr)';
+  const numCols = isMobile ? 2 : isTablet ? 3 : 5;
+  const n = ITEMS.length;
+  const inLastRow = n % numCols || numCols;
+  const internalCols = (numCols * inLastRow) / gcd(numCols, inLastRow);
+  const normalSpan = internalCols / numCols;
+  const lastSpan = internalCols / inLastRow;
 
   return (
     <Section theme={theme} id={id} eyebrow={eyebrow} style={{ background: theme.surface, ...style }}>
-      <div style={{ display: 'grid', gridTemplateColumns: cols, gap: 16 }}>
-        {ITEMS.map((item, i) => (
+      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${internalCols}, 1fr)`, gap: 16 }}>
+        {ITEMS.map((item, i) => {
+          const isInLastRow = inLastRow < numCols && i >= n - inLastRow;
+          return (
           <div key={i} style={{
+            gridColumn: `span ${isInLastRow ? lastSpan : normalSpan}`,
             padding: isMobile ? 20 : 28,
             border: `1px solid ${theme.line}`,
             borderRadius: theme.radius,
@@ -58,7 +68,8 @@ export const TrustPoints = ({ theme, id, eyebrow = 'Why Trust Home Run Electric'
             <h3 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 18, letterSpacing: '-0.02em', color: theme.ink, margin: 0, lineHeight: 1.2 }}>{item.title}</h3>
             <p style={{ fontFamily: theme.bodyFont, fontSize: 13, color: theme.ink2, lineHeight: 1.5, margin: 0 }}>{item.body}</p>
           </div>
-        ))}
+          );
+        })}
       </div>
     </Section>
   );

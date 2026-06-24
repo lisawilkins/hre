@@ -11,8 +11,7 @@ import { breadcrumbSchema } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
 export const AboutPage = ({ theme, tone }) => {
-  const { isMobile, isTablet, isTabletDown } = useBreakpoint();
-  const teamCols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)';
+  const { isTabletDown } = useBreakpoint();
 
   return (
     <div>

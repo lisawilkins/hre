@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../ui/Icon';
 import { Button } from '../ui/Button';
-import { HeroPattern } from '../ui/HeroPattern';
 import { Logo } from '../ui/Logo';
 import { STATS, PHONE_DISPLAY, PHONE_TEL } from '../../data/content';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
@@ -12,7 +11,15 @@ export const HomeHero = ({ theme, tone, id }) => {
 
   return (
     <div id={id} style={{ position: 'relative', background: theme.bg, overflow: 'hidden' }}>
-      <HeroPattern theme={theme} kind={theme.heroPattern} />
+      <div style={{
+        position: 'absolute', top: 40, bottom: 40, left: 0, right: 0,
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        pointerEvents: 'none',
+      }}>
+        <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ height: '100%', width: 'auto', opacity: 0.3 }}>
+          <path d="M256 0C397.385 0.000131948 512 114.615 512 256C512 364.006 445.114 456.388 350.504 493.989H346.049L303.54 494.262C283.248 494.262 278.848 491.758 270.628 483.538L60.1465 274.344C51.9264 266.123 51.9263 252.795 60.1465 244.575L241.644 63.0771C249.864 54.8575 263.192 54.8574 271.412 63.0771L446.682 238.348C454.902 246.568 454.901 259.895 446.682 268.115L294.039 417.752C293.999 417.791 286.384 425.12 274.951 416.736C270.631 413.568 269.432 406.344 269.24 400.388V365.631H289.877C289.903 365.553 293.175 355.726 293.176 353.753C293.175 351.773 283.278 335.936 283.277 327.356C283.277 318.778 284.851 316.714 287.237 310.198C289.181 304.891 290.539 301.998 293.176 296.999C298.945 286.062 311.638 271.281 311.654 271.262V246.186H319.573V221.107H299.775V211.869C299.775 210.412 298.593 209.23 297.136 209.229V156.436C297.136 152.791 294.18 149.836 290.536 149.836C286.892 149.836 283.938 152.791 283.938 156.436V209.229C282.48 209.23 281.298 210.411 281.298 211.869V221.107H237.565V211.869C237.565 210.412 236.383 209.23 234.926 209.229V156.436C234.926 152.791 231.971 149.836 228.327 149.836C224.683 149.836 221.728 152.791 221.728 156.436V209.229C220.27 209.23 219.088 210.411 219.088 211.869V221.107H199.29V246.186H207.21V271.262C207.294 271.359 219.934 286.091 225.688 296.999C228.324 301.998 229.683 304.891 231.627 310.198C234.013 316.713 235.586 318.778 235.586 327.356C235.585 335.936 225.688 351.773 225.688 353.753C225.688 355.727 228.964 365.565 228.986 365.631H251.725V391.231C251.725 399.623 249.036 420.591 264.851 434.279C285.57 449.686 300.998 436.405 302.544 434.762C304.092 433.117 461.383 278.927 461.566 278.747C475.658 264.655 475.658 241.808 461.566 227.716L283.106 49.2559C269.015 35.1646 246.167 35.1644 232.075 49.2559L47.3887 233.942C33.2968 248.034 33.2971 270.883 47.3887 284.975L261.06 497.359C267.671 504.808 275.739 508.234 286.874 509.641C287.797 509.757 288.775 509.801 289.797 509.787C278.738 511.246 267.457 512 256 512C114.615 512 0.00013198 397.385 0 256C0 114.615 114.615 0 256 0ZM337.077 498.893C334.468 499.763 331.84 500.594 329.193 501.382C331.983 500.537 334.618 499.703 337.077 498.893Z" fill={theme.line} />
+        </svg>
+      </div>
       <div style={{
         maxWidth: 1400, margin: '0 auto',
         padding: isMobile ? '48px 16px 64px' : isTabletDown ? '60px 24px 80px' : '80px 48px 100px',
@@ -55,46 +62,11 @@ export const HomeHero = ({ theme, tone, id }) => {
             <Button theme={theme} variant="primary" size={isMobile ? 'md' : 'lg'} iconRight="arrow" onClick={() => navigate('/book')}>{tone.bookCta}</Button>
             <Button theme={theme} variant="ghost" size={isMobile ? 'md' : 'lg'} icon="phone" onClick={() => window.location.href = `tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</Button>
           </div>
-          <svg width="100%" height="20" style={{ marginTop: 48, display: 'block' }} xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="hre-bg-icons" x="0" y="0" width="610" height="20" patternUnits="userSpaceOnUse">
-                <rect y="8.78589" width="60.5923" height="2.42369" fill={theme.surfaceAlt}/>
-                <circle cx="63.6218" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <rect x="71.4989" y="0.908936" width="2.42369" height="18.1777" rx="1.21185" fill={theme.surfaceAlt}/>
-                <rect x="78.77" y="3.33264" width="2.42369" height="13.3303" rx="1.21185" fill={theme.surfaceAlt}/>
-                <rect x="86.041" y="0.908936" width="2.42369" height="18.1777" rx="1.21185" fill={theme.surfaceAlt}/>
-                <rect x="93.3121" y="3.33264" width="2.42369" height="13.3303" rx="1.21185" fill={theme.surfaceAlt}/>
-                <rect x="100.583" y="0.908936" width="2.42369" height="18.1777" rx="1.21185" fill={theme.surfaceAlt}/>
-                <circle cx="110.884" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <rect x="113.913" y="8.78589" width="60.5923" height="2.42369" fill={theme.surfaceAlt}/>
-                <circle cx="177.535" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <path d="M212.073 13.6332V16.0569H188.442V13.6332H212.073ZM212.679 13.0273V6.96809C212.679 6.63345 212.408 6.36217 212.073 6.36217H188.442C188.107 6.36217 187.836 6.63345 187.836 6.96809V13.0273C187.836 13.362 188.107 13.6332 188.442 13.6332V16.0569C186.769 16.0569 185.412 14.7005 185.412 13.0273V6.96809C185.412 5.34717 186.685 4.02347 188.286 3.94232L188.442 3.93848H212.073L212.229 3.94232C213.83 4.02347 215.103 5.34717 215.103 6.96809V13.0273L215.099 13.1832C215.018 14.784 213.694 16.0569 212.073 16.0569V13.6332C212.408 13.6332 212.679 13.362 212.679 13.0273Z" fill={theme.surfaceAlt}/>
-                <circle cx="222.98" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <rect x="226.009" y="8.78589" width="60.5923" height="2.42369" fill={theme.surfaceAlt}/>
-                <circle cx="289.631" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <path d="M331.697 1.12764C332.083 -0.0457582 333.621 -0.276047 334.343 0.686513L334.41 0.78326L339.844 9.24783H346.264V11.6715H339.347C338.831 11.6715 338.351 11.4091 338.072 10.9751L333.402 3.69867L328.406 18.868C327.949 20.256 325.986 20.256 325.529 18.868L320.889 4.77679L316.248 18.868C315.791 20.256 313.828 20.256 313.371 18.868L308.384 3.72471L303.821 10.9644C303.544 11.4046 303.06 11.6715 302.54 11.6715H292.055V9.24783H302.039L307.362 0.800419L307.429 0.70249C308.124 -0.238442 309.595 -0.0577584 310.041 1.0232L310.082 1.13445L314.809 15.4881L319.45 1.39717C319.907 0.00931925 321.87 0.00932459 322.327 1.39717L326.968 15.4881L331.697 1.12764Z" fill={theme.surfaceAlt}/>
-                <circle cx="348.688" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <rect x="351.718" y="8.78589" width="60.5923" height="2.42369" fill={theme.surfaceAlt}/>
-                <circle cx="415.34" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <rect x="423.217" y="5.75635" width="2.42369" height="8.48292" rx="1.21185" fill={theme.surfaceAlt}/>
-                <rect x="430.488" y="3.33264" width="2.42369" height="13.3303" rx="1.21185" fill={theme.surfaceAlt}/>
-                <rect x="437.759" y="0.908936" width="2.42369" height="18.1777" rx="1.21185" fill={theme.surfaceAlt}/>
-                <circle cx="448.059" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <rect x="451.089" y="8.78589" width="60.5923" height="2.42369" fill={theme.surfaceAlt}/>
-                <circle cx="514.711" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <rect x="522.588" y="0.908936" width="2.42369" height="18.1777" rx="1.21185" fill={theme.surfaceAlt}/>
-                <path d="M529.859 1.63323C529.859 0.858767 530.562 0.267533 531.296 0.512714C535.265 1.8374 538.127 5.58322 538.127 9.99774C538.127 14.4122 535.266 18.158 531.297 19.4827C530.562 19.7279 529.859 19.1366 529.859 18.3621C529.859 17.7826 530.263 17.2896 530.805 17.0848C533.667 16.0036 535.703 13.2386 535.703 9.99774C535.703 6.75679 533.667 3.99153 530.805 2.91031C530.263 2.70556 529.859 2.21267 529.859 1.63323Z" fill={theme.surfaceAlt}/>
-                <circle cx="546.004" cy="9.99781" r="3.02961" fill={theme.surfaceAlt}/>
-                <rect x="549.033" y="8.78589" width="60.5923" height="2.42369" fill={theme.surfaceAlt}/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="20" fill="url(#hre-bg-icons)" />
-          </svg>
           <div style={{
-            marginTop: 0, display: 'grid',
+            marginTop: 48, display: 'grid',
             gridTemplateColumns: isNarrow ? 'repeat(2, 46%)' : `repeat(${4}, auto)`,
             gap: isNarrow ? '20px 0' : isMobile ? 24 : 36,
-            paddingTop: 32,
+            paddingTop: 32, borderTop: `1px solid ${theme.line}`,
           }}>
             {STATS.map((s, i) => (
               <div key={i} style={{ textAlign: 'center' }}>

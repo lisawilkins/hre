@@ -6,6 +6,7 @@ import imgGenerator from '../assets/res-generator.jpg';
 import imgLighting from '../assets/res-lighting.jpg';
 import { ServiceCard } from '../components/home/ServiceCard';
 import { Testimonials } from '../components/home/Testimonials';
+import { TrustPoints } from '../components/ui/TrustPoints';
 import { FAQ } from '../components/home/FAQ';
 import { PageHero, CTABand } from './shared';
 import { SERVICES, FAQ_ITEMS } from '../data/content';
@@ -97,6 +98,7 @@ export const ResidentialPage = ({ theme, tone }) => {
       <ProjectGallery theme={theme} id="projects" />
       <ProcessBand theme={theme} id="guarantees" />
       <FAQ theme={theme} id="faq" />
+      <TrustPoints theme={theme} id="credentials" eyebrow="Credentials &amp; Trust" />
       <Testimonials theme={theme} id="testimonials" />
       <CTABand theme={theme} tone={tone} id="cta" />
     </div>

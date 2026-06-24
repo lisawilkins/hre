@@ -4,6 +4,7 @@ import { PageMeta } from '../components/ui/PageMeta';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
 import { BookForm } from '../components/forms/BookForm';
+import { TrustPoints } from '../components/ui/TrustPoints';
 import { PageHero } from './shared';
 import { COMMERCIAL_SERVICES, COMMERCIAL_CLIENTS, PHONE_TEL } from '../data/content';
 import { JsonLd } from '../components/seo/JsonLd';
@@ -66,6 +67,8 @@ export const CommercialPage = ({ theme, tone }) => {
         </div>
       </Section>
 
+      <TrustPoints theme={theme} id="credentials" eyebrow="Credentials &amp; Trust" />
+
       {/* Bid section */}
       <Section theme={theme} id="bid">
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? '1fr' : '1.2fr 1fr', gap: isTabletDown ? 40 : 48, alignItems: 'center' }}>
@@ -75,7 +78,7 @@ export const CommercialPage = ({ theme, tone }) => {
               Have plans? We&apos;ll bid them.
             </h2>
             <p style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.55, color: theme.ink2, margin: '0 0 28px', maxWidth: 480 }}>
-              We do design-assist and design-build bids. Send us your plans or scope and we&apos;ll turn around a numbered estimate in 5–10 business days for most jobs.
+              We coordinate with builders, architects, and designers to achieve the desired solution. Send us your plans or scope and we&apos;ll turn around a numbered estimate in 5–10 business days for most jobs.
             </p>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <Button theme={theme} variant="primary" iconRight="arrow" onClick={() => navigate('/book')}>Request a bid</Button>

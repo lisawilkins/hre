@@ -49,7 +49,7 @@ export const CTABand = ({ theme, tone, id }) => {
             Ready when you are.
           </h2>
           <p style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.55, opacity: 0.8, marginTop: 20, maxWidth: 480 }}>
-            Short form, or a phone call. Either way, our team gets back to you right away during business hours.
+            Have questions or need an estimate? Our team is here to help your vision become a reality.
           </p>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>

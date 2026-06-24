@@ -79,7 +79,7 @@ export const TONE_COPY = {
   neighborly: {
     name: 'Neighborly',
     heroEyebrow: 'Covering all the bases since 2003',
-    heroTitle: ['Western Washington\'s Trusted Electricial Experts'], 
+    heroTitle: ['Western Washington\'s Trusted Electrical Experts'],
     heroSub: "From Bellingham to Olympia, and Gig Harbor to Monroe, Home Run Electric has powered the greater Seattle area's residential and commercial projects for over 23 years.",
     bookCta: 'Request Estimate',
     emergencyLede: 'Don\'t wait to have your electrical system checked out by one of our licensed electricians.',

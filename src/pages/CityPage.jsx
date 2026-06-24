@@ -9,6 +9,7 @@ import { HeroPattern } from '../components/ui/HeroPattern';
 import { JsonLd } from '../components/seo/JsonLd';
 import { breadcrumbSchema, SITE_URL } from '../data/schemas';
 import { useBreakpoint } from '../hooks/useBreakpoint';
+import { TrustPoints } from '../components/ui/TrustPoints';
 
 export const CityPage = ({ theme }) => {
   const { citySlug } = useParams();
@@ -71,6 +72,8 @@ export const CityPage = ({ theme }) => {
           </div>
         </Section>
       )}
+
+      <TrustPoints theme={theme} id="credentials" eyebrow="Credentials &amp; Trust" />
 
       <Section theme={theme} id="services" eyebrow="Services available">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', flexDirection: isMobile ? 'column' : 'row', gap: 8, marginBottom: 32 }}>

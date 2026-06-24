@@ -5,6 +5,7 @@ import { Section } from '../components/ui/Section';
 import { Icon } from '../components/ui/Icon';
 import { Badge } from '../components/ui/Badge';
 import { PageHero, CTABand } from './shared';
+import { TrustPoints } from '../components/ui/TrustPoints';
 import { PageMeta } from '../components/ui/PageMeta';
 import { LOCATIONS } from '../data/content';
 import { JsonLd } from '../components/seo/JsonLd';
@@ -89,6 +90,7 @@ export const LocationsPage = ({ theme, tone }) => {
           </div>
         </div>
       </Section>
+      <TrustPoints theme={theme} id="credentials" eyebrow="Credentials &amp; Trust" />
       <CTABand theme={theme} tone={tone} id="cta" />
     </div>
   );
