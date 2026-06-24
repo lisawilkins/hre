@@ -23,7 +23,7 @@ export const BookPage = ({ theme }) => {
           <div>
             <Badge theme={theme} variant="soft">Request Service</Badge>
             <h1 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(40px, 5vw, 64px)', lineHeight: 1, margin: '18px 0 20px', letterSpacing: '-0.035em', color: theme.ink, textWrap: 'balance' }}>
-              We'll help you make your plans a reality.
+              We'll help make your plans a reality.
             </h1>
             <p style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.55, color: theme.ink2, margin: 0, maxWidth: 440 }}>
               During business hours we&apos;ll get back to you right away. For emergencies, call us directly.
