@@ -80,7 +80,7 @@ export const TwoLanes = ({ theme, id }) => {
         gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
         gap: 16,
       }}>
-        <LaneCard theme={theme} kind="Residential" eyebrow="For the home" title="Residential Electrical Services in Western Washington" lede="Panel swaps, EV chargers, smart home, and repairs — handled like it's our own house." icon="house" go={() => navigate('/residential')} isMobile={isMobile} />
+        <LaneCard theme={theme} kind="Residential" eyebrow="For the home" title="Residential Electrical Services in Western Washington" lede="Panel swaps, new construction, remodels, repairs and EV chargers, handled like it's our own house." icon="house" go={() => navigate('/residential')} isMobile={isMobile} />
         <LaneCard theme={theme} kind="Commercial" eyebrow="Commercial" title="Commercial Expertise Across Snohomish & King County" lede="Twenty-plus years of TIs, ground-up builds, and service upgrades across Western WA." icon="building" go={() => navigate('/commercial')} isMobile={isMobile} />
       </div>
       <div style={{
@@ -90,7 +90,7 @@ export const TwoLanes = ({ theme, id }) => {
         marginTop: 16,
       }}>
         <InfoCard theme={theme} eyebrow="Rebuild" title="Insurance & Restoration" lede="We work with all insurance & restoration companies to make you whole again after fire or water damage." icon="life-preserver" isMobile={isMobile} />
-        <InfoCard theme={theme} eyebrow="Referrals" title="Public Utilities" lede="We're proud to be frequently referred by agencies such as PUD, PSE and Seattle City Light" icon="lightning" isMobile={isMobile} />
+        <InfoCard theme={theme} eyebrow="Referrals" title="Public Utilities" lede="We're proud to work hand-in-hand with agencies such as PUD, PSE and Seattle City Light" icon="lightning" isMobile={isMobile} />
       </div>
     </Section>
   );

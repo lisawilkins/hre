@@ -16,7 +16,7 @@ export const AboutPage = ({ theme, tone }) => {
 
   return (
     <div>
-      <PageMeta title="About Home Run Electric — Licensed Electricians in Lynnwood, WA since 2003" description="Meet the Home Run Electric team — locally owned since 2003, serving Western Washington. Licensed master electricians, OSHA 30 certified." />
+      <PageMeta title="About Home Run Electric — Licensed Electricians in Lynnwood, WA since 2003" description="Meet Home Run Electric — locally owned since 2003, serving Western Washington. Licensed master electricians. Life-safety and fire alarm certified" />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'About Us', path: '/about' }])} />
       <PageHero theme={theme} id="hero" eyebrow="About HRE" title="Over 23 years of local, reliable electrical work" lede={tone.aboutLede} />
 
@@ -26,14 +26,14 @@ export const AboutPage = ({ theme, tone }) => {
           <Placeholder theme={theme} label="Crew photo · Lynnwood shop · 2024" aspect="4/5" tint="#8A8570" />
           <div>
             <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.05, margin: 0, letterSpacing: '-0.03em', color: theme.ink, marginBottom: 24 }}>
-              Started in 2003. Still family run.
+              Family owned and operated since 2003.
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18, fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.55, color: theme.ink2 }}>
               <p style={{ margin: 0 }}>
-                Michael & Jessica Smith started Home Run Electric in Lynnwood with two tool bags and a reputation for showing up on time and delivering quality service.
+                Michael Smith began his career as an electrician when he was 16 year old.  In 2003 he got his Electrical Administrator certification and opened Home Run Electric with this wife Jessica in Western Washington. In 2005 Michael became a Master Electrician. Together they quickly grew Home Run Electric as well as their reputation of integrity, efficiency, and delivering quality service.
               </p>
               <p style={{ margin: 0 }}>
-                Twenty-three years later, we employ our own local crew of thirteen licensed electricians. Dozens of exceptional and talented young men have been trained through our apprenticeship program. We've had thousands of satisfied clients ranging from stores, offices, restaurants, and residential properties.
+                23+ years later Michael and Jessica control the quality, cost, and craftsmanship on every project by employing their own local crew of licensed electricians. Through those years, dozens of exceptional and talented electricians were trained through HRE's apprenticeship program, building the next generation of licensed professionals. Thousands of satisfied clients ranging from retail stores, offices, restaurants, and residential properties agree that Home Run Electric is the most trusted electrician in the Puget Sound area.
               </p>
             </div>
           </div>
@@ -41,7 +41,7 @@ export const AboutPage = ({ theme, tone }) => {
       </Section>
 
       {/* Team */}
-      <Section theme={theme} id="team" eyebrow="The crew">
+      {/* <Section theme={theme} id="team" eyebrow="The crew">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', flexDirection: isMobile ? 'column' : 'row', gap: 12, marginBottom: 32 }}>
           <h2 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1, margin: 0, letterSpacing: '-0.03em', color: theme.ink }}>
             The people on your job.
@@ -66,6 +66,8 @@ export const AboutPage = ({ theme, tone }) => {
           ))}
         </div>
       </Section>
+      */ }
+      
 
       <TrustPoints theme={theme} id="credentials" eyebrow="Credentials &amp; Trust" />
 

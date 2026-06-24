@@ -23,11 +23,13 @@ export const BookPage = ({ theme, tone }) => {
           <div>
             <Badge theme={theme} variant="soft">Request Service</Badge>
             <h1 style={{ fontFamily: theme.displayFont, fontWeight: theme.displayWeight, fontSize: 'clamp(40px, 5vw, 64px)', lineHeight: 1, margin: '18px 0 20px', letterSpacing: '-0.035em', color: theme.ink, textWrap: 'balance' }}>
-              Tell us what&apos;s going on. Our team gets back to you.
+              We'll help you make your plans a reality.
             </h1>
             <p style={{ fontFamily: theme.bodyFont, fontSize: 17, lineHeight: 1.55, color: theme.ink2, margin: 0, maxWidth: 440 }}>
-              Short form — about a minute. During business hours we&apos;ll get back to you right away. For emergencies, call us directly at{' '}
-              <a href={`tel:${PHONE_TEL}`} style={{ color: theme.ink, fontWeight: 600 }}>{PHONE_DISPLAY}</a>.
+              During business hours we&apos;ll get back to you right away. For emergencies, call us directly.
+              {/* {' '}
+              <br></br>
+              <a href={`tel:${PHONE_TEL}`} style={{ color: theme.ink, fontWeight: 600 }}>{PHONE_DISPLAY}</a>. */}
             </p>
             {selectedService && (
               <div style={{ marginTop: 32, padding: 20, border: `1px solid ${theme.line}`, borderRadius: theme.radius, background: theme.surface, display: 'flex', alignItems: 'center', gap: 16 }}>
@@ -42,7 +44,7 @@ export const BookPage = ({ theme, tone }) => {
             )}
             <div style={{ marginTop: 40, display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
               {[
-                { i: 'phone', t: 'Or call us', d: PHONE_DISPLAY },
+                { i: 'phone', t: 'Call us', d: PHONE_DISPLAY },
                 { i: 'clock', t: 'Hours', d: 'Mon–Sat · 7a–6p' },
                 { i: 'shield', t: 'Licensed', d: 'WA Lic. HOMERRE974K2' },
                 { i: 'pin', t: 'HQ', d: 'Lynnwood, WA' },

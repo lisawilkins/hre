@@ -43,7 +43,7 @@ export const SERVICES = [
   {
     id: 'generator',
     title: 'Whole-home generator',
-    blurb: 'Natural gas and propane standby generators sized for your home. Automatic transfer switch included.',
+    blurb: 'Natural gas and propane standby generators sized for your home. Automatic transfer switches available.',
     eta: '1-2 days (+permits & inspections)',
     from: '$12,500',
     tag: 'Storm-ready',
@@ -99,8 +99,8 @@ export const SERVICES = [
   },
   {
     id: 'lighting',
-    title: 'Lighting design & install',
-    blurb: 'Recessed, pendant, landscape, under-cabinet. Design consult included on projects over $2k.',
+    title: 'Residential Lighting',
+    blurb: 'Recessed, pendant, under-cabinet. We work with you, your designer or your architect to make your ideas become reality.',
     eta: '4-8 hrs',
     from: '$600',
     tag: 'Add Value',
@@ -233,7 +233,7 @@ export const COMMERCIAL_SERVICES = [
 ];
 
 export const TEAM = [
-  {
+  /* {
     name: 'Michael & Jessica Smith',
     role: 'Owners & Master Electrician',
     since: 'Since 2003',
@@ -274,7 +274,7 @@ export const TEAM = [
     since: 'Since 2013',
     bio: 'Jess is in year three of her apprenticeship. She pulled her first 400A service last month and is studying for her journeyman exam.',
     tint: '#9B9EB0',
-  },
+  }, */
 ];
 
 export const LOCATIONS = [
@@ -292,7 +292,7 @@ export const LOCATIONS = [
   },
   {
     city: 'Mill Creek', slug: 'mill-creek', county: 'Snohomish County', eta: '20 min', emergency: true,
-    blurb: "Mill Creek is one of Snohomish County's most sought-after residential communities — a planned city with winding streets, wooded lots, and homes built primarily in the 1980s and 90s. EV charger installations and panel upgrades are among our most common calls here, as homeowners modernize electrical systems reaching the end of their first service life.",
+    blurb: "Mill Creek is one of Snohomish County's most sought-after residential communities — a planned city with winding streets, wooded lots, and homes built primarily in the 1980s and 90s. EV charger installations and panel upgrades are among our common calls here, as homeowners modernize electrical systems reaching the end of their first service life.",
   },
   {
     city: 'Everett', slug: 'everett', county: 'Snohomish County', eta: '25 min', emergency: true,
@@ -435,9 +435,8 @@ export const TESTIMONIALS = [
 ];
 
 export const COMMERCIAL_CLIENTS = [
-  'GROCERY HUB, LYNNWOOD', 'PIER 88 SEAFOOD, ISSAQUAH', 'QUALITY INN, ARLINGTON',
-  'CEDAR & OAK GROUP', 'NORTHWEST LOGISTICS', 'TIDEWATER CAPITAL',
-  'MAPLE RIDGE SCHOOLS', 'SNOHOMISH COUNTY', 'ANCHOR BAY HOTELS',
+  'BELFOR RESTORATION', 'GROCERY HUB, LYNNWOOD',  'PIER 88 SEAFOOD, ISSAQUAH', 'QUALITY INN, ARLINGTON',
+  'TITLE CONSTRUCTION', 'KUSTOM RESTORATION', 'SNOHOMISH COUNTY', 'ANCHOR BAY HOTELS',
 ];
 
 export const STATS = [

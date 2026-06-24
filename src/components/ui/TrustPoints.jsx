@@ -6,7 +6,7 @@ const ITEMS = [
   {
     icon: 'shield',
     title: 'Licensed, Bonded, Insured',
-    body: 'Every project is protected, serviced, and managed by experts. WA state electrical contractor licence HOMERRE974K2. $2M general liability.',
+    body: 'Every project is protected, serviced, and managed by experts. WA state electrical contractor licence HOMERRE974K2.',
   },
   {
     icon: 'clock',

@@ -17,9 +17,9 @@ import { useBreakpoint } from '../hooks/useBreakpoint';
 const ProjectGallery = ({ theme, id }) => {
   const { isMobile, isTablet } = useBreakpoint();
   const projects = [
-    { t: 'An open electrical panel revealing a 200A residential panel', where: 'Edmonds · 1951 Craftsman', img: imgPanel },
-    { t: 'An EV charger installed on a residential detached garage', where: 'Mill Creek · detached garage', img: imgEV },
-    { t: 'A backup generator installed in a residential home', where: 'Lynnwood · whole-home', img: imgGenerator },
+    { t: '200A residential panel swap', where: 'Edmonds · 1951 Craftsman', img: imgPanel },
+    { t: 'An EV charger installed on a residential detached garage', where: 'Mill Creek · garage', img: imgEV },
+    { t: 'A backup generator installed in a residential home', where: 'Woodinville · whole-home', img: imgGenerator },
     { t: 'A kitchen beautifully well lit with warm light', where: 'Bothell · 1980s split', img: imgLighting },
   ];
   return (
@@ -47,12 +47,11 @@ const ProjectGallery = ({ theme, id }) => {
 
 const ProcessBand = ({ theme, id }) => {
   const { isMobile, isTablet } = useBreakpoint();
-  const cols = isMobile ? 1 : isTablet ? 2 : 4;
+  const cols = isMobile ? 1 : isTablet ? 2 : 3;
   const items = [
-    { n: '$185', l: 'Flat diagnostic fee', d: 'Waived if you hire us for the fix.' },
     { n: '1yr', l: 'Workmanship warranty', d: 'On everything we install.' },
-    { n: '100%', l: 'Permitted when required', d: 'We pull permits and handle inspection.' },
-    { n: '2hr', l: 'Arrival window', d: 'Not "sometime today." A real window.' },
+    { n: '100%', l: 'Permitted when required', d: 'We pull permits and handle inspections. You can relax and know the project will be up to code.' },
+    { n: 'On Time', l: 'Open communication', d: 'Customer service is the cornerstone of our continued growth.' },
   ];
   return (
     <Section theme={theme} id={id} eyebrow="What you can count on">

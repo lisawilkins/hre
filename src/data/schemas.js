@@ -29,6 +29,8 @@ export const localBusinessSchema = () => ({
     { '@type': 'AdministrativeArea', name: 'King County, WA' },
     { '@type': 'AdministrativeArea', name: 'Pierce County, WA' },
     { '@type': 'AdministrativeArea', name: 'Thurston County, WA' },
+    { '@type': 'AdministrativeArea', name: 'Whatcom County, WA' },
+    { '@type': 'AdministrativeArea', name: 'Kitsap County, WA' },
   ],
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
