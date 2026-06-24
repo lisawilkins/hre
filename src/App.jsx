@@ -13,7 +13,7 @@ import { AboutPage } from './pages/AboutPage';
 import { LocationsPage } from './pages/LocationsPage';
 import { BookPage } from './pages/BookPage';
 import { CityPage } from './pages/CityPage';
-import { ServicePage } from './pages/ServicePage';
+// import { ServicePage } from './pages/ServicePage';
 import { DesignSystemPage } from './pages/DesignSystemPage';
 
 const DEFAULT_TWEAKS = {
@@ -51,9 +51,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage theme={theme} tone={tone} />} />
           <Route path="/residential" element={<ResidentialPage theme={theme} tone={tone} />} />
-          <Route path="/residential/:serviceId" element={<ServicePage theme={theme} tone={tone} type="residential" />} />
+          {/* <Route path="/residential/:serviceId" element={<ServicePage theme={theme} tone={tone} type="residential" />} /> */}
           <Route path="/commercial" element={<CommercialPage theme={theme} tone={tone} />} />
-          <Route path="/commercial/:serviceId" element={<ServicePage theme={theme} tone={tone} type="commercial" />} />
+          {/* <Route path="/commercial/:serviceId" element={<ServicePage theme={theme} tone={tone} type="commercial" />} /> */}
           <Route path="/about" element={<AboutPage theme={theme} tone={tone} />} />
           <Route path="/service-areas" element={<LocationsPage theme={theme} tone={tone} />} />
           <Route path="/service-areas/:citySlug" element={<CityPage theme={theme} tone={tone} />} />

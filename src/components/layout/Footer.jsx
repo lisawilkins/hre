@@ -19,7 +19,7 @@ export const Footer = ({ theme }) => {
   const { isMobile, isTablet } = useBreakpoint();
   const navigate = useNavigate();
 
-  const gridCols = isMobile ? '1fr' : isTablet ? '1fr 1fr' : '1.4fr 1fr 1fr 1fr';
+  const gridCols = isMobile ? '1fr' : isTablet ? '1fr 1fr' : '1.4fr 1fr 1fr';
   const padding = isMobile ? '48px 16px 32px' : isTablet ? '64px 24px 36px' : '80px 48px 40px';
 
   return (
@@ -37,15 +37,6 @@ export const Footer = ({ theme }) => {
               <div>WA Lic. HOMERRE974K2 · Bonded & Insured</div>
             </div>
           </div>
-          <FooterCol theme={theme} title="Services" items={[
-            { t: 'Panel upgrades', go: () => navigate('/residential/panel') },
-            { t: 'EV chargers', go: () => navigate('/residential/ev') },
-            { t: 'Generators', go: () => navigate('/residential/generator') },
-            { t: 'Smart home', go: () => navigate('/residential/smart') },
-            { t: 'Troubleshooting', go: () => navigate('/residential/repair') },
-            { t: 'Lighting', go: () => navigate('/residential/lighting') },
-            { t: 'Hot tub & pool', go: () => navigate('/residential/pool') },
-          ]} />
           <FooterCol theme={theme} title="Company" items={[
             { t: 'Residential', go: () => navigate('/residential') },
             { t: 'Commercial', go: () => navigate('/commercial') },

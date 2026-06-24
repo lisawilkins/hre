@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { Section } from '../ui/Section';
 import { Button } from '../ui/Button';
 import { ServiceCard } from './ServiceCard';
@@ -7,7 +6,6 @@ import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 export const ResidentialServices = ({ theme, id }) => {
   const { isMobile } = useBreakpoint();
-  const navigate = useNavigate();
 
   return (
     <Section theme={theme} id={id} eyebrow="Residential services" topDivider="bgIcons">
@@ -35,7 +33,7 @@ export const ResidentialServices = ({ theme, id }) => {
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', gap: 16 }}>
         {SERVICES.slice(0, 4).map(s => (
-          <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate(`/residential/${s.id}`)} />
+          <ServiceCard key={s.id} theme={theme} service={s} />
         ))}
       </div>
     </Section>

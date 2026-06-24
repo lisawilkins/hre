@@ -1,19 +1,15 @@
 import { Icon, SERVICE_ICONS } from '../ui/Icon';
 import { Badge } from '../ui/Badge';
 
-export const ServiceCard = ({ theme, service, onClick, compact, style }) => (
+export const ServiceCard = ({ theme, service, compact, style }) => (
   <div
-    onClick={onClick}
     style={{
       background: theme.surface, border: `1px solid ${theme.line}`,
-      borderRadius: theme.radius, padding: 24, cursor: 'pointer',
+      borderRadius: theme.radius, padding: 24,
       display: 'flex', flexDirection: 'column', gap: 14,
-      transition: 'transform .15s, border-color .15s',
       minHeight: compact ? 'auto' : 220,
       ...style,
     }}
-    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = theme.ink; }}
-    onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = theme.line; }}
   >
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
       <div style={{

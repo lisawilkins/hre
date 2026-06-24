@@ -81,7 +81,7 @@ export const CityPage = ({ theme }) => {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: 16 }}>
           {featuredServices.map(s => (
-            <ServiceCard key={s.id} theme={theme} service={s} onClick={() => navigate(`/residential/${s.id}`)} />
+            <ServiceCard key={s.id} theme={theme} service={s} />
           ))}
         </div>
         <div style={{ marginTop: 24 }}>

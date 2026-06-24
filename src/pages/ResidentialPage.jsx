@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { Section } from '../components/ui/Section';
 import { PageMeta } from '../components/ui/PageMeta';
 import imgPanel from '../assets/res-panel.jpg';
@@ -74,7 +73,6 @@ const ProcessBand = ({ theme, id }) => {
 };
 
 export const ResidentialPage = ({ theme, tone }) => {
-  const navigate = useNavigate();
   const { isTabletDown } = useBreakpoint();
   const desktopCols = 4;
   const lastRowCount = SERVICES.length % desktopCols || desktopCols;
@@ -85,13 +83,12 @@ export const ResidentialPage = ({ theme, tone }) => {
       <PageMeta title="Residential Electrician — Western Washington | Home Run Electric" description="Residential electrician serving Snohomish, King, Pierce & Thurston County. Panel upgrades, EV charger installs, whole-home generators — licensed, bonded, warrantied." />
       <JsonLd schema={breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Residential Services', path: '/residential' }])} />
       <JsonLd schema={faqSchema(FAQ_ITEMS)} />
-      <PageHero theme={theme} id="hero" eyebrow="Residential" title="Your home, wired to commercial standards." lede={tone.residentialLede} cta={{ label: tone.bookCta, path: '/book' }} />
+      <PageHero theme={theme} id="hero" eyebrow="Residential" title="Professional, code-compliant electrical for your home." lede={tone.residentialLede} cta={{ label: tone.bookCta, path: '/book' }} />
       <Section theme={theme} id="services">
         <div style={{ display: 'grid', gridTemplateColumns: isTabletDown ? 'repeat(auto-fill, minmax(200px, 1fr))' : 'repeat(4, minmax(200px, 1fr))', gap: 16 }}>
           {SERVICES.map((s, i) => (
             <ServiceCard
               key={s.id} theme={theme} service={s}
-              onClick={() => navigate(`/residential/${s.id}`)}
               style={!isTabletDown && i >= lastRowStart ? { gridColumn: `span ${lastRowSpan}` } : undefined}
             />
           ))}

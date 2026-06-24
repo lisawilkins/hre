@@ -28,15 +28,12 @@ export const CommercialPage = ({ theme, tone }) => {
         <div style={{ display: 'grid', gridTemplateColumns: servicesCols, gap: 16 }}>
           {COMMERCIAL_SERVICES.map((s, i) => (
             <div
-              key={s.id} onClick={() => navigate(`/commercial/${s.id}`)}
+              key={s.id}
               style={{
                 background: theme.surface, border: `1px solid ${theme.line}`,
                 borderRadius: theme.radius, padding: 28, minHeight: 200,
                 display: 'flex', flexDirection: 'column', gap: 14,
-                cursor: 'pointer', transition: 'transform .15s, border-color .15s',
               }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = theme.ink; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = theme.line; }}
             >
               <div style={{ fontFamily: theme.monoFont, fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: theme.monoColor }}>
                 {String(i + 1).padStart(2, '0')} / {String(COMMERCIAL_SERVICES.length).padStart(2, '0')}
